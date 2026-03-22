@@ -1708,6 +1708,9 @@ body > nav {
   .hero-badge { font-size: var(--label-sm); padding: var(--sp-1) var(--sp-3); margin-bottom: var(--sp-4); }
   .hero-cta { font-size: var(--body-md); padding: var(--sp-3) var(--sp-6); }
 
+  /* Float cards — masquées sur mobile */
+  .hero-visual { display: none; }
+
   /* Float cards compactes en ligne */
   .hero-float-card { padding: var(--sp-3) !important; border-radius: 0.75rem !important; box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important; }
   .hero-float-card .float-card-icon { font-size: 1.2rem !important; margin-bottom: var(--sp-1) !important; }
