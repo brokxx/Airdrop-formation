@@ -172,6 +172,7 @@ void main() {
 `;
 
 function initFloatingLines(containerId, options) {
+  if (window.innerWidth <= 768) return;
   const container = document.getElementById(containerId);
   if (!container) return;
 
