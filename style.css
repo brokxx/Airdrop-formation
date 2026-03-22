@@ -618,6 +618,7 @@ body > nav {
   .hero-visual { min-height: 280px; }
   .hero-float-card { position: relative; top: auto; bottom: auto; left: auto; right: auto; width: 100% !important; transform: none !important; animation: none !important; }
   .hero-visual { flex-direction: column; gap: var(--sp-4); }
+  .hero-grid-bg { display: none; }
 }
 
 /* ═══════════════════════════════════════════

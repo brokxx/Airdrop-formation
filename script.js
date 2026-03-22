@@ -39,7 +39,8 @@ window.addEventListener('scroll', () => {
   const progress = (scrollTop / docHeight) * 100;
   scrollProgress.style.width = progress + '%';
 
-  // 3D parallax — only run if elements exist (main page)
+  // 3D parallax — skip on mobile and if elements don't exist
+  if (window.innerWidth <= 768) return;
   if (!heroGridBg && heroFloatCards.length === 0) return;
 
   const heroHeight = window.innerHeight;
@@ -356,7 +357,8 @@ glowCards.forEach(card => {
   }
   card.style.setProperty('--gradient-base', 'linear-gradient(' + colors[0] + ' 0 100%)');
 
-  // Mouse tracking
+  // Mouse tracking (desktop only)
+  if (window.innerWidth <= 768) return;
   card.addEventListener('pointermove', (e) => {
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;

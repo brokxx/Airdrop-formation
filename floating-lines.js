@@ -223,12 +223,21 @@ function initFloatingLines(containerId, options) {
     return new THREE.Vector3(r, g, b);
   }
 
+  var isMobile = window.innerWidth <= 768;
+
+  // On mobile: reduce waves for performance
+  if (isMobile) {
+    opts.enabledWaves = ['middle', 'bottom'];
+    opts.interactive = false;
+    opts.parallax = false;
+  }
+
   var scene = new THREE.Scene();
   var camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
   camera.position.z = 1;
 
-  var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  var renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: false, powerPreference: 'low-power' });
+  renderer.setPixelRatio(isMobile ? 1 : Math.min(window.devicePixelRatio || 1, 2));
   renderer.domElement.style.width = '100%';
   renderer.domElement.style.height = '100%';
   container.appendChild(renderer.domElement);
