@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 05 — Les Plays du Moment | Airdrop Formation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">AF</a>
+    <ul class="nav-links">
+      <li><a href="module1.html">Cryptos</a></li>
+      <li><a href="module2.html">Investir</a></li>
+      <li><a href="module3.html">Airdrops</a></li>
+      <li><a href="module4.html">Onboarding</a></li>
+      <li><a href="module5.html" class="active">Plays</a></li>
+      <li><a href="module6.html">Stratégie</a></li>
+    </ul>
+    <div class="theme-toggle" id="themeToggle" role="button" aria-label="Basculer thème">
+      <span class="theme-toggle-icon moon">🌙</span>
+      <span class="theme-toggle-icon sun">☀️</span>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">☰</button>
+  </nav>
+
+  <!-- Module Hero -->
+  <section class="module-hero section">
+    <div class="container">
+      <a href="index.html" class="module-back reveal">← Retour au parcours</a>
+      <div class="module-badge reveal">Module 05</div>
+      <h1 class="reveal reveal-delay-1">Les <span class="accent">Plays</span> du Moment</h1>
+      <p class="module-subtitle reveal reveal-delay-2">Les opportunités actives à farmer maintenant. Sélectionnées et analysées pour toi.</p>
+    </div>
+  </section>
+
+  <!-- Plays Section -->
+  <section class="plays-section section" id="plays" style="padding-top: 0;">
+    <div class="container">
+      <div class="plays-header">
+        <div>
+          <div class="section-label reveal">Opportunités</div>
+          <h2 class="section-title reveal reveal-delay-1" style="margin-bottom: 0;">Sélection Curatée</h2>
+        </div>
+        <div class="plays-filters reveal reveal-delay-2">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="L1">L1</button>
+          <button class="filter-btn" data-filter="L2">L2</button>
+        </div>
+      </div>
+
+      <div class="plays-grid" id="playsGrid">
+
+        <!-- Card 1 — Hyperliquid 2.0 -->
+        <div class="border-glow-card reveal" data-glow data-category="L1">
+          <span class="edge-light"></span>
+          <div class="border-glow-inner">
+            <div class="play-card">
+              <div class="play-card-header">
+                <div class="play-card-identity">
+                  <div class="play-card-logo"><img src="HL symbol_light green.png" alt="Hyperliquid"></div>
+                  <div>
+                    <div class="play-card-name">Hyperliquid 2.0</div>
+                    <div class="play-card-category">L1 — DEX Perps</div>
+                  </div>
+                </div>
+                <div class="play-card-status"><span class="dot"></span> Actif</div>
+              </div>
+              <p class="play-card-desc">La plateforme qui a distribué 9 milliards $ prépare sa saison 2. Génère du volume sur le DEX perps et accumule des points pour le prochain airdrop.</p>
+              <div class="play-card-meta">
+                <div class="play-meta-item">
+                  <span class="play-meta-label">Coût</span>
+                  <span class="play-meta-value">~$50</span>
+                </div>
+                <div class="play-meta-item">
+                  <span class="play-meta-label">Difficulté</span>
+                  <span class="difficulty-badge intermediate">Intermédiaire</span>
+                </div>
+              </div>
+              <a href="hyperliquid.html" class="play-card-cta">Voir le Guide →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 — Trade[XYZ] -->
+        <div class="border-glow-card reveal reveal-delay-1" data-glow data-category="L1">
+          <span class="edge-light"></span>
+          <div class="border-glow-inner">
+            <div class="play-card">
+              <div class="play-card-header">
+                <div class="play-card-identity">
+                  <div class="play-card-logo"><img src="tradexyz.svg" alt="Trade[XYZ]"></div>
+                  <div>
+                    <div class="play-card-name">Trade[XYZ]</div>
+                    <div class="play-card-category">HIP-3 — sur Hyperliquid</div>
+                  </div>
+                </div>
+                <div class="play-card-status"><span class="dot"></span> Actif</div>
+              </div>
+              <p class="play-card-desc">Plateforme de trading construite sur Hyperliquid. Actions, indices, matières premières en perps. Farming 2 en 1 : chaque trade compte pour Hyperliquid et Trade[XYZ].</p>
+              <div class="play-card-meta">
+                <div class="play-meta-item">
+                  <span class="play-meta-label">Coût</span>
+                  <span class="play-meta-value">~$50</span>
+                </div>
+                <div class="play-meta-item">
+                  <span class="play-meta-label">Difficulté</span>
+                  <span class="difficulty-badge intermediate">Intermédiaire</span>
+                </div>
+              </div>
+              <a href="tradexyz.html" class="play-card-cta">Voir le Guide →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 — Ink -->
+        <div class="border-glow-card reveal reveal-delay-2" data-glow data-category="L2">
+          <span class="edge-light"></span>
+          <div class="border-glow-inner">
+            <div class="play-card">
+              <div class="play-card-header">
+                <div class="play-card-identity">
+                  <div class="play-card-logo"><img src="nado.avif" alt="Ink"></div>
+                  <div>
+                    <div class="play-card-name">Ink</div>
+                    <div class="play-card-category">L2 — by Kraken</div>
+                  </div>
+                </div>
+                <div class="play-card-status"><span class="dot"></span> Actif</div>
+              </div>
+              <p class="play-card-desc">Layer 2 développé par Kraken, l'un des plus grands exchanges. Bridge des fonds, utilise les dApps natives et accumule de l'activité on-chain.</p>
+              <div class="play-card-meta">
+                <div class="play-meta-item">
+                  <span class="play-meta-label">Coût</span>
+                  <span class="play-meta-value">~$20</span>
+                </div>
+                <div class="play-meta-item">
+                  <span class="play-meta-label">Difficulté</span>
+                  <span class="difficulty-badge beginner">Débutant</span>
+                </div>
+              </div>
+              <a href="#" class="play-card-cta">Voir le Guide →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 — MegaETH -->
+        <div class="border-glow-card reveal reveal-delay-3" data-glow data-category="L2">
+          <span class="edge-light"></span>
+          <div class="border-glow-inner">
+            <div class="play-card">
+              <div class="play-card-header">
+                <div class="play-card-identity">
+                  <div class="play-card-logo">⚡</div>
+                  <div>
+                    <div class="play-card-name">MegaETH</div>
+                    <div class="play-card-category">L2 Ultra-rapide</div>
+                  </div>
+                </div>
+                <div class="play-card-status"><span class="dot"></span> Actif</div>
+              </div>
+              <p class="play-card-desc">Layer 2 Ethereum visant le temps réel. Testnet disponible — utilise le bridge et les dApps natives pour accumuler de l'activité.</p>
+              <div class="play-card-meta">
+                <div class="play-meta-item">
+                  <span class="play-meta-label">Coût</span>
+                  <span class="play-meta-value">Gratuit</span>
+                </div>
+                <div class="play-meta-item">
+                  <span class="play-meta-label">Difficulté</span>
+                  <span class="difficulty-badge beginner">Débutant</span>
+                </div>
+              </div>
+              <a href="#" class="play-card-cta">Voir le Guide →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Module CTA Footer -->
+      <div class="module-cta-footer reveal">
+        <h3>Prêt pour le prochain module ?</h3>
+        <p>Tu connais les plays. Découvrons comment optimiser ta stratégie de farming.</p>
+        <div class="cta-buttons">
+          <a href="module6.html" class="btn-primary">Module Suivant : Stratégie →</a>
+          <a href="index.html" class="btn-secondary">← Retour au parcours</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Formation créée avec ❤️ pour la communauté crypto francophone</p>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="module1.html">Cryptos</a>
+        <a href="module3.html">Airdrops</a>
+        <a href="module5.html">Plays</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Scroll Progress Bar ── */
+    (function () {
+      const bar = document.getElementById('scrollProgress');
+      window.addEventListener('scroll', function () {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        bar.style.width = progress + '%';
+      }, { passive: true });
+    })();
+
+    /* ── Theme Toggle ── */
+    (function () {
+      const toggle = document.getElementById('themeToggle');
+      const root = document.documentElement;
+      const stored = localStorage.getItem('theme');
+      if (stored) root.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', function () {
+        const current = root.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    })();
+
+    /* ── Mobile Nav Hamburger ── */
+    (function () {
+      const hamburger = document.getElementById('navHamburger');
+      const nav = document.getElementById('nav');
+      hamburger.addEventListener('click', function () {
+        nav.classList.toggle('open');
+      });
+      nav.querySelectorAll('.nav-links a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('open');
+        });
+      });
+    })();
+
+    /* ── Scroll Reveal with IntersectionObserver ── */
+    (function () {
+      var reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        reveals.forEach(function (el) { observer.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('visible'); });
+      }
+    })();
+
+    /* ── Play Card Filters ── */
+    (function () {
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      var playCardWrappers = document.querySelectorAll('#playsGrid > .border-glow-card');
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          var filter = btn.getAttribute('data-filter');
+
+          playCardWrappers.forEach(function (wrapper) {
+            var cat = wrapper.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              wrapper.style.display = '';
+              wrapper.style.opacity = '0';
+              requestAnimationFrame(function () {
+                wrapper.style.transition = 'opacity 400ms cubic-bezier(0.16, 1, 0.3, 1)';
+                wrapper.style.opacity = '1';
+              });
+            } else {
+              wrapper.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+
+    /* ── Border Glow — Mouse tracking ── */
+    (function () {
+      function getCenterOfElement(el) {
+        var rect = el.getBoundingClientRect();
+        return [rect.width / 2, rect.height / 2];
+      }
+
+      function getEdgeProximity(el, x, y) {
+        var center = getCenterOfElement(el);
+        var cx = center[0], cy = center[1];
+        var dx = x - cx;
+        var dy = y - cy;
+        var kx = Infinity, ky = Infinity;
+        if (dx !== 0) kx = cx / Math.abs(dx);
+        if (dy !== 0) ky = cy / Math.abs(dy);
+        return Math.min(Math.max(1 / Math.min(kx, ky), 0), 1);
+      }
+
+      function getCursorAngle(el, x, y) {
+        var center = getCenterOfElement(el);
+        var cx = center[0], cy = center[1];
+        var dx = x - cx;
+        var dy = y - cy;
+        if (dx === 0 && dy === 0) return 0;
+        var degrees = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+        if (degrees < 0) degrees += 360;
+        return degrees;
+      }
+
+      function parseHSL(hslStr) {
+        var match = hslStr.match(/([\d.]+)\s*([\d.]+)%?\s*([\d.]+)%?/);
+        if (!match) return { h: 42, s: 97, l: 48 };
+        return { h: parseFloat(match[1]), s: parseFloat(match[2]), l: parseFloat(match[3]) };
+      }
+
+      function buildGlowVars(glowColor, intensity) {
+        var parsed = parseHSL(glowColor);
+        var h = parsed.h, s = parsed.s, l = parsed.l;
+        var base = h + 'deg ' + s + '% ' + l + '%';
+        var opacities = [100, 60, 50, 40, 30, 20, 10];
+        var keys = ['', '-60', '-50', '-40', '-30', '-20', '-10'];
+        var vars = {};
+        for (var i = 0; i < opacities.length; i++) {
+          vars['--glow-color' + keys[i]] = 'hsl(' + base + ' / ' + Math.min(opacities[i] * intensity, 100) + '%)';
+        }
+        return vars;
+      }
+
+      var glowCards = document.querySelectorAll('[data-glow]');
+      var glowColor = '42 97 48';
+      var glowIntensity = 1.0;
+      var glowVars = buildGlowVars(glowColor, glowIntensity);
+
+      glowCards.forEach(function (card) {
+        // Apply glow color vars
+        Object.entries(glowVars).forEach(function (entry) {
+          card.style.setProperty(entry[0], entry[1]);
+        });
+
+        // Apply gradient vars matching color palette
+        var colors = ['#efa905', '#92723a', '#43bfff'];
+        var positions = ['80% 55%', '69% 34%', '8% 6%', '41% 38%', '86% 85%', '82% 18%', '51% 4%'];
+        var gradKeys = ['--gradient-one', '--gradient-two', '--gradient-three', '--gradient-four', '--gradient-five', '--gradient-six', '--gradient-seven'];
+        var colorMap = [0, 1, 2, 0, 1, 2, 1];
+
+        for (var i = 0; i < 7; i++) {
+          var c = colors[Math.min(colorMap[i], colors.length - 1)];
+          card.style.setProperty(gradKeys[i], 'radial-gradient(at ' + positions[i] + ', ' + c + ' 0px, transparent 50%)');
+        }
+        card.style.setProperty('--gradient-base', 'linear-gradient(' + colors[0] + ' 0 100%)');
+
+        // Mouse tracking (desktop only)
+        if (window.innerWidth <= 768) return;
+        card.addEventListener('pointermove', function (e) {
+          var rect = card.getBoundingClientRect();
+          var x = e.clientX - rect.left;
+          var y = e.clientY - rect.top;
+          var edge = getEdgeProximity(card, x, y);
+          var angle = getCursorAngle(card, x, y);
+          card.style.setProperty('--edge-proximity', (edge * 100).toFixed(3));
+          card.style.setProperty('--cursor-angle', angle.toFixed(3) + 'deg');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

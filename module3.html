@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 03 — Qu'est-ce que les Airdrops | Airdrop Formation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">AF</a>
+    <ul class="nav-links">
+      <li><a href="module1.html">Cryptos</a></li>
+      <li><a href="module2.html">Investir</a></li>
+      <li><a href="module3.html" class="active">Airdrops</a></li>
+      <li><a href="module4.html">Onboarding</a></li>
+      <li><a href="module5.html">Plays</a></li>
+      <li><a href="module6.html">Stratégie</a></li>
+    </ul>
+    <div class="theme-toggle" id="themeToggle" role="button" aria-label="Basculer thème clair/sombre">
+      <span class="theme-toggle-icon moon">🌙</span>
+      <span class="theme-toggle-icon sun">☀️</span>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">☰</button>
+  </nav>
+
+  <!-- Module Hero -->
+  <section class="module-hero section">
+    <div class="container">
+      <a href="index.html" class="module-back reveal">← Retour au parcours</a>
+      <div class="module-badge reveal">Module 03</div>
+      <h1 class="reveal reveal-delay-1">Qu'est-ce que les <span class="accent">Airdrops</span> ?</h1>
+      <p class="module-subtitle reveal reveal-delay-2">Comprendre le mécanisme de distribution de tokens et comment les protocoles récompensent leurs utilisateurs.</p>
+    </div>
+  </section>
+
+  <!-- Section 1 — Explain Cards (from existing site) -->
+  <section class="explain-section section">
+    <div class="container">
+      <div class="section-label reveal">Comprendre</div>
+      <h2 class="section-title reveal reveal-delay-1">C'est Quoi un Airdrop ?</h2>
+
+      <div class="explain-overlay" id="explainOverlay"></div>
+      <div class="explain-grid">
+        <!-- Card 1 -->
+        <div class="border-glow-card reveal reveal-delay-1" data-glow>
+          <span class="edge-light"></span>
+          <div class="border-glow-inner">
+            <button class="explain-close">✕</button>
+            <div class="explain-card" data-expandable>
+              <span class="explain-card-icon">🎯</span>
+              <h3>Comprendre les Airdrops</h3>
+              <div class="card-expand">
+                <p style="margin-top: var(--sp-4);">Recevoir 100 $, 1 000 $, ou même des centaines de milliers de dollars — sur un, voire plusieurs portefeuilles — simplement parce qu'on a utilisé une plateforme au bon moment ? C'est quelque chose qui arrive réellement en crypto. De l'argent magique ? Ce n'est pas aussi simple. Voyons ce que sont les airdrops.</p>
+                <p>Aujourd'hui, une grande partie des opportunités dans la crypto ne se trouve pas là où tout le monde regarde. La majorité des débutants pensent que gagner de l'argent passe forcément par le trading : acheter au bon moment, vendre au bon moment, analyser les graphiques… En réalité, ce n'est pas le seul chemin — et ce n'est clairement pas le plus accessible.</p>
+                <p>Ce que peu de gens savent encore, c'est qu'il existe une méthode beaucoup plus simple, structurée, et surtout reproductible : <strong>profiter des airdrops</strong> en utilisant certaines plateformes de manière stratégique.</p>
+                <p>Un airdrop, c'est une distribution gratuite de tokens faite par un projet crypto. Ces tokens ont une valeur réelle, car ils peuvent être revendus sur le marché. Les projets utilisent ce système pour attirer des utilisateurs, récompenser l'activité et créer une communauté. En d'autres termes, <strong>ils paient les gens pour utiliser leur plateforme.</strong> Imaginez recevoir un grand nombre d'actions Amazon simplement parce que vous avez été l'un des premiers à commander un produit. C'est exactement comme ça que fonctionnent les airdrops.</p>
+                <p>C'est là que se trouve l'opportunité.</p>
+                <p>Des plateformes comme <strong>Hyperliquid, Kinetiq</strong> et d'autres similaires sont des infrastructures de finance décentralisée (DeFi). Elles permettent notamment de trader des cryptomonnaies, d'ouvrir des positions, et de générer de l'activité financière.</p>
+                <p>Mais il faut être très clair dès le départ : <strong>nous ne sommes pas là pour apprendre à trader.</strong></p>
+                <p>Le trading demande des compétences, de l'expérience, et comporte un vrai risque de perte. Ce n'est pas l'objectif de cette formation. Nous utilisons ces plateformes pour une autre raison : <strong>leur système de récompense.</strong></p>
+                <p>Aujourd'hui, beaucoup de ces projets n'ont pas encore distribué leur token. Ils mettent donc en place des systèmes de points ou de tracking d'activité pour identifier les utilisateurs qui méritent d'être récompensés plus tard. Et c'est exactement ce qu'on exploite.</p>
+                <button class="explain-next-btn" data-next="1">Suite →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="border-glow-card reveal reveal-delay-2" data-glow>
+          <span class="edge-light"></span>
+          <div class="border-glow-inner">
+            <button class="explain-close">✕</button>
+            <div class="explain-card" data-expandable>
+              <span class="explain-card-icon">🔁</span>
+              <h3>Le Farming & les Récompenses</h3>
+              <div class="card-expand">
+                <p style="margin-top: var(--sp-4);">Le cœur de la méthode repose sur une chose simple : <strong>l'activité.</strong></p>
+                <p>Plus tu es actif sur une plateforme, plus tu es visible pour le projet. Et plus tu es visible, plus tu augmentes tes chances d'être récompensé lors d'un airdrop. Cette activité se mesure principalement par ce qu'on appelle <strong>le volume.</strong></p>
+                <p>Faire du volume, ça ne veut pas dire "parier" ou "prendre des risques inconsidérés". Ça signifie simplement effectuer des actions sur la plateforme : ouvrir et fermer des positions, interagir avec les fonctionnalités, générer du mouvement. L'objectif n'est pas de gagner de l'argent avec le trading lui-même, mais de <strong>créer un historique d'utilisation</strong> suffisamment important pour être considéré comme un utilisateur actif et légitime.</p>
+                <p>C'est exactement comme un programme de fidélité, mais à grande échelle.</p>
+                <p>La plupart de ces plateformes fonctionnent aujourd'hui avec des <strong>systèmes de points.</strong> Ces points ne valent rien immédiatement, mais ils représentent une part potentielle des futures récompenses. Plus tu utilises la plateforme, plus tu accumules ces points. Et surtout, plus tu génères de volume, plus ton "poids" dans la distribution finale sera important.</p>
+                <p>Quand le projet lance officiellement son token, <strong>ces points sont convertis en tokens réels.</strong> Et c'est à ce moment-là que l'argent est généré.</p>
+                <p>Certains utilisateurs ont déjà reçu, sur des projets similaires, des airdrops valant plusieurs centaines, voire <strong>plusieurs milliers d'euros</strong> — simplement pour avoir utilisé une plateforme régulièrement avant son lancement.</p>
+                <button class="explain-next-btn" data-next="2">Suite →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="border-glow-card reveal reveal-delay-3" data-glow>
+          <span class="edge-light"></span>
+          <div class="border-glow-inner">
+            <button class="explain-close">✕</button>
+            <div class="explain-card" data-expandable>
+              <span class="explain-card-icon">🚀</span>
+              <h3>L'Opportunité</h3>
+              <div class="card-expand">
+                <p style="margin-top: var(--sp-4);">Ce qui rend cette stratégie particulièrement intéressante aujourd'hui, c'est qu'elle reste encore <strong>largement sous-estimée.</strong> La majorité des gens sont focalisés sur le trading, les meme coins, les gains rapides. Très peu comprennent réellement la logique des airdrops, et encore moins savent comment les exploiter correctement.</p>
+                <p>Résultat : ceux qui maîtrisent cette approche se positionnent très tôt sur des projets, accumulent des points en silence, et récupèrent des récompenses importantes quand le projet décolle.</p>
+                <p>Dans de nombreux cas, les gains peuvent représenter des sommes très intéressantes : <strong>1 500 $, 3 000 $, 6 000 $, parfois même 10 000 $ ou plus</strong>, simplement pour avoir été actif au bon moment.</p>
+                <p>Un exemple marquant : l'airdrop de <strong>Hyperliquid</strong>. Les utilisateurs qui avaient farmé la plateforme ont reçu une allocation massive de tokens. Certains sont devenus millionnaires, simplement parce qu'ils avaient compris l'opportunité avant la majorité.</p>
+                <p>Cette méthode n'est pas magique. Mais contrairement au trading classique, <strong>le risque est beaucoup plus contrôlé.</strong> Tu ne dépends pas d'une prédiction de marché, tu ne cherches pas à battre le marché, tu suis une méthode structurée basée sur l'activité.</p>
+                <p>Dans cette formation, on va te montrer comment <strong>identifier les bonnes plateformes</strong> avant tout le monde, comprendre les systèmes de récompense, <strong>générer du volume de manière intelligente</strong>, et optimiser ton activité pour maximiser tes airdrops. Le tout avec une approche claire, structurée, et accessible, même si tu pars de zéro.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 — Process Flow (from existing site) -->
+      <div class="process-flow reveal">
+        <div class="process-step">
+          <div class="process-icon">🔗</div>
+          <span class="process-label">Connecte ton wallet</span>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step">
+          <div class="process-icon">🔄</div>
+          <span class="process-label">Utilise le protocole</span>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step">
+          <div class="process-icon">📸</div>
+          <span class="process-label">Snapshot pris</span>
+        </div>
+        <span class="process-arrow">→</span>
+        <div class="process-step">
+          <div class="process-icon">💰</div>
+          <span class="process-label">Reçois tes tokens</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 — Types d'Airdrops (NEW) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label reveal">Typologie</div>
+      <h2 class="section-title reveal reveal-delay-1">Les Différents Types d'Airdrops</h2>
+
+      <div class="vertical-steps">
+        <!-- Type 1 -->
+        <div class="v-step reveal">
+          <span class="step-num-bg">01</span>
+          <span class="step-icon">🔄</span>
+          <h3>Rétroactif</h3>
+          <p>Récompense l'usage passé du protocole sans annonce préalable.</p>
+          <div class="strategy-tags">
+            <span class="strategy-tag">Old School</span>
+            <span class="strategy-tag">High Value</span>
+          </div>
+        </div>
+
+        <div class="step-connector reveal">↓</div>
+
+        <!-- Type 2 -->
+        <div class="v-step reveal">
+          <span class="step-num-bg">02</span>
+          <span class="step-icon">📊</span>
+          <h3>Système de Points</h3>
+          <p>Actions quantifiables convertibles en jetons lors du TGE.</p>
+          <div class="strategy-tags">
+            <span class="strategy-tag">Tendance 2024</span>
+            <span class="strategy-tag">Linéaire</span>
+          </div>
+        </div>
+
+        <div class="step-connector reveal">↓</div>
+
+        <!-- Type 3 -->
+        <div class="v-step reveal">
+          <span class="step-num-bg">03</span>
+          <span class="step-icon">🎲</span>
+          <h3>Raffle (Loterie)</h3>
+          <p>Tirage au sort parmi les participants éligibles.</p>
+        </div>
+
+        <div class="step-connector reveal">↓</div>
+
+        <!-- Type 4 -->
+        <div class="v-step reveal">
+          <span class="step-num-bg">04</span>
+          <span class="step-icon">🪙</span>
+          <h3>Holder Airdrop</h3>
+          <p>Distribué aux détenteurs d'actifs spécifiques (TIA, SOL, etc).</p>
+        </div>
+
+        <div class="step-connector reveal">↓</div>
+
+        <!-- Type 5 -->
+        <div class="v-step reveal">
+          <span class="step-num-bg">05</span>
+          <span class="step-icon">📱</span>
+          <h3>Social Tasks</h3>
+          <p>Récompense les actions sur les réseaux sociaux.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 — Critères d'Éligibilité (NEW) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label reveal">Éligibilité</div>
+      <h2 class="section-title reveal reveal-delay-1">Les Critères d'Éligibilité</h2>
+      <p class="reveal reveal-delay-2" style="color: var(--on-surface-variant); font-size: var(--body-lg); line-height: 1.7; max-width: 700px; margin-bottom: var(--sp-10);">Les protocoles utilisent des filtres complexes pour éliminer les bots (Sybils) et récompenser les utilisateurs réels.</p>
+
+      <div class="detail-list">
+        <div class="detail-item reveal">
+          <div class="detail-icon gold">💸</div>
+          <div>
+            <h4>Volume de Transaction</h4>
+            <p>Le montant total échangé sur le protocole.</p>
+          </div>
+        </div>
+        <div class="detail-item reveal reveal-delay-1">
+          <div class="detail-icon gold">📅</div>
+          <div>
+            <h4>Ancienneté & Constance</h4>
+            <p>Activité sur plusieurs mois distincts.</p>
+          </div>
+        </div>
+        <div class="detail-item reveal reveal-delay-2">
+          <div class="detail-icon gold">🔀</div>
+          <div>
+            <h4>Diversité d'Actions</h4>
+            <p>Utilisation de plusieurs fonctionnalités du protocole.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-box reveal" style="margin-top: var(--sp-8);">
+        <span style="font-size:1.25rem;">💡</span>
+        <p>Ne cherchez pas à tricher. Les algorithmes anti-Sybil sont devenus extrêmement performants.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5 — Famous Examples (from existing site) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label reveal">Success Stories</div>
+      <h2 class="section-title reveal reveal-delay-1" style="font-size: var(--headline-md);">Exemples Célèbres</h2>
+      <div class="examples-row">
+        <div class="border-glow-card reveal reveal-delay-1" data-glow>
+          <span class="edge-light"></span>
+          <div class="border-glow-inner">
+            <div class="example-card">
+              <div style="font-size:2.5rem; margin-bottom: var(--sp-3);">💎</div>
+              <div class="example-name">Hyperliquid</div>
+              <div class="example-token">$HYPE</div>
+              <div class="example-value">9 Milliards $</div>
+              <div class="example-label">distribués à ~100K utilisateurs</div>
+            </div>
+          </div>
+        </div>
+        <div class="border-glow-card reveal reveal-delay-2" data-glow>
+          <span class="edge-light"></span>
+          <div class="border-glow-inner">
+            <div class="example-card">
+              <div style="font-size:2.5rem; margin-bottom: var(--sp-3);">🦄</div>
+              <div class="example-name">Uniswap</div>
+              <div class="example-token">$UNI</div>
+              <div class="example-value">~$20,000</div>
+              <div class="example-label">par wallet éligible</div>
+            </div>
+          </div>
+        </div>
+        <div class="border-glow-card reveal reveal-delay-3" data-glow>
+          <span class="edge-light"></span>
+          <div class="border-glow-inner">
+            <div class="example-card">
+              <div style="font-size:2.5rem; margin-bottom: var(--sp-3);">🔵</div>
+              <div class="example-name">Arbitrum</div>
+              <div class="example-token">$ARB</div>
+              <div class="example-value">~$2,000</div>
+              <div class="example-label">par wallet éligible</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Module CTA Footer -->
+  <section class="section">
+    <div class="container">
+      <div class="module-cta-footer reveal">
+        <h3>Prêt pour le prochain module ?</h3>
+        <p>Tu comprends maintenant les airdrops. Passons à la pratique : créer ton wallet et farmer.</p>
+        <div class="cta-buttons">
+          <a href="module4.html" class="btn-primary">Module Suivant : Onboarding →</a>
+          <a href="index.html" class="btn-secondary">← Retour au parcours</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Formation créée avec ❤️ pour la communauté crypto francophone</p>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="module1.html">Cryptos</a>
+        <a href="module2.html">Investir</a>
+        <a href="module3.html">Airdrops</a>
+        <a href="module4.html">Onboarding</a>
+        <a href="module5.html">Plays</a>
+        <a href="module6.html">Stratégie</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ═══════════════════════════════════════════
+       SCROLL REVEAL
+       ═══════════════════════════════════════════ */
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    /* ═══════════════════════════════════════════
+       SCROLL PROGRESS BAR
+       ═══════════════════════════════════════════ */
+    const scrollProgress = document.getElementById('scrollProgress');
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = progress + '%';
+    });
+
+    /* ═══════════════════════════════════════════
+       THEME TOGGLE
+       ═══════════════════════════════════════════ */
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+
+    /* ═══════════════════════════════════════════
+       MOBILE NAV
+       ═══════════════════════════════════════════ */
+    const navHamburger = document.getElementById('navHamburger');
+    const nav = document.getElementById('nav');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navHamburger.addEventListener('click', () => nav.classList.toggle('open'));
+    navLinks.forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
+
+    /* ═══════════════════════════════════════════
+       EXPANDABLE EXPLAIN CARDS — Clone zoom
+       ═══════════════════════════════════════════ */
+    const explainOverlay = document.getElementById('explainOverlay');
+    const explainGlowCards = document.querySelectorAll('.explain-grid .border-glow-card');
+    let zoomedClone = null;
+
+    function openExplainCard(glowCard) {
+      if (zoomedClone) return;
+
+      // Capture original position
+      const rect = glowCard.getBoundingClientRect();
+
+      // Clone the card
+      zoomedClone = glowCard.cloneNode(true);
+      zoomedClone.classList.remove('reveal', 'reveal-delay-1', 'reveal-delay-2', 'reveal-delay-3', 'visible');
+      zoomedClone.style.position = 'fixed';
+      zoomedClone.style.top = rect.top + 'px';
+      zoomedClone.style.left = rect.left + 'px';
+      zoomedClone.style.width = rect.width + 'px';
+      zoomedClone.style.height = rect.height + 'px';
+      zoomedClone.style.zIndex = '95';
+      zoomedClone.style.margin = '0';
+      zoomedClone.style.transition = 'top 500ms cubic-bezier(0.16, 1, 0.3, 1), left 500ms cubic-bezier(0.16, 1, 0.3, 1), width 500ms cubic-bezier(0.16, 1, 0.3, 1), height 500ms cubic-bezier(0.16, 1, 0.3, 1)';
+      document.body.appendChild(zoomedClone);
+
+      // Show overlay
+      explainOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      // Store original rect on clone for closing
+      zoomedClone._originRect = rect;
+      zoomedClone._sourceCard = glowCard;
+
+      // Animate to center on next frame
+      requestAnimationFrame(() => {
+        const targetW = Math.min(700, window.innerWidth * 0.9);
+        const targetTop = window.innerHeight * 0.1;
+        const targetLeft = (window.innerWidth - targetW) / 2;
+
+        zoomedClone.style.top = targetTop + 'px';
+        zoomedClone.style.left = targetLeft + 'px';
+        zoomedClone.style.width = targetW + 'px';
+        zoomedClone.style.height = 'auto';
+        zoomedClone.style.maxHeight = '80vh';
+        zoomedClone.style.overflowY = 'auto';
+        zoomedClone.classList.add('zoomed');
+      });
+
+      // Close button on clone
+      const closeBtn = zoomedClone.querySelector('.explain-close');
+      if (closeBtn) closeBtn.addEventListener('click', (e) => { e.stopPropagation(); closeExplainCard(); });
+
+      // Suite button on clone
+      const nextBtn = zoomedClone.querySelector('.explain-next-btn');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const nextIndex = parseInt(nextBtn.getAttribute('data-next'));
+          goToNextCard(nextIndex);
+        });
+      }
+    }
+
+    function closeExplainCard() {
+      if (!zoomedClone) return;
+      const clone = zoomedClone;
+      const origin = clone._originRect;
+
+      // Animate back
+      clone.classList.remove('zoomed');
+      clone.style.transition = 'top 400ms ease-in-out, left 400ms ease-in-out, width 400ms ease-in-out, height 400ms ease-in-out';
+      clone.style.top = origin.top + 'px';
+      clone.style.left = origin.left + 'px';
+      clone.style.width = origin.width + 'px';
+      clone.style.height = origin.height + 'px';
+      clone.style.overflowY = 'hidden';
+
+      explainOverlay.classList.remove('active');
+
+      setTimeout(() => {
+        if (clone.parentNode) clone.parentNode.removeChild(clone);
+        document.body.style.overflow = '';
+      }, 420);
+
+      zoomedClone = null;
+    }
+
+    function goToNextCard(nextIndex) {
+      if (!zoomedClone || nextIndex >= explainGlowCards.length) return;
+      const clone = zoomedClone;
+
+      // Remove clone immediately
+      if (clone.parentNode) clone.parentNode.removeChild(clone);
+      zoomedClone = null;
+      explainOverlay.classList.remove('active');
+
+      // Open the next card
+      openExplainCard(explainGlowCards[nextIndex]);
+    }
+
+    explainGlowCards.forEach(glowCard => {
+      const card = glowCard.querySelector('[data-expandable]');
+      card.addEventListener('click', (e) => {
+        if (zoomedClone) return;
+        e.stopPropagation();
+        openExplainCard(glowCard);
+      });
+    });
+
+    explainOverlay.addEventListener('click', closeExplainCard);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeExplainCard();
+    });
+
+    /* ═══════════════════════════════════════════
+       BORDER GLOW — Mouse tracking
+       ═══════════════════════════════════════════ */
+    function getCenterOfElement(el) {
+      const { width, height } = el.getBoundingClientRect();
+      return [width / 2, height / 2];
+    }
+
+    function getEdgeProximity(el, x, y) {
+      const [cx, cy] = getCenterOfElement(el);
+      const dx = x - cx;
+      const dy = y - cy;
+      let kx = Infinity, ky = Infinity;
+      if (dx !== 0) kx = cx / Math.abs(dx);
+      if (dy !== 0) ky = cy / Math.abs(dy);
+      return Math.min(Math.max(1 / Math.min(kx, ky), 0), 1);
+    }
+
+    function getCursorAngle(el, x, y) {
+      const [cx, cy] = getCenterOfElement(el);
+      const dx = x - cx;
+      const dy = y - cy;
+      if (dx === 0 && dy === 0) return 0;
+      let degrees = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+      if (degrees < 0) degrees += 360;
+      return degrees;
+    }
+
+    function parseHSL(hslStr) {
+      const match = hslStr.match(/([\d.]+)\s*([\d.]+)%?\s*([\d.]+)%?/);
+      if (!match) return { h: 42, s: 97, l: 48 };
+      return { h: parseFloat(match[1]), s: parseFloat(match[2]), l: parseFloat(match[3]) };
+    }
+
+    function buildGlowVars(glowColor, intensity) {
+      const { h, s, l } = parseHSL(glowColor);
+      const base = h + 'deg ' + s + '% ' + l + '%';
+      const opacities = [100, 60, 50, 40, 30, 20, 10];
+      const keys = ['', '-60', '-50', '-40', '-30', '-20', '-10'];
+      const vars = {};
+      for (let i = 0; i < opacities.length; i++) {
+        vars['--glow-color' + keys[i]] = 'hsl(' + base + ' / ' + Math.min(opacities[i] * intensity, 100) + '%)';
+      }
+      return vars;
+    }
+
+    // Initialize all glow cards
+    const glowCards = document.querySelectorAll('[data-glow]');
+    const glowColor = '42 97 48';
+    const glowIntensity = 1.0;
+    const glowVars = buildGlowVars(glowColor, glowIntensity);
+
+    glowCards.forEach(card => {
+      // Apply glow color vars
+      Object.entries(glowVars).forEach(([key, val]) => {
+        card.style.setProperty(key, val);
+      });
+
+      // Apply gradient vars matching our color palette
+      const colors = ['#efa905', '#92723a', '#43bfff'];
+      const positions = ['80% 55%', '69% 34%', '8% 6%', '41% 38%', '86% 85%', '82% 18%', '51% 4%'];
+      const gradKeys = ['--gradient-one', '--gradient-two', '--gradient-three', '--gradient-four', '--gradient-five', '--gradient-six', '--gradient-seven'];
+      const colorMap = [0, 1, 2, 0, 1, 2, 1];
+
+      for (let i = 0; i < 7; i++) {
+        const c = colors[Math.min(colorMap[i], colors.length - 1)];
+        card.style.setProperty(gradKeys[i], 'radial-gradient(at ' + positions[i] + ', ' + c + ' 0px, transparent 50%)');
+      }
+      card.style.setProperty('--gradient-base', 'linear-gradient(' + colors[0] + ' 0 100%)');
+
+      // Mouse tracking (desktop only)
+      if (window.innerWidth <= 768) return;
+      card.addEventListener('pointermove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const edge = getEdgeProximity(card, x, y);
+        const angle = getCursorAngle(card, x, y);
+        card.style.setProperty('--edge-proximity', (edge * 100).toFixed(3));
+        card.style.setProperty('--cursor-angle', angle.toFixed(3) + 'deg');
+      });
+    });
+  </script>
+</body>
+</html>

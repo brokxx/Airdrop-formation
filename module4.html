@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 04 — Onboarding | Airdrop Formation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">AF</a>
+    <ul class="nav-links">
+      <li><a href="module1.html">Cryptos</a></li>
+      <li><a href="module2.html">Investir</a></li>
+      <li><a href="module3.html">Airdrops</a></li>
+      <li><a href="module4.html" class="active">Onboarding</a></li>
+      <li><a href="module5.html">Plays</a></li>
+      <li><a href="module6.html">Stratégie</a></li>
+    </ul>
+    <div class="theme-toggle" id="themeToggle" role="button" aria-label="Basculer thème clair/sombre">
+      <span class="theme-toggle-icon moon">🌙</span>
+      <span class="theme-toggle-icon sun">☀️</span>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">☰</button>
+  </nav>
+
+  <!-- Module Hero -->
+  <section class="module-hero section">
+    <div class="container">
+      <a href="index.html" class="module-back reveal">← Retour au parcours</a>
+      <div class="module-badge reveal">Module 04</div>
+      <h1 class="reveal reveal-delay-1">Onboarding : <span class="accent">Tes Premiers Pas</span></h1>
+      <p class="module-subtitle reveal reveal-delay-2">Crée ton wallet, obtiens des fonds et farme ton premier airdrop. On t'accompagne étape par étape.</p>
+    </div>
+  </section>
+
+  <!-- Onboarding Section — Step Accordions with Progress Track -->
+  <section class="onboarding-section section">
+    <div class="container">
+      <div class="section-label reveal">Pratique</div>
+      <h2 class="section-title reveal reveal-delay-1">Guide Étape par Étape</h2>
+
+      <div class="onboarding-layout reveal">
+        <!-- Progress Track (left sidebar) -->
+        <div class="progress-track" id="progressTrack">
+          <div class="progress-line"></div>
+          <div class="progress-line-fill" id="progressLineFill"></div>
+          <div class="progress-node active" data-step="0">
+            1
+            <span class="progress-node-label">Wallet</span>
+          </div>
+          <div class="progress-node" data-step="1">
+            2
+            <span class="progress-node-label">Fonds</span>
+          </div>
+          <div class="progress-node" data-step="2">
+            3
+            <span class="progress-node-label">Farmer</span>
+          </div>
+        </div>
+
+        <!-- Step Accordions (right content) -->
+        <div class="steps-container" id="stepsContainer">
+
+          <!-- Step 1: Créer ton Wallet -->
+          <div class="step-accordion active open" data-step="0">
+            <div class="step-header">
+              <div class="step-number">1</div>
+              <div class="step-title">Créer ton Wallet</div>
+              <span class="step-chevron">▼</span>
+            </div>
+            <div class="step-body">
+              <div class="step-content">
+                <p>Un wallet (portefeuille) crypto est ton identité sur la blockchain. C'est comme un compte bancaire décentralisé que toi seul contrôles. Le wallet le plus populaire pour débuter est <strong>MetaMask</strong>.</p>
+
+                <div class="substeps">
+                  <div class="substep">
+                    <span class="substep-num">1</span>
+                    <span class="substep-text">Rends-toi sur <strong>metamask.io</strong> et installe l'extension pour ton navigateur (Chrome, Firefox, Brave).</span>
+                  </div>
+                  <div class="substep">
+                    <span class="substep-num">2</span>
+                    <span class="substep-text">Clique sur <strong>"Créer un nouveau portefeuille"</strong> et choisis un mot de passe solide.</span>
+                  </div>
+                  <div class="substep">
+                    <span class="substep-num">3</span>
+                    <span class="substep-text">MetaMask te donne une <strong>seed phrase de 12 mots</strong>. C'est la clé maîtresse de ton wallet.</span>
+                  </div>
+                  <div class="substep">
+                    <span class="substep-num">4</span>
+                    <span class="substep-text">Note ta seed phrase sur papier et range-la dans un endroit sûr. <strong>Confirme-la</strong> pour finaliser la création.</span>
+                  </div>
+                </div>
+
+                <div class="warning-box">
+                  <span style="font-size:1.25rem;">⚠️</span>
+                  <p>Ne partage <strong>JAMAIS</strong> ta seed phrase. Personne de légitime ne te la demandera. Si tu la perds, tu perds l'accès à tes fonds définitivement. Ne la stocke pas en photo ou dans un fichier texte sur ton ordinateur.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Obtenir des Fonds -->
+          <div class="step-accordion" data-step="1">
+            <div class="step-header">
+              <div class="step-number">2</div>
+              <div class="step-title">Obtenir des Fonds</div>
+              <span class="step-chevron">▼</span>
+            </div>
+            <div class="step-body">
+              <div class="step-content">
+                <p>Pour interagir avec la plupart des protocoles, tu auras besoin d'un peu de crypto pour payer les frais de transaction (gas). Voici comment t'approvisionner :</p>
+
+                <div class="substeps">
+                  <div class="substep">
+                    <span class="substep-num">1</span>
+                    <span class="substep-text">Crée un compte sur un exchange comme <strong>Binance, Coinbase ou Bybit</strong>. Complète la vérification d'identité (KYC).</span>
+                  </div>
+                  <div class="substep">
+                    <span class="substep-num">2</span>
+                    <span class="substep-text">Achète de l'<strong>ETH (Ethereum)</strong> par carte bancaire ou virement. C'est la crypto la plus utilisée pour les airdrops.</span>
+                  </div>
+                  <div class="substep">
+                    <span class="substep-num">3</span>
+                    <span class="substep-text">Envoie tes ETH vers ton wallet MetaMask. Copie ton adresse MetaMask (commence par <strong>0x...</strong>) et utilise-la comme adresse de retrait sur l'exchange.</span>
+                  </div>
+                </div>
+
+                <div class="tip-box">
+                  <span style="font-size:1.25rem;">💡</span>
+                  <p><strong>Conseil :</strong> Pour les testnets gratuits (Monad, MegaETH), tu n'as pas besoin d'acheter de crypto. Utilise les faucets du testnet pour obtenir des tokens de test gratuitement.</p>
+                </div>
+
+                <p style="margin-top: var(--sp-4);"><strong>Les Bridges :</strong> Un bridge te permet d'envoyer tes tokens d'une blockchain à une autre. Par exemple, pour utiliser Berachain, tu devras "bridge" tes ETH depuis Ethereum vers Berachain via le bridge officiel du projet.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Farmer ton Premier Airdrop -->
+          <div class="step-accordion" data-step="2">
+            <div class="step-header">
+              <div class="step-number">3</div>
+              <div class="step-title">Farmer ton Premier Airdrop</div>
+              <span class="step-chevron">▼</span>
+            </div>
+            <div class="step-body">
+              <div class="step-content">
+                <p>On va prendre <strong>Monad</strong> comme premier exemple — c'est gratuit et parfait pour débuter. Voici comment te positionner :</p>
+
+                <div class="substeps">
+                  <div class="substep">
+                    <span class="substep-num">1</span>
+                    <span class="substep-text">Ajoute le réseau <strong>Monad Testnet</strong> à MetaMask. Va dans les paramètres réseau et ajoute le RPC du testnet Monad (disponible sur leur documentation officielle).</span>
+                  </div>
+                  <div class="substep">
+                    <span class="substep-num">2</span>
+                    <span class="substep-text">Utilise le <strong>faucet Monad</strong> pour recevoir des tokens de test gratuits. Rejoins leur Discord pour accéder au faucet.</span>
+                  </div>
+                  <div class="substep">
+                    <span class="substep-num">3</span>
+                    <span class="substep-text">Interagis avec les <strong>dApps de l'écosystème</strong> : fais des swaps sur les DEX natifs, fournis de la liquidité, mint des NFTs. Plus tu es actif, plus tu seras potentiellement récompensé.</span>
+                  </div>
+                  <div class="substep">
+                    <span class="substep-num">4</span>
+                    <span class="substep-text">Sois <strong>régulier</strong>. Reviens chaque semaine pour effectuer des transactions. La régularité est un critère important pour l'éligibilité aux airdrops.</span>
+                  </div>
+                </div>
+
+                <div class="tip-box">
+                  <span style="font-size:1.25rem;">🎯</span>
+                  <p><strong>Stratégie :</strong> Les projets récompensent la qualité ET la régularité. Mieux vaut faire 2-3 transactions par semaine pendant 3 mois que 50 transactions en un jour. Diversifie tes interactions : swap, LP, bridge, governance, NFT.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Module CTA Footer -->
+  <section class="section">
+    <div class="container">
+      <div class="module-cta-footer reveal">
+        <h3>Prêt pour le prochain module ?</h3>
+        <p>Tu es maintenant opérationnel. Découvrons les plays du moment à farmer.</p>
+        <div class="cta-buttons">
+          <a href="module5.html" class="btn-primary">Module Suivant : Plays →</a>
+          <a href="index.html" class="btn-secondary">← Retour au parcours</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Formation créée avec ❤️ pour la communauté crypto francophone</p>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="module1.html">Cryptos</a>
+        <a href="module2.html">Investir</a>
+        <a href="module3.html">Airdrops</a>
+        <a href="module4.html">Onboarding</a>
+        <a href="module5.html">Plays</a>
+        <a href="module6.html">Stratégie</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ═══════════════════════════════════════════
+       SCROLL REVEAL
+       ═══════════════════════════════════════════ */
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    /* ═══════════════════════════════════════════
+       SCROLL PROGRESS BAR
+       ═══════════════════════════════════════════ */
+    const scrollProgress = document.getElementById('scrollProgress');
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = progress + '%';
+    });
+
+    /* ═══════════════════════════════════════════
+       THEME TOGGLE
+       ═══════════════════════════════════════════ */
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+
+    /* ═══════════════════════════════════════════
+       MOBILE NAV
+       ═══════════════════════════════════════════ */
+    const navHamburger = document.getElementById('navHamburger');
+    const nav = document.getElementById('nav');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navHamburger.addEventListener('click', () => nav.classList.toggle('open'));
+    navLinks.forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
+
+    /* ═══════════════════════════════════════════
+       ACCORDION + PROGRESS TRACK LOGIC
+       ═══════════════════════════════════════════ */
+    const stepsContainer = document.getElementById('stepsContainer');
+    const accordions = stepsContainer.querySelectorAll('.step-accordion');
+    const progressNodes = document.querySelectorAll('.progress-node');
+    const progressLineFill = document.getElementById('progressLineFill');
+
+    function updateProgressTrack(activeIndex) {
+      // Update progress nodes
+      progressNodes.forEach((node, i) => {
+        node.classList.remove('active', 'completed');
+        if (i < activeIndex) {
+          node.classList.add('completed');
+        } else if (i === activeIndex) {
+          node.classList.add('active');
+        }
+      });
+
+      // Update progress line fill
+      const totalSteps = progressNodes.length;
+      if (totalSteps > 1) {
+        const fillPercent = (activeIndex / (totalSteps - 1)) * 100;
+        progressLineFill.style.height = fillPercent + '%';
+      }
+    }
+
+    function openAccordion(index) {
+      accordions.forEach((acc, i) => {
+        if (i === index) {
+          acc.classList.add('open', 'active');
+        } else {
+          acc.classList.remove('open', 'active');
+          // Mark previous steps as completed
+          if (i < index) {
+            acc.classList.add('completed');
+          } else {
+            acc.classList.remove('completed');
+          }
+        }
+      });
+      updateProgressTrack(index);
+    }
+
+    // Click on accordion headers
+    accordions.forEach((acc, i) => {
+      const header = acc.querySelector('.step-header');
+      header.addEventListener('click', () => {
+        // If clicking an already open accordion, close it
+        if (acc.classList.contains('open')) {
+          acc.classList.remove('open');
+        } else {
+          openAccordion(i);
+        }
+      });
+    });
+
+    // Click on progress nodes
+    progressNodes.forEach((node, i) => {
+      node.addEventListener('click', () => {
+        openAccordion(i);
+        // Scroll to the accordion
+        const targetAccordion = accordions[i];
+        if (targetAccordion) {
+          targetAccordion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Initialize: Step 1 open by default
+    updateProgressTrack(0);
+  </script>
+</body>
+</html>

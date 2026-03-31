@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 02 — Placer ses Premiers Sous | Airdrop Formation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">AF</a>
+    <ul class="nav-links">
+      <li><a href="module1.html">Cryptos</a></li>
+      <li><a href="module2.html" class="active">Investir</a></li>
+      <li><a href="module3.html">Airdrops</a></li>
+      <li><a href="module4.html">Onboarding</a></li>
+      <li><a href="module5.html">Plays</a></li>
+      <li><a href="module6.html">Stratégie</a></li>
+    </ul>
+    <div class="theme-toggle" id="themeToggle" role="button" aria-label="Basculer theme clair/sombre">
+      <span class="theme-toggle-icon moon">🌙</span>
+      <span class="theme-toggle-icon sun">☀️</span>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">☰</button>
+  </nav>
+
+  <!-- ═══════════════ MODULE HERO ═══════════════ -->
+  <section class="module-hero section">
+    <div class="container">
+      <a href="index.html" class="module-back reveal">← Retour au parcours</a>
+      <div class="module-badge reveal">Module 02</div>
+      <h1 class="reveal reveal-delay-1">Placer ses <span class="accent">Premiers Sous</span></h1>
+      <p class="module-subtitle reveal reveal-delay-2">Le passage à l'action. Apprends à transformer tes euros en actifs numériques en toute sécurité.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ STEPS ═══════════════ -->
+  <section class="section" id="steps">
+    <div class="container">
+      <div class="onboarding-layout">
+
+        <!-- Progress track with 5 nodes -->
+        <div class="progress-track" id="progressTrack">
+          <div class="progress-line"></div>
+          <div class="progress-line-fill" id="progressFill"></div>
+          <div class="progress-node active" data-step="0">1<span class="progress-node-label">Acheter</span></div>
+          <div class="progress-node" data-step="1">2<span class="progress-node-label">Exchange</span></div>
+          <div class="progress-node" data-step="2">3<span class="progress-node-label">Transférer</span></div>
+          <div class="progress-node" data-step="3">4<span class="progress-node-label">Bridges</span></div>
+          <div class="progress-node" data-step="4">5<span class="progress-node-label">Sécurité</span></div>
+        </div>
+
+        <div class="steps-container">
+
+          <!-- Step 1 — Acheter ses premières cryptos -->
+          <div class="step-accordion open active" data-index="0">
+            <div class="step-header">
+              <div class="step-number">1</div>
+              <div class="step-title">Acheter ses premières cryptos</div>
+              <span class="step-chevron">▾</span>
+            </div>
+            <div class="step-body">
+              <div class="step-content">
+                <p>L'entrée dans l'écosystème commence par la <strong>rampe d'accès (On-Ramp)</strong>. C'est le moment où tu transformes tes euros en crypto pour la première fois. Deux options principales s'offrent à toi :</p>
+                <div class="substeps">
+                  <div class="substep">
+                    <div class="substep-num">1</div>
+                    <div class="substep-text"><strong>Virement SEPA</strong> — Frais minimes, délai de 24-48h. La méthode la plus économique.</div>
+                  </div>
+                  <div class="substep">
+                    <div class="substep-num">2</div>
+                    <div class="substep-text"><strong>Carte Bancaire</strong> — Instantané mais frais plus élevés (1.5-3%). Pratique pour commencer rapidement.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 — Choisir son exchange -->
+          <div class="step-accordion" data-index="1">
+            <div class="step-header">
+              <div class="step-number">2</div>
+              <div class="step-title">Choisir son exchange</div>
+              <span class="step-chevron">▾</span>
+            </div>
+            <div class="step-body">
+              <div class="step-content">
+                <p>Un exchange est une <strong>plateforme d'achat/vente de crypto</strong>. Choisis celui qui te convient en fonction de tes besoins et de ton niveau d'expérience.</p>
+                <div class="substeps">
+                  <div class="substep">
+                    <div class="substep-num">1</div>
+                    <div class="substep-text"><strong>Binance</strong> — Le plus grand exchange mondial. Large choix de cryptos, frais bas.</div>
+                  </div>
+                  <div class="substep">
+                    <div class="substep-num">2</div>
+                    <div class="substep-text"><strong>Coinbase</strong> — Interface simple, idéal pour les débutants. Régulé en Europe.</div>
+                  </div>
+                  <div class="substep">
+                    <div class="substep-num">3</div>
+                    <div class="substep-text"><strong>Bybit</strong> — Bon compromis entre fonctionnalités et simplicité. Bonus d'inscription réguliers.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 — Transférer vers MetaMask -->
+          <div class="step-accordion" data-index="2">
+            <div class="step-header">
+              <div class="step-number">3</div>
+              <div class="step-title">Transférer vers MetaMask</div>
+              <span class="step-chevron">▾</span>
+            </div>
+            <div class="step-body">
+              <div class="step-content">
+                <p>Une fois tes cryptos achetées, il faut les envoyer vers ton <strong>wallet personnel</strong> pour garder le contrôle. Voici les étapes :</p>
+                <div class="substeps">
+                  <div class="substep">
+                    <div class="substep-num">1</div>
+                    <div class="substep-text">Copie ton adresse MetaMask (commence par <strong>0x...</strong>)</div>
+                  </div>
+                  <div class="substep">
+                    <div class="substep-num">2</div>
+                    <div class="substep-text">Sur l'exchange, va dans <strong>"Retrait"</strong> et colle ton adresse</div>
+                  </div>
+                  <div class="substep">
+                    <div class="substep-num">3</div>
+                    <div class="substep-text">Choisis le bon réseau (<strong>Ethereum, Arbitrum, etc.</strong>)</div>
+                  </div>
+                  <div class="substep">
+                    <div class="substep-num">4</div>
+                    <div class="substep-text">Vérifie <strong>TOUJOURS</strong> l'adresse avant de confirmer</div>
+                  </div>
+                </div>
+                <div class="warning-box">
+                  <p>Une erreur d'adresse ou de réseau = fonds perdus définitivement. Fais un petit envoi test d'abord.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 — Comprendre les bridges -->
+          <div class="step-accordion" data-index="3">
+            <div class="step-header">
+              <div class="step-number">4</div>
+              <div class="step-title">Comprendre les bridges</div>
+              <span class="step-chevron">▾</span>
+            </div>
+            <div class="step-body">
+              <div class="step-content">
+                <p>Un bridge te permet d'envoyer tes tokens <strong>d'une blockchain à une autre</strong>. C'est un outil essentiel pour naviguer entre les différents réseaux.</p>
+                <div class="substeps">
+                  <div class="substep">
+                    <div class="substep-num">1</div>
+                    <div class="substep-text">Va sur le <strong>bridge officiel</strong> du réseau cible</div>
+                  </div>
+                  <div class="substep">
+                    <div class="substep-num">2</div>
+                    <div class="substep-text">Connecte ton wallet <strong>MetaMask</strong></div>
+                  </div>
+                  <div class="substep">
+                    <div class="substep-num">3</div>
+                    <div class="substep-text">Sélectionne la crypto et le <strong>montant à transférer</strong></div>
+                  </div>
+                  <div class="substep">
+                    <div class="substep-num">4</div>
+                    <div class="substep-text">Confirme la transaction et <strong>attends la finalisation</strong></div>
+                  </div>
+                </div>
+                <div class="tip-box">
+                  <p>Les bridges officiels sont toujours plus sûrs que les bridges tiers. Vérifie l'URL avant de connecter ton wallet.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5 — Sécurité -->
+          <div class="step-accordion" data-index="4">
+            <div class="step-header">
+              <div class="step-number">5</div>
+              <div class="step-title">Sécurité — Protéger ses fonds</div>
+              <span class="step-chevron">▾</span>
+            </div>
+            <div class="step-body">
+              <div class="step-content">
+                <p>La sécurité est un <strong>processus, pas un produit</strong>. Adopte ces réflexes dès le début pour protéger tes actifs.</p>
+                <div class="substeps">
+                  <div class="substep">
+                    <div class="substep-num">1</div>
+                    <div class="substep-text">Active le <strong>2FA</strong> (authentification à deux facteurs) sur tous tes comptes</div>
+                  </div>
+                  <div class="substep">
+                    <div class="substep-num">2</div>
+                    <div class="substep-text">Ne stocke <strong>JAMAIS</strong> ta seed phrase en ligne (pas de photo, pas de fichier texte)</div>
+                  </div>
+                  <div class="substep">
+                    <div class="substep-num">3</div>
+                    <div class="substep-text">Utilise un <strong>gestionnaire de mots de passe</strong></div>
+                  </div>
+                  <div class="substep">
+                    <div class="substep-num">4</div>
+                    <div class="substep-text">Méfie-toi des messages privés — <strong>personne de légitime ne te demandera ta seed phrase</strong></div>
+                  </div>
+                </div>
+                <div class="warning-box">
+                  <p>Les arnaques les plus courantes : faux airdrops demandant ta seed phrase, faux sites d'exchange, messages DM sur Discord/Telegram.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ MODULE CTA FOOTER ═══════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="module-cta-footer reveal">
+        <h3>Prêt pour le prochain module ?</h3>
+        <p>Tu sais maintenant acheter et sécuriser tes cryptos. Découvrons ce que sont les airdrops.</p>
+        <div class="cta-buttons">
+          <a href="module3.html" class="btn-primary">Module Suivant : Airdrops →</a>
+          <a href="index.html" class="btn-secondary">← Retour au parcours</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Formation créée avec ❤️ pour la communauté crypto francophone</p>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="module1.html">Cryptos</a>
+        <a href="module2.html">Investir</a>
+        <a href="module3.html">Airdrops</a>
+        <a href="module4.html">Onboarding</a>
+        <a href="module5.html">Plays</a>
+        <a href="module6.html">Stratégie</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ═══════════════════════════════════════════
+       SCROLL PROGRESS BAR
+       ═══════════════════════════════════════════ */
+    const scrollProgress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = progress + '%';
+    });
+
+    /* ═══════════════════════════════════════════
+       SCROLL REVEAL
+       ═══════════════════════════════════════════ */
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    /* ═══════════════════════════════════════════
+       THEME TOGGLE
+       ═══════════════════════════════════════════ */
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+
+    /* ═══════════════════════════════════════════
+       MOBILE NAV
+       ═══════════════════════════════════════════ */
+    const navHamburger = document.getElementById('navHamburger');
+    const nav = document.getElementById('nav');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navHamburger.addEventListener('click', () => nav.classList.toggle('open'));
+    navLinks.forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
+
+    /* ═══════════════════════════════════════════
+       ACCORDION STEPS
+       ═══════════════════════════════════════════ */
+    const accordions = document.querySelectorAll('.step-accordion');
+    const progressNodes = document.querySelectorAll('.progress-node');
+    const progressFill = document.getElementById('progressFill');
+
+    function setActiveStep(index) {
+      accordions.forEach((acc, i) => {
+        const isTarget = i === index;
+        acc.classList.toggle('open', isTarget);
+        acc.classList.remove('active', 'completed');
+        if (i < index) acc.classList.add('completed');
+        if (i === index) acc.classList.add('active');
+      });
+
+      progressNodes.forEach((node, i) => {
+        node.classList.remove('active', 'completed');
+        if (i < index) node.classList.add('completed');
+        if (i === index) node.classList.add('active');
+      });
+
+      // Fill progress line
+      const pct = (index / (accordions.length - 1)) * 100;
+      progressFill.style.height = pct + '%';
+    }
+
+    accordions.forEach((acc, i) => {
+      acc.querySelector('.step-header').addEventListener('click', () => setActiveStep(i));
+    });
+
+    progressNodes.forEach((node, i) => {
+      node.addEventListener('click', () => setActiveStep(i));
+    });
+  </script>
+</body>
+</html>

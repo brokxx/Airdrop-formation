@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 01 — Comprendre les Cryptos | Airdrop Formation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">AF</a>
+    <ul class="nav-links">
+      <li><a href="module1.html" class="active">Cryptos</a></li>
+      <li><a href="module2.html">Investir</a></li>
+      <li><a href="module3.html">Airdrops</a></li>
+      <li><a href="module4.html">Onboarding</a></li>
+      <li><a href="module5.html">Plays</a></li>
+      <li><a href="module6.html">Stratégie</a></li>
+    </ul>
+    <div class="theme-toggle" id="themeToggle" role="button" aria-label="Basculer thème">
+      <span class="theme-toggle-icon moon">🌙</span>
+      <span class="theme-toggle-icon sun">☀️</span>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">☰</button>
+  </nav>
+
+  <!-- Module Hero -->
+  <section class="module-hero section">
+    <div class="container">
+      <a href="index.html" class="module-back reveal">← Retour au parcours</a>
+      <div class="module-badge reveal">Module 01</div>
+      <h1 class="reveal reveal-delay-1">Comprendre les <span class="accent">Cryptos</span></h1>
+      <p class="module-subtitle reveal reveal-delay-2">Le guide essentiel pour maîtriser les fondamentaux de la blockchain et naviguer dans l'écosystème Web3.</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="bento-grid">
+
+        <!-- 1. Qu'est-ce qu'une blockchain ? -->
+        <div class="bento-card span-8 reveal">
+          <span class="card-icon">🔗</span>
+          <h3>Qu'est-ce qu'une blockchain ?</h3>
+          <p style="margin-bottom: var(--sp-6);">Imaginez un grand livre comptable numérique partagé entre des milliers d'ordinateurs. Chaque transaction est inscrite de manière indélébile.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4);">
+            <div class="info-box">
+              <h4>L'Analogie</h4>
+              <p>Comme un groupe WhatsApp où personne ne peut supprimer ses messages : tout est public et permanent.</p>
+            </div>
+            <div class="info-box">
+              <h4>La Puissance</h4>
+              <p>Pas besoin de banque centrale. C'est le réseau lui-même qui vérifie et sécurise les échanges.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Qu'est-ce qu'une crypto-monnaie ? -->
+        <div class="bento-card span-4 reveal reveal-delay-1">
+          <span class="card-icon">💰</span>
+          <h3>Qu'est-ce qu'une crypto-monnaie ?</h3>
+          <p style="margin-bottom: var(--sp-6);">Une unité de valeur numérique qui sert de carburant (Ethereum) ou de réserve de valeur (Bitcoin).</p>
+          <div style="display: flex; flex-direction: column; gap: var(--sp-3);">
+            <div style="display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-3) var(--sp-4); background: var(--surface-container-high); border-radius: 0.75rem;">
+              <span style="font-family: var(--font-display); font-weight: 800; font-size: var(--label-sm); color: var(--primary); text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap;">BITCOIN (BTC)</span>
+              <span style="color: var(--on-surface-variant); font-size: var(--label-sm);">— L'or numérique</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-3) var(--sp-4); background: var(--surface-container-high); border-radius: 0.75rem;">
+              <span style="font-family: var(--font-display); font-weight: 800; font-size: var(--label-sm); color: var(--tertiary); text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap;">ETHEREUM (ETH)</span>
+              <span style="color: var(--on-surface-variant); font-size: var(--label-sm);">— L'ordinateur mondial</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Les Wallets -->
+        <div class="bento-card span-6 reveal">
+          <span class="card-icon">👛</span>
+          <h3>Les Wallets</h3>
+          <p style="margin-bottom: var(--sp-6);">Votre porte d'entrée dans le Web3.</p>
+          <div class="detail-list">
+            <div class="detail-item">
+              <div class="detail-icon">🌐</div>
+              <div>
+                <h4>Adresse Publique</h4>
+                <p>Votre IBAN crypto. Partagez-la pour recevoir des fonds.</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon gold">🔑</div>
+              <div>
+                <h4>Clé Privée</h4>
+                <p>Votre code secret. Ne jamais la partager. Qui possède la clé possède les fonds.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. CEX vs DEX -->
+        <div class="bento-card span-6 reveal reveal-delay-1">
+          <span class="card-icon">⚖️</span>
+          <h3>CEX vs DEX</h3>
+          <p style="margin-bottom: var(--sp-6);">Où échanger vos cryptos ?</p>
+          <div class="compare-grid">
+            <div class="compare-item gold">
+              <h4>CEX</h4>
+              <p>Centralisé (ex : Binance). Facile à utiliser, mais ils gardent vos clés.</p>
+            </div>
+            <div class="compare-item">
+              <h4>DEX</h4>
+              <p>Décentralisé (ex : Uniswap). Vous gardez le contrôle total via votre wallet.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Layer 1 vs Layer 2 -->
+        <div class="bento-card span-5 accent-left reveal">
+          <span class="card-icon">🏗️</span>
+          <h3>Layer 1 vs Layer 2</h3>
+          <p>Le Layer 1 est la base (Ethereum). Le Layer 2 (Arbitrum, Optimism) est une autoroute construite au-dessus pour aller plus vite et moins cher.</p>
+        </div>
+
+        <!-- 6. Le Gas et les Frais -->
+        <div class="bento-card span-7 reveal reveal-delay-1">
+          <span class="card-icon">⛽</span>
+          <h3>Le Gas et les Frais</h3>
+          <p style="margin-bottom: var(--sp-6);">Pourquoi payons-nous ?</p>
+          <div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+            <div style="display: flex; align-items: flex-start; gap: var(--sp-4); padding: var(--sp-4); background: var(--surface-container-high); border-radius: 1rem;">
+              <span style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--primary); line-height: 1; flex-shrink: 0;">01</span>
+              <div>
+                <h4 style="font-family: var(--font-display); font-weight: 700; font-size: var(--body-lg); margin-bottom: var(--sp-1);">Rémunération</h4>
+                <p style="color: var(--on-surface-variant); font-size: var(--body-md); line-height: 1.6;">Payer les validateurs qui sécurisent le réseau.</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: var(--sp-4); padding: var(--sp-4); background: var(--surface-container-high); border-radius: 1rem;">
+              <span style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--primary); line-height: 1; flex-shrink: 0;">02</span>
+              <div>
+                <h4 style="font-family: var(--font-display); font-weight: 700; font-size: var(--body-lg); margin-bottom: var(--sp-1);">Anti-Spam</h4>
+                <p style="color: var(--on-surface-variant); font-size: var(--body-md); line-height: 1.6;">Empêcher la saturation du réseau.</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: var(--sp-4); padding: var(--sp-4); background: var(--surface-container-high); border-radius: 1rem;">
+              <span style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--primary); line-height: 1; flex-shrink: 0;">03</span>
+              <div>
+                <h4 style="font-family: var(--font-display); font-weight: 700; font-size: var(--body-lg); margin-bottom: var(--sp-1);">Priorité</h4>
+                <p style="color: var(--on-surface-variant); font-size: var(--body-md); line-height: 1.6;">Plus vous payez, plus c'est rapide.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Module CTA Footer -->
+      <div class="module-cta-footer reveal">
+        <h3>Prêt pour le prochain module ?</h3>
+        <p>Maintenant que tu maîtrises les bases, découvrons comment acheter tes premières cryptos.</p>
+        <div class="cta-buttons">
+          <a href="module2.html" class="btn-primary">Module Suivant : Investir →</a>
+          <a href="index.html" class="btn-secondary">← Retour au parcours</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Formation créée avec ❤️ pour la communauté crypto francophone</p>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="module1.html">Cryptos</a>
+        <a href="module3.html">Airdrops</a>
+        <a href="module5.html">Plays</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Scroll Progress Bar ── */
+    (function () {
+      const bar = document.getElementById('scrollProgress');
+      window.addEventListener('scroll', function () {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        bar.style.width = progress + '%';
+      }, { passive: true });
+    })();
+
+    /* ── Theme Toggle ── */
+    (function () {
+      const toggle = document.getElementById('themeToggle');
+      const root = document.documentElement;
+      const stored = localStorage.getItem('theme');
+      if (stored) root.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', function () {
+        const current = root.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    })();
+
+    /* ── Mobile Nav Hamburger ── */
+    (function () {
+      const hamburger = document.getElementById('navHamburger');
+      const nav = document.getElementById('nav');
+      hamburger.addEventListener('click', function () {
+        nav.classList.toggle('open');
+      });
+      // Close menu when a link is clicked
+      nav.querySelectorAll('.nav-links a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('open');
+        });
+      });
+    })();
+
+    /* ── Scroll Reveal with IntersectionObserver ── */
+    (function () {
+      var reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        reveals.forEach(function (el) { observer.observe(el); });
+      } else {
+        // Fallback: show all
+        reveals.forEach(function (el) { el.classList.add('visible'); });
+      }
+    })();
+  </script>
+
+</body>
+</html>
