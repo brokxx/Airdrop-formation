@@ -1,0 +1,151 @@
+/* ═══════════════════════════════════════════
+   CRYPTO DETAIL PAGES — Shared styles
+   (Bitcoin, Ethereum, Stablecoins)
+   ═══════════════════════════════════════════ */
+
+/* Sketch illustration container */
+.sketch-illustration {
+  display: flex;
+  justify-content: center;
+  margin: var(--sp-8) 0;
+}
+
+.sketch-illustration svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Sketch labels */
+.sketch-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+/* Crypto hero with symbol */
+.crypto-hero {
+  text-align: center;
+  margin-bottom: var(--sp-8);
+}
+
+.crypto-hero-symbol {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--sp-6);
+}
+
+.crypto-hero-title {
+  font-family: var(--font-display);
+  font-size: var(--display-lg);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: var(--sp-4);
+}
+
+.crypto-hero-subtitle {
+  font-size: var(--title-lg);
+  color: var(--on-surface-variant);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Pioneer list */
+.pioneer-list {
+  display: grid;
+  gap: var(--sp-3);
+  margin: var(--sp-6) 0;
+}
+
+.pioneer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--surface-container);
+  border: 1px solid var(--outline-variant);
+  border-radius: 10px;
+}
+
+.pioneer-item strong {
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.pioneer-item span {
+  color: var(--on-surface-variant);
+  font-size: var(--body-md);
+}
+
+/* Halving timeline */
+.halving-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-3);
+  margin: var(--sp-6) 0;
+}
+
+.halving-item {
+  text-align: center;
+  padding: var(--sp-4);
+  background: var(--surface-container);
+  border: 1px solid var(--outline-variant);
+  border-radius: 12px;
+  transition: border-color var(--duration-md) ease;
+}
+
+.halving-item:hover {
+  border-color: var(--primary);
+}
+
+.halving-year {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--title-md);
+  color: var(--primary);
+  margin-bottom: var(--sp-2);
+}
+
+.halving-reward {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--headline-md);
+  margin-bottom: var(--sp-1);
+}
+
+.halving-label {
+  font-size: var(--label-sm);
+  color: var(--on-surface-variant);
+}
+
+/* Gradient text inside crypto hero */
+.crypto-hero-title .gradient-text {
+    background: linear-gradient(135deg, var(--primary), var(--primary-fixed-dim));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Method card as link */
+a.method-card {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+}
+
+a.method-card:hover {
+    transform: translateY(-2px);
+    transition: transform var(--duration-md) ease;
+}
+
+@media (max-width: 768px) {
+  .halving-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .crypto-hero-title {
+    font-size: 2.25rem;
+  }
+}

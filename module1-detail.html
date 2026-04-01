@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 01 — Comprendre les Cryptos | Airdrop Formation</title>
+  <meta name="description" content="Plongée dans l'univers crypto : blockchain, smart contracts, wallets et cryptomonnaies expliqués en détail.">
+  <meta property="og:title" content="Module 01 — Comprendre les Cryptos | Airdrop Formation">
+  <meta property="og:description" content="Plongée dans l'univers crypto : blockchain, smart contracts, wallets et cryptomonnaies expliqués en détail.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23efa905'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='bold' fill='%231a1400' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="guide.css">
+  <link rel="stylesheet" href="module1-detail.css">
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="module1.html" class="nav-logo">← M01</a>
+    <ul class="nav-links">
+      <li><a href="#blockchain" class="active">Blockchain</a></li>
+      <li><a href="#crypto">Crypto</a></li>
+      <li><a href="#wallets">Wallets</a></li>
+      <li><a href="#cex-dex">Exchanges</a></li>
+      <li><a href="#layers">Layers</a></li>
+      <li><a href="#gas">Gas</a></li>
+      <li><a href="#orderbook">Ordres</a></li>
+      <li><a href="#liquidite">Liquidit&eacute;</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer de thème">
+      <span class="theme-toggle-icon moon">&#127769;</span>
+      <span class="theme-toggle-icon sun">&#9728;&#65039;</span>
+    </button>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <main>
+
+  <!-- Side Navigation (desktop) -->
+  <nav class="detail-sidenav" id="detailSidenav">
+    <a href="#blockchain" class="active">Blockchain</a>
+    <a href="#crypto">Crypto-monnaie</a>
+    <a href="#wallets">Wallets</a>
+    <a href="#cex-dex">CEX vs DEX</a>
+    <a href="#layers">Layer 1 vs 2</a>
+    <a href="#gas">Gas & Frais</a>
+    <a href="#orderbook">Carnet d'Ordres</a>
+    <a href="#liquidite">Liquidit&eacute;</a>
+  </nav>
+
+  <!-- ═══════════════ SECTION 1 — BLOCKCHAIN ═══════════════ -->
+  <section class="guide-section section" id="blockchain">
+    <div class="container">
+      <a href="module1.html" class="back-link reveal">&larr; Retour au Module 01</a>
+
+      <div class="section-label reveal">01</div>
+      <span class="detail-section-icon reveal">&#128279;</span>
+      <h2 class="section-title reveal">Qu'est-ce qu'une blockchain ?</h2>
+
+      <div class="guide-content reveal">
+        <p>Imaginez un grand livre comptable num&eacute;rique partag&eacute; entre des milliers d'ordinateurs. Chaque transaction est inscrite de mani&egrave;re ind&eacute;l&eacute;bile. Personne ne peut modifier ou supprimer une entr&eacute;e une fois qu'elle est enregistr&eacute;e.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">L'Analogie</div>
+          <p>Comme un groupe WhatsApp o&ugrave; personne ne peut supprimer ses messages : tout est public et permanent. Sauf qu'ici, c'est un registre financier partag&eacute; par des milliers de participants &agrave; travers le monde.</p>
+        </div>
+
+        <h3 class="guide-subtitle">Comment fonctionne la blockchain ?</h3>
+        <p>La blockchain est une <strong>cha&icirc;ne de blocs</strong> : chaque bloc contient un ensemble de transactions, et chaque nouveau bloc est li&eacute; au pr&eacute;c&eacute;dent par une empreinte cryptographique unique.</p>
+        <p>Ce qui la rend r&eacute;volutionnaire, c'est sa <strong>d&eacute;centralisation</strong>. Contrairement &agrave; une banque qui stocke vos donn&eacute;es sur un serveur central, la blockchain est copi&eacute;e sur des milliers d'ordinateurs appel&eacute;s <strong>n&oelig;uds</strong> (nodes). Si un seul n&oelig;ud est compromis, les autres continuent &agrave; fonctionner normalement.</p>
+        <p>Pour qu'une transaction soit ajout&eacute;e, elle doit &ecirc;tre <strong>valid&eacute;e par le r&eacute;seau</strong>. C'est ce qu'on appelle le m&eacute;canisme de consensus :</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#9935;&#65039;</span>
+            <div>
+              <strong>Proof of Work (PoW)</strong>
+              <p>Utilis&eacute; par Bitcoin. Des ordinateurs puissants r&eacute;solvent des calculs complexes pour valider les transactions. S&eacute;curis&eacute; mais &eacute;nergivore.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#129689;</span>
+            <div>
+              <strong>Proof of Stake (PoS)</strong>
+              <p>Utilis&eacute; par Ethereum. Les validateurs mettent en jeu (stake) leurs tokens pour participer. Plus &eacute;conome en &eacute;nergie et plus rapide.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="guide-subtitle">Au-del&agrave; des cryptomonnaies</h3>
+        <p>Une fois inscrite dans un bloc, une transaction est <strong>immuable</strong> : personne ne peut la modifier. C'est cette propri&eacute;t&eacute; qui fait de la blockchain un outil de confiance sans interm&eacute;diaire.</p>
+        <p>Au-del&agrave; des cryptomonnaies, la blockchain permet de cr&eacute;er des <strong>smart contracts</strong> (programmes autonomes), des <strong>NFTs</strong>, des applications de finance d&eacute;centralis&eacute;e (DeFi), et bien plus encore.</p>
+
+        <div class="next-section-link">
+          <a href="#crypto">Section suivante : Les crypto-monnaies &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 2 — CRYPTO-MONNAIE ═══════════════ -->
+  <section class="guide-section section" id="crypto">
+    <div class="container">
+      <div class="section-label reveal">02</div>
+      <span class="detail-section-icon reveal">&#128176;</span>
+      <h2 class="section-title reveal">Qu'est-ce qu'une crypto-monnaie ?</h2>
+
+      <div class="guide-content reveal">
+        <p>Une cryptomonnaie est une monnaie num&eacute;rique qui fonctionne sur une blockchain, sans banque ni gouvernement pour la contr&ocirc;ler. Sa valeur est d&eacute;termin&eacute;e par <strong>l'offre et la demande</strong> sur les plateformes d'&eacute;change.</p>
+
+        <div class="method-cards">
+          <a href="bitcoin.html" class="method-card">
+            <div class="method-header">
+              <span class="method-icon">&#129689;</span>
+              <h4>Bitcoin (BTC)</h4>
+            </div>
+            <p>La premi&egrave;re cryptomonnaie, cr&eacute;&eacute;e en 2009. Son offre est limit&eacute;e &agrave; <strong>21 millions d'unit&eacute;s</strong>, ce qui en fait un actif rare, souvent compar&eacute; &agrave; l'or.</p>
+            <span style="display:inline-flex;align-items:center;gap:var(--sp-2);margin-top:var(--sp-3);font-size:var(--label-sm);color:var(--primary);font-weight:600;">D&eacute;couvrir Bitcoin &rarr;</span>
+          </a>
+          <a href="ethereum.html" class="method-card">
+            <div class="method-header">
+              <span class="method-icon">&#9899;</span>
+              <h4>Ethereum (ETH)</h4>
+            </div>
+            <p>Bien plus qu'une monnaie : une plateforme pour cr&eacute;er des applications d&eacute;centralis&eacute;es gr&acirc;ce aux smart contracts.</p>
+            <span style="display:inline-flex;align-items:center;gap:var(--sp-2);margin-top:var(--sp-3);font-size:var(--label-sm);color:var(--primary);font-weight:600;">D&eacute;couvrir Ethereum &rarr;</span>
+          </a>
+          <a href="stablecoins.html" class="method-card">
+            <div class="method-header">
+              <span class="method-icon">&#128178;</span>
+              <h4>Les Stablecoins (USDT, USDC)</h4>
+            </div>
+            <p>Des cryptomonnaies index&eacute;es sur le dollar. Essentiels pour trader sans volatilit&eacute;.</p>
+            <span style="display:inline-flex;align-items:center;gap:var(--sp-2);margin-top:var(--sp-3);font-size:var(--label-sm);color:var(--primary);font-weight:600;">D&eacute;couvrir les Stablecoins &rarr;</span>
+          </a>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Le point cl&eacute;</div>
+          <p>Il existe des milliers de cryptomonnaies, chacune avec un cas d'usage sp&eacute;cifique : tokens de gouvernance, tokens utilitaires, meme coins... L'important est de comprendre que <strong>chaque token a une fonction dans son &eacute;cosyst&egrave;me</strong>.</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#wallets">Section suivante : Les Wallets &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 3 — WALLETS ═══════════════ -->
+  <section class="guide-section section" id="wallets">
+    <div class="container">
+      <div class="section-label reveal">03</div>
+      <span class="detail-section-icon reveal">&#128091;</span>
+      <h2 class="section-title reveal">Les Wallets</h2>
+
+      <div class="guide-content reveal">
+        <p>Un wallet (portefeuille) ne stocke pas r&eacute;ellement vos cryptos &mdash; il stocke vos <strong>cl&eacute;s</strong> qui prouvent que vous poss&eacute;dez des actifs sur la blockchain. C'est votre porte d'entr&eacute;e dans le Web3.</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#127760;</span>
+            <div>
+              <strong>Adresse Publique</strong>
+              <p>Votre IBAN crypto. Partagez-la pour recevoir des fonds. Elle est visible par tous sur la blockchain.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128273;</span>
+            <div>
+              <strong>Cl&eacute; Priv&eacute;e</strong>
+              <p>Votre code secret. Ne jamais la partager. Qui poss&egrave;de la cl&eacute; poss&egrave;de les fonds.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="guide-subtitle">Types de wallets</h3>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128293;</span>
+            <div>
+              <strong>Hot Wallets</strong>
+              <p>Connect&eacute;s &agrave; internet. Pratiques pour un usage quotidien. Exemples : MetaMask, Trust Wallet, Rabby. C'est ce que vous utiliserez pour les airdrops.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#10052;&#65039;</span>
+            <div>
+              <strong>Cold Wallets</strong>
+              <p>Hors ligne, ultra-s&eacute;curis&eacute;s. Exemples : Ledger, Trezor. Recommand&eacute;s pour stocker de grosses sommes sur le long terme.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">La Seed Phrase</div>
+          <p>Un ensemble de 12 ou 24 mots g&eacute;n&eacute;r&eacute;s &agrave; la cr&eacute;ation du wallet. C'est votre cl&eacute; ma&icirc;tresse : avec elle, n'importe qui peut acc&eacute;der &agrave; tous vos fonds depuis n'importe quel appareil.</p>
+        </div>
+
+        <h3 class="guide-subtitle">R&egrave;gles de s&eacute;curit&eacute; essentielles</h3>
+
+        <div class="strategy-box">
+          <div class="strategy-item">
+            <div class="strategy-num">1</div>
+            <div>
+              <strong>Jamais de capture d'&eacute;cran</strong>
+              <p>Ne faites jamais de screenshot de votre seed phrase.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">2</div>
+            <div>
+              <strong>Jamais en num&eacute;rique</strong>
+              <p>Ne la stockez pas dans un fichier, email ou cloud.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">3</div>
+            <div>
+              <strong>&Eacute;crivez-la sur papier</strong>
+              <p>Conservez-la en lieu s&ucirc;r, id&eacute;alement en double.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">4</div>
+            <div>
+              <strong>Ne jamais la partager</strong>
+              <p>M&ecirc;me si quelqu'un pr&eacute;tend &ecirc;tre du "support technique".</p>
+            </div>
+          </div>
+        </div>
+
+        <p>Dans le cadre des airdrops, vous utiliserez principalement <strong>MetaMask</strong>, le wallet le plus populaire pour les blockchains compatibles EVM (Ethereum, Arbitrum, Optimism, Base...).</p>
+
+        <div class="next-section-link">
+          <a href="#cex-dex">Section suivante : CEX vs DEX &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 4 — CEX vs DEX ═══════════════ -->
+  <section class="guide-section section" id="cex-dex">
+    <div class="container">
+      <div class="section-label reveal">04</div>
+      <span class="detail-section-icon reveal">&#9878;&#65039;</span>
+      <h2 class="section-title reveal">CEX vs DEX</h2>
+
+      <div class="guide-content reveal">
+        <p>Les plateformes d'&eacute;change sont les endroits o&ugrave; vous achetez, vendez et &eacute;changez des cryptomonnaies. Il en existe deux types fondamentaux.</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#127970;</span>
+            <div>
+              <strong>CEX &mdash; Centralized Exchange</strong>
+              <p>Binance, Coinbase, Kraken, Bybit. Fonctionnent comme une banque : vous cr&eacute;ez un compte, v&eacute;rifiez votre identit&eacute; (KYC), et elles gardent vos cryptos pour vous. Point d'entr&eacute;e le plus simple pour acheter de la crypto avec des euros.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128279;</span>
+            <div>
+              <strong>DEX &mdash; Decentralized Exchange</strong>
+              <p>Uniswap, Hyperliquid, Jupiter. Pas de compte &agrave; cr&eacute;er : vous connectez directement votre wallet. Personne ne peut geler vos fonds. Les &eacute;changes se font en peer-to-peer via des smart contracts.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hip-cards">
+          <div class="hip-card">
+            <h4>Avantages CEX</h4>
+            <p>Interface simple, support client, conversion fiat/crypto directe (virement SEPA, carte bancaire).</p>
+          </div>
+          <div class="hip-card">
+            <h4>Inconv&eacute;nients CEX</h4>
+            <p>Vos cl&eacute;s ne vous appartiennent pas ("not your keys, not your coins"), possibilit&eacute; de gel de compte, donn&eacute;es personnelles requises.</p>
+          </div>
+          <div class="hip-card">
+            <h4>Avantages DEX</h4>
+            <p>Contr&ocirc;le total, anonymat, acc&egrave;s &agrave; tous les tokens sans restriction g&eacute;ographique.</p>
+          </div>
+          <div class="hip-card">
+            <h4>Inconv&eacute;nients DEX</h4>
+            <p>Plus complexe &agrave; utiliser, frais de gas, pas de conversion fiat directe.</p>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Pour les airdrops</div>
+          <p><strong>Les DEX sont essentiels</strong> : c'est en utilisant des protocoles d&eacute;centralis&eacute;s que vous accumulez de l'activit&eacute; on-chain et que vous devenez &eacute;ligible aux distributions de tokens.</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#layers">Section suivante : Layer 1 vs Layer 2 &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 5 — LAYERS ═══════════════ -->
+  <section class="guide-section section" id="layers">
+    <div class="container">
+      <div class="section-label reveal">05</div>
+      <span class="detail-section-icon reveal">&#127959;&#65039;</span>
+      <h2 class="section-title reveal">Layer 1 vs Layer 2</h2>
+
+      <div class="guide-content reveal">
+        <p>Comprendre la diff&eacute;rence entre Layer 1 et Layer 2 est crucial pour naviguer dans l'&eacute;cosyst&egrave;me crypto et optimiser vos frais.</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#127961;&#65039;</span>
+            <div>
+              <strong>Layer 1 (L1)</strong>
+              <p>Les blockchains principales qui traitent et finalisent les transactions elles-m&ecirc;mes. Exemples : <strong>Ethereum, Solana, Avalanche, Bitcoin</strong>. S&eacute;curis&eacute;es mais peuvent &ecirc;tre lentes et co&ucirc;teuses quand le r&eacute;seau est congestionn&eacute;.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128640;</span>
+            <div>
+              <strong>Layer 2 (L2)</strong>
+              <p>R&eacute;seaux construits au-dessus d'un L1 pour le d&eacute;charger. Regroupent des centaines de transactions en un seul "paquet". R&eacute;sultat : <strong>10 &agrave; 100x moins cher</strong> et quasi instantan&eacute;.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="guide-subtitle">Les L2 populaires</h3>
+        <p><strong>Arbitrum, Optimism, Base</strong> (par Coinbase), <strong>zkSync, Scroll, Linea</strong> &mdash; tous construits sur Ethereum.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Comparaison des co&ucirc;ts</div>
+          <p>Une transaction sur Ethereum mainnet peut co&ucirc;ter <strong>5 &agrave; 50$</strong> en gas. La m&ecirc;me transaction sur Arbitrum ou Base co&ucirc;te souvent <strong>moins de 0.10$</strong>.</p>
+        </div>
+
+        <h3 class="guide-subtitle">Pourquoi c'est important pour les airdrops ?</h3>
+        <p>La plupart des L2 n'ont pas encore leur propre token, ou pr&eacute;parent de nouvelles distributions. Arbitrum a distribu&eacute; $ARB, Optimism a distribu&eacute; $OP. <strong>Les prochains L2 &agrave; lancer leur token repr&eacute;sentent des opportunit&eacute;s majeures.</strong></p>
+
+        <div class="next-section-link">
+          <a href="#gas">Section suivante : Le Gas et les Frais &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 6 — GAS ═══════════════ -->
+  <section class="guide-section section" id="gas">
+    <div class="container">
+      <div class="section-label reveal">06</div>
+      <span class="detail-section-icon reveal">&#9981;</span>
+      <h2 class="section-title reveal">Le Gas et les Frais</h2>
+
+      <div class="guide-content reveal">
+        <p>Le "gas" est l'unit&eacute; de mesure du travail computationnel n&eacute;cessaire pour ex&eacute;cuter une transaction sur la blockchain. Chaque action (envoyer des tokens, interagir avec un smart contract, mint un NFT) consomme une quantit&eacute; de gas diff&eacute;rente.</p>
+
+        <h3 class="guide-subtitle">Comment &ccedil;a se calcule ?</h3>
+        <p>Sur Ethereum : <strong>Co&ucirc;t = Gas utilis&eacute; &times; Prix du gas (en Gwei)</strong>. Le Gwei est une sous-unit&eacute; de l'ETH (1 ETH = 1 milliard de Gwei). Le prix du gas varie en temps r&eacute;el selon la congestion du r&eacute;seau.</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128293;</span>
+            <div>
+              <strong>Base Fee</strong>
+              <p>Frais de base, br&ucirc;l&eacute; automatiquement par le protocole (EIP-1559).</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128176;</span>
+            <div>
+              <strong>Priority Fee</strong>
+              <p>Pourboire pour le validateur. Plus il est &eacute;lev&eacute;, plus votre transaction est trait&eacute;e rapidement.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="guide-subtitle">Comment r&eacute;duire vos frais</h3>
+
+        <div class="strategy-box">
+          <div class="strategy-item">
+            <div class="strategy-num">1</div>
+            <div>
+              <strong>Utiliser des Layer 2</strong>
+              <p>Arbitrum, Base, Optimism sont 10 &agrave; 100x moins chers qu'Ethereum mainnet.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">2</div>
+            <div>
+              <strong>Choisir les heures creuses</strong>
+              <p>Le week-end et la nuit en Europe, le r&eacute;seau est moins congestionn&eacute;.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">3</div>
+            <div>
+              <strong>Surveiller le gas en temps r&eacute;el</strong>
+              <p>V&eacute;rifiez le prix du gas avant de valider une transaction.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Chaque blockchain a son token de gas</div>
+          <p>ETH sur Ethereum et ses L2, SOL sur Solana, AVAX sur Avalanche. <strong>Vous devez toujours avoir un peu du token natif dans votre wallet pour payer les frais.</strong></p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#orderbook">Section suivante : Le Carnet d'Ordres &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 7 — ORDER BOOK ═══════════════ -->
+  <section class="guide-section section" id="orderbook">
+    <div class="container">
+      <div class="section-label reveal">07</div>
+      <span class="detail-section-icon reveal">&#128202;</span>
+      <h2 class="section-title reveal">Le Carnet d'Ordres</h2>
+
+      <div class="guide-content reveal">
+        <p>Sur une plateforme comme Hyperliquid ou Trade.xyz, l'un des &eacute;l&eacute;ments les plus importants &agrave; comprendre est l'<strong>order book</strong> (carnet d'ordres). C'est lui qui refl&egrave;te, en temps r&eacute;el, l'activit&eacute; du march&eacute;.</p>
+
+        <h3 class="guide-subtitle">D&eacute;finition</h3>
+        <p>Un order book est une liste de tous les ordres en attente sur un march&eacute;. Un ordre correspond &agrave; une intention : soit <strong>acheter un actif &agrave; un certain prix</strong>, soit <strong>vendre un actif &agrave; un certain prix</strong>. Tant que ces ordres ne sont pas ex&eacute;cut&eacute;s, ils restent visibles dans le carnet.</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128994;</span>
+            <div>
+              <strong>Ordres d'Achat (Bids)</strong>
+              <p>Les prix auxquels les participants sont pr&ecirc;ts &agrave; acheter. Plus il y a de volume, plus la demande est forte &agrave; ce niveau.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128308;</span>
+            <div>
+              <strong>Ordres de Vente (Asks)</strong>
+              <p>Les prix auxquels les participants sont pr&ecirc;ts &agrave; vendre. Le prix du march&eacute; se situe entre les deux c&ocirc;t&eacute;s.</p>
+            </div>
+          </div>
+        </div>
+
+        <p>Le prix <strong>augmente</strong> lorsque les acheteurs ex&eacute;cutent les ordres de vente. Il <strong>diminue</strong> lorsque les vendeurs ex&eacute;cutent les ordres d'achat.</p>
+
+        <h3 class="guide-subtitle">Lire et interpr&eacute;ter les donn&eacute;es</h3>
+        <p>Chaque ligne du carnet correspond &agrave; un niveau de prix, associ&eacute; &agrave; une quantit&eacute; (le volume d'ordres disponibles). Cela permet d'observer :</p>
+        <ul class="checklist">
+          <li>O&ugrave; se situent les zones d'int&eacute;r&ecirc;t</li>
+          <li>O&ugrave; se concentrent les volumes</li>
+          <li>Comment le march&eacute; est structur&eacute; &agrave; un instant donn&eacute;</li>
+        </ul>
+        <p>Un volume important &agrave; un certain prix indique une pr&eacute;sence marqu&eacute;e d'acheteurs ou de vendeurs.</p>
+
+        <h3 class="guide-subtitle">Les "murs" d'achat et de vente</h3>
+        <p>Certaines zones du carnet concentrent beaucoup de volume. On parle de <strong>"murs"</strong> :</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#129521;</span>
+            <div>
+              <strong>Mur d'achat</strong>
+              <p>Forte concentration d'ordres d'achat &agrave; un certain prix. Peut agir comme un support, ralentissant la baisse du prix.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#129521;</span>
+            <div>
+              <strong>Mur de vente</strong>
+              <p>Forte concentration d'ordres de vente. Peut agir comme une r&eacute;sistance, freinant la hausse du prix.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Ce que l'order book montre... et ne montre pas</div>
+          <p>L'order book est un outil d'analyse, <strong>pas une pr&eacute;diction</strong>. Il montre l'&eacute;tat actuel du march&eacute;, mais les ordres visibles peuvent &eacute;voluer rapidement : ils peuvent &ecirc;tre d&eacute;plac&eacute;s, annul&eacute;s ou remplac&eacute;s &agrave; tout moment. Il faut l'interpr&eacute;ter comme une indication, pas comme une certitude.</p>
+        </div>
+
+        <h3 class="guide-subtitle">Utiliser l'order book pour g&eacute;n&eacute;rer du volume</h3>
+        <p>Dans une strat&eacute;gie de volume, l'objectif n'est pas de pr&eacute;dire le march&eacute;, mais d'ex&eacute;cuter ses actions de mani&egrave;re propre en limitant au maximum les pertes. L'order book devient un outil essentiel.</p>
+
+        <div class="strategy-box">
+          <div class="strategy-item">
+            <div class="strategy-num">1</div>
+            <div>
+              <strong>Observer les prix les plus proches</strong>
+              <p>Avant toute action, v&eacute;rifiez le meilleur prix d'achat et le meilleur prix de vente. Un &eacute;cart faible avec du volume indique un environnement favorable.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">2</div>
+            <div>
+              <strong>V&eacute;rifier la profondeur du march&eacute;</strong>
+              <p>Assurez-vous qu'il existe suffisamment d'ordres en face pour absorber votre ordre sans d&eacute;placer le march&eacute;.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">3</div>
+            <div>
+              <strong>&Eacute;viter d'impacter le prix</strong>
+              <p>Si votre ordre est trop important par rapport &agrave; la liquidit&eacute; disponible, il traversera plusieurs niveaux du carnet. Cela entra&icirc;ne une ex&eacute;cution moins favorable et des pertes r&eacute;p&eacute;t&eacute;es.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">4</div>
+            <div>
+              <strong>Anticiper la sortie d&egrave;s l'entr&eacute;e</strong>
+              <p>Avant m&ecirc;me de prendre position, v&eacute;rifiez si la sortie pourra se faire dans des conditions similaires. Si ce n'est pas le cas, l'op&eacute;ration entra&icirc;ne m&eacute;caniquement une perte.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#liquidite">Section suivante : La Liquidit&eacute; &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 8 — LIQUIDIT&Eacute; ═══════════════ -->
+  <section class="guide-section section" id="liquidite">
+    <div class="container">
+      <div class="section-label reveal">08</div>
+      <span class="detail-section-icon reveal">&#128167;</span>
+      <h2 class="section-title reveal">La Liquidit&eacute;</h2>
+
+      <div class="guide-content reveal">
+        <p>La liquidit&eacute; correspond &agrave; la facilit&eacute; avec laquelle un actif peut &ecirc;tre achet&eacute; ou vendu <strong>sans impacter fortement son prix</strong>. C'est un concept central en finance, et encore plus en crypto.</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128994;</span>
+            <div>
+              <strong>March&eacute; liquide</strong>
+              <p>Beaucoup d'acheteurs et de vendeurs actifs. Les ordres sont ex&eacute;cut&eacute;s rapidement et les variations de prix sont progressives. Exemples : Bitcoin, Ethereum sur les grandes plateformes.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128308;</span>
+            <div>
+              <strong>March&eacute; illiquide</strong>
+              <p>Peu de participants, peu de volume. Un seul gros ordre peut faire bouger le prix de mani&egrave;re significative. C'est souvent le cas des petits tokens.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Le Slippage</div>
+          <p>C'est l'&eacute;cart entre le prix attendu et le prix r&eacute;el d'ex&eacute;cution. Si vous achetez un token sur un march&eacute; peu liquide, vous risquez de payer plus cher que pr&eacute;vu car votre ordre "traverse" plusieurs niveaux de prix dans le carnet d'ordres.</p>
+        </div>
+
+        <h3 class="guide-subtitle">Pourquoi c'est important pour le farming ?</h3>
+        <p>Quand vous g&eacute;n&eacute;rez du volume sur une plateforme, vous devez pouvoir entrer et sortir de positions <strong>sans perdre d'argent sur l'ex&eacute;cution</strong>. Un march&eacute; liquide vous permet de le faire proprement. Un march&eacute; illiquide transforme chaque op&eacute;ration en source de perte potentielle.</p>
+
+        <div class="strategy-box">
+          <div class="strategy-item">
+            <div class="strategy-num">1</div>
+            <div>
+              <strong>Toujours v&eacute;rifier la liquidit&eacute;</strong>
+              <p>Avant de trader, regardez le volume et la profondeur du carnet d'ordres sur la paire choisie.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">2</div>
+            <div>
+              <strong>Privil&eacute;gier les paires majeures</strong>
+              <p>BTC, ETH et les stablecoins offrent la meilleure liquidit&eacute; et le moins de slippage.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">3</div>
+            <div>
+              <strong>Adapter la taille de vos ordres</strong>
+              <p>Ne passez jamais un ordre plus gros que ce que le march&eacute; peut absorber sans d&eacute;placer le prix.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Module CTA Footer -->
+  <section class="section">
+    <div class="container">
+      <div class="module-cta-footer reveal">
+        <h3>Pr&ecirc;t pour le prochain module ?</h3>
+        <p>Maintenant que tu ma&icirc;trises les bases, d&eacute;couvrons comment acheter tes premi&egrave;res cryptos.</p>
+        <div class="cta-buttons">
+          <a href="module2.html" class="btn-primary">Module Suivant : Investir &rarr;</a>
+          <a href="module1.html" class="btn-secondary">&larr; Retour au Module 01</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Formation cr&eacute;&eacute;e avec &#10084;&#65039; pour la communaut&eacute; crypto francophone</p>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="module1.html">Cryptos</a>
+        <a href="module2.html">Investir</a>
+        <a href="module3.html">Airdrops</a>
+        <a href="module4.html">Onboarding</a>
+        <a href="module5.html">Plays</a>
+        <a href="module6.html">Strat&eacute;gie</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Scroll Progress Bar ── */
+    (function () {
+      var bar = document.getElementById('scrollProgress');
+      window.addEventListener('scroll', function () {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        bar.style.width = progress + '%';
+      }, { passive: true });
+    })();
+
+    /* ── Theme Toggle ── */
+    (function () {
+      var toggle = document.getElementById('themeToggle');
+      var root = document.documentElement;
+      var stored = localStorage.getItem('theme');
+      if (stored) root.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', function () {
+        var current = root.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    })();
+
+    /* ── Mobile Nav Hamburger ── */
+    (function () {
+      var hamburger = document.getElementById('navHamburger');
+      var nav = document.getElementById('nav');
+      hamburger.addEventListener('click', function () {
+        nav.classList.toggle('open');
+      });
+      nav.querySelectorAll('.nav-links a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('open');
+        });
+      });
+    })();
+
+    /* ── Scroll Reveal ── */
+    (function () {
+      var reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        reveals.forEach(function (el) { observer.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('visible'); });
+      }
+    })();
+
+    /* ── Active Section Tracking (nav + sidenav) ── */
+    (function () {
+      var sections = document.querySelectorAll('.guide-section');
+      var navLinks = document.querySelectorAll('.nav-links a');
+      var sideLinks = document.querySelectorAll('.detail-sidenav a');
+
+      function updateActive() {
+        var scrollPos = window.scrollY + 120;
+        var currentId = '';
+
+        sections.forEach(function (section) {
+          if (section.offsetTop <= scrollPos) {
+            currentId = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(function (link) {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+        });
+        sideLinks.forEach(function (link) {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+        });
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+  </script>
+
+</body>
+</html>

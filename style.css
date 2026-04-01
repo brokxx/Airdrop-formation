@@ -21,6 +21,7 @@
   --on-primary: #1a1400;
   --surface-tint: #efa905;
   --outline-variant: rgba(154, 149, 133, 0.15);
+  --primary-hover: #d49804;
 
   /* Spacing scale */
   --sp-1: 0.25rem;
@@ -73,6 +74,9 @@
   --tertiary: #0077b6;
   --surface-tint: #b07d00;
   --on-primary: #ffffff;
+  --primary-hover: #c48a04;
+  --outline-variant: rgba(94, 90, 79, 0.2);
+  --tertiary-fixed: #0096d6;
 }
 
 /* ═══════════════════════════════════════════
@@ -245,6 +249,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   width: 52px;
   height: 28px;
+  min-height: 36px;
   background: var(--surface-container-high);
   border-radius: 100px;
   cursor: pointer;
@@ -291,6 +296,8 @@ img { max-width: 100%; display: block; }
   display: none;
   width: 32px;
   height: 32px;
+  min-width: 44px;
+  min-height: 44px;
   align-items: center;
   justify-content: center;
   color: var(--on-surface);
@@ -551,7 +558,6 @@ body > nav {
   padding: var(--sp-6);
   box-shadow: 0 40px 80px rgba(0,0,0,0.25);
   transition: background var(--duration-md) ease, transform 0.05s linear, opacity 0.05s linear;
-  will-change: transform, opacity;
 }
 
 .hero-float-card:nth-child(1) {
@@ -614,7 +620,6 @@ body > nav {
 @media (max-width: 768px) {
   .hero { padding-top: var(--sp-24); }
   .hero-grid { grid-template-columns: 1fr; gap: var(--sp-8); }
-  .hero h1 { font-size: 2.5rem; }
   .hero-visual { min-height: auto; flex-direction: column; gap: var(--sp-3); overflow: hidden; }
   .hero-float-card { position: relative; top: auto; bottom: auto; left: auto; right: auto; width: 100% !important; transform: none !important; animation: none !important; padding: var(--sp-4); border-radius: 1rem; }
   .hero-float-card .float-card-icon { font-size: 1.5rem; margin-bottom: var(--sp-2); }
@@ -860,6 +865,11 @@ body > nav {
   transition: background var(--duration-md) ease, transform var(--duration-md) var(--ease-out-expo);
 }
 
+.example-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--sp-3);
+}
+
 .example-card:hover {
   background: var(--surface-container-highest);
   transform: scale(1.03);
@@ -927,7 +937,7 @@ body > nav {
   font-weight: 500;
   color: var(--on-surface-variant);
   background: var(--surface-container-high);
-  transition: all var(--duration-md) ease;
+  transition: background var(--duration-md) ease, color var(--duration-md) ease, transform var(--duration-md) ease, opacity var(--duration-md) ease;
 }
 
 .filter-btn:hover,
@@ -1163,7 +1173,7 @@ body > nav {
   font-size: var(--body-md);
   color: var(--on-surface-variant);
   cursor: pointer;
-  transition: all var(--duration-md) var(--ease-out-expo);
+  transition: background var(--duration-md) var(--ease-out-expo), color var(--duration-md) var(--ease-out-expo), transform var(--duration-md) var(--ease-out-expo), opacity var(--duration-md) var(--ease-out-expo);
   margin-bottom: calc(200px - 44px);
 }
 
@@ -1238,7 +1248,7 @@ body > nav {
   font-size: var(--body-md);
   color: var(--on-surface-variant);
   flex-shrink: 0;
-  transition: all var(--duration-md) ease;
+  transition: background var(--duration-md) ease, color var(--duration-md) ease, transform var(--duration-md) ease, opacity var(--duration-md) ease;
 }
 
 .step-accordion.active .step-number {
@@ -1711,13 +1721,6 @@ body > nav {
   /* Float cards — masquées sur mobile */
   .hero-visual { display: none; }
 
-  /* Float cards compactes en ligne */
-  .hero-float-card { padding: var(--sp-3) !important; border-radius: 0.75rem !important; box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important; }
-  .hero-float-card .float-card-icon { font-size: 1.2rem !important; margin-bottom: var(--sp-1) !important; }
-  .hero-float-card .float-card-label { font-size: var(--label-sm) !important; }
-  .hero-float-card .float-card-value { font-size: var(--label-sm) !important; }
-  .float-card-value .highlight { font-size: var(--label-sm); }
-
   /* Explain cards */
   .border-glow-card { --border-radius: 16px; --glow-padding: 20px; }
   .border-glow-card .explain-card { padding: var(--sp-4); }
@@ -1727,7 +1730,7 @@ body > nav {
   /* Exemples célèbres */
   .examples-row { gap: var(--sp-3); }
   .border-glow-card .example-card { padding: var(--sp-4); }
-  .example-card div[style*="font-size:2.5rem"] { font-size: 1.5rem !important; margin-bottom: var(--sp-2) !important; }
+  .example-card .example-icon { font-size: 1.5rem !important; margin-bottom: var(--sp-2) !important; }
   .example-name { font-size: var(--body-md); }
   .example-token { font-size: var(--label-sm); }
   .example-value { font-size: var(--title-md); }
@@ -1746,7 +1749,7 @@ body > nav {
 
   /* Onboarding */
   .step-header { padding: var(--sp-3) var(--sp-4); }
-  .step-number { width: 28px; height: 28px; font-size: var(--body-md); }
+  .step-number { width: 28px; height: 28px; min-width: 44px; min-height: 44px; font-size: var(--body-md); }
   .step-title { font-size: var(--title-md); }
   .step-content { padding: var(--sp-4); padding-left: var(--sp-4); }
   .step-content p { font-size: var(--body-md); }
@@ -1763,4 +1766,18 @@ body > nav {
 
   /* Loader */
   .loader-text { font-size: 1.5rem !important; }
+}
+
+/* ═══════════════════════════════════════════
+   ACCESSIBILITY — Reduced Motion
+   ═══════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .floating-lines-bg { display: none; }
 }

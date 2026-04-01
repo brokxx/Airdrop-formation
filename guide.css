@@ -4,7 +4,7 @@
 
 /* Restore opaque background on guide pages */
 html, body {
-  background: var(--surface) !important;
+  background: var(--surface);
   transition: background var(--duration-md) ease;
 }
 

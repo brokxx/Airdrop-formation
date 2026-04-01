@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guide Hyperliquid 2.0 — Airdrop Formation</title>
+  <meta name="description" content="Guide Hyperliquid : DEX perpétuel décentralisé, fonctionnement et stratégies de trading.">
+  <meta property="og:title" content="Guide Hyperliquid 2.0 — Airdrop Formation">
+  <meta property="og:description" content="Guide Hyperliquid : DEX perpétuel décentralisé, fonctionnement et stratégies de trading.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23efa905'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='bold' fill='%231a1400' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,17 +29,19 @@
       <li><a href="#farm">Farmer</a></li>
       <li><a href="#steps">Guide</a></li>
     </ul>
-    <div class="theme-toggle" id="themeToggle" role="button" aria-label="Basculer thème clair/sombre">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer de thème">
       <span class="theme-toggle-icon moon">🌙</span>
       <span class="theme-toggle-icon sun">☀️</span>
-    </div>
+    </button>
     <button class="nav-hamburger" id="navHamburger" aria-label="Menu">☰</button>
   </nav>
+
+  <main>
 
   <!-- ═══════════════ SECTION 1 — HOOK ═══════════════ -->
   <section class="guide-section section" id="hook">
     <div class="container">
-      <a href="index.html" class="back-link reveal">← Retour aux Plays</a>
+      <a href="module5.html" class="back-link reveal">← Retour aux Plays</a>
 
       <div class="guide-hero reveal reveal-delay-1">
         <img src="HL symbol_light green.png" alt="Hyperliquid" class="guide-hero-logo">
@@ -308,6 +315,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="footer">
     <div class="container">
@@ -322,6 +331,8 @@
     </div>
   </footer>
 
+  <script>(function(){var s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s);})();</script>
   <script src="script.js"></script>
+  <script>(function(){var t=document.getElementById('themeToggle');if(t)t.addEventListener('click',function(){localStorage.setItem('theme',document.documentElement.getAttribute('data-theme'));});})();</script>
 </body>
 </html>

@@ -319,8 +319,9 @@ function initFloatingLines(containerId, options) {
 
   if (typeof ResizeObserver !== 'undefined') {
     new ResizeObserver(setSize).observe(container);
+  } else {
+    window.addEventListener('resize', setSize);
   }
-  window.addEventListener('resize', setSize);
 
   renderer.domElement.addEventListener('pointermove', function(e) {
     if (!opts.interactive) return;
@@ -345,6 +346,8 @@ function initFloatingLines(containerId, options) {
     targetInfluence = 0.0;
   });
 
+  var animId;
+
   function renderLoop() {
     uniforms.iTime.value = clock.getElapsedTime();
 
@@ -357,7 +360,23 @@ function initFloatingLines(containerId, options) {
     uniforms.parallaxOffset.value.copy(currentParallax);
 
     renderer.render(scene, camera);
-    requestAnimationFrame(renderLoop);
+    animId = requestAnimationFrame(renderLoop);
   }
-  renderLoop();
+
+  var io = new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting) {
+      renderLoop();
+    } else {
+      cancelAnimationFrame(animId);
+    }
+  });
+  io.observe(container);
+
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      cancelAnimationFrame(animId);
+    } else if (container && container.getBoundingClientRect().top < window.innerHeight) {
+      renderLoop();
+    }
+  });
 }

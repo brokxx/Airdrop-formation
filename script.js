@@ -37,7 +37,7 @@ window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
   const progress = (scrollTop / docHeight) * 100;
-  scrollProgress.style.width = progress + '%';
+  if (scrollProgress) scrollProgress.style.width = progress + '%';
 
   // 3D parallax — skip on mobile and if elements don't exist
   if (window.innerWidth <= 768) return;
@@ -94,7 +94,7 @@ sections.forEach(s => navObserver.observe(s));
    THEME TOGGLE
    ═══════════════════════════════════════════ */
 const themeToggle = document.getElementById('themeToggle');
-themeToggle.addEventListener('click', () => {
+if (themeToggle) themeToggle.addEventListener('click', () => {
   const html = document.documentElement;
   const current = html.getAttribute('data-theme');
   html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
@@ -105,8 +105,8 @@ themeToggle.addEventListener('click', () => {
    ═══════════════════════════════════════════ */
 const navHamburger = document.getElementById('navHamburger');
 const nav = document.getElementById('nav');
-navHamburger.addEventListener('click', () => nav.classList.toggle('open'));
-navLinks.forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
+if (navHamburger && nav) navHamburger.addEventListener('click', () => nav.classList.toggle('open'));
+if (nav) navLinks.forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
 
 /* ═══════════════════════════════════════════
    EXPANDABLE EXPLAIN CARDS — Clone zoom
@@ -135,7 +135,7 @@ function openExplainCard(glowCard) {
   document.body.appendChild(zoomedClone);
 
   // Show overlay
-  explainOverlay.classList.add('active');
+  if (explainOverlay) explainOverlay.classList.add('active');
   document.body.style.overflow = 'hidden';
 
   // Store original rect on clone for closing
@@ -186,7 +186,7 @@ function closeExplainCard() {
   clone.style.height = origin.height + 'px';
   clone.style.overflowY = 'hidden';
 
-  explainOverlay.classList.remove('active');
+  if (explainOverlay) explainOverlay.classList.remove('active');
 
   setTimeout(() => {
     if (clone.parentNode) clone.parentNode.removeChild(clone);
@@ -203,7 +203,7 @@ function goToNextCard(nextIndex) {
   // Remove clone immediately
   if (clone.parentNode) clone.parentNode.removeChild(clone);
   zoomedClone = null;
-  explainOverlay.classList.remove('active');
+  if (explainOverlay) explainOverlay.classList.remove('active');
 
   // Open the next card
   openExplainCard(explainGlowCards[nextIndex]);
@@ -211,14 +211,14 @@ function goToNextCard(nextIndex) {
 
 explainGlowCards.forEach(glowCard => {
   const card = glowCard.querySelector('[data-expandable]');
-  card.addEventListener('click', (e) => {
+  if (card) card.addEventListener('click', (e) => {
     if (zoomedClone) return;
     e.stopPropagation();
     openExplainCard(glowCard);
   });
 });
 
-explainOverlay.addEventListener('click', closeExplainCard);
+if (explainOverlay) explainOverlay.addEventListener('click', closeExplainCard);
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeExplainCard();
@@ -260,6 +260,8 @@ const progressNodes = document.querySelectorAll('.progress-node');
 const progressFill = document.getElementById('progressFill');
 
 function setActiveStep(index) {
+  if (!progressFill) return;
+
   accordions.forEach((acc, i) => {
     const isTarget = i === index;
     acc.classList.toggle('open', isTarget);
@@ -280,7 +282,8 @@ function setActiveStep(index) {
 }
 
 accordions.forEach((acc, i) => {
-  acc.querySelector('.step-header').addEventListener('click', () => setActiveStep(i));
+  const header = acc.querySelector('.step-header');
+  if (header) header.addEventListener('click', () => setActiveStep(i));
 });
 
 progressNodes.forEach((node, i) => {

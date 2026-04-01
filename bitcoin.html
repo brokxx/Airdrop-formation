@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitcoin — Comprendre l'or num&eacute;rique | Airdrop Formation</title>
+  <meta name="description" content="Bitcoin : guide complet. Histoire, fonctionnement, halving et rôle de BTC dans l'écosystème crypto.">
+  <meta property="og:title" content="Bitcoin — Comprendre l'or numérique | Airdrop Formation">
+  <meta property="og:description" content="Bitcoin : guide complet. Histoire, fonctionnement, halving et rôle de BTC dans l'écosystème crypto.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23efa905'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='bold' fill='%231a1400' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="guide.css">
+  <link rel="stylesheet" href="module1-detail.css">
+  <link rel="stylesheet" href="crypto-detail.css">
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="module1-detail.html#crypto" class="nav-logo">&larr; Cryptos</a>
+    <ul class="nav-links">
+      <li><a href="#intro" class="active">Bitcoin</a></li>
+      <li><a href="#unique">Unique</a></li>
+      <li><a href="#controle">Contr&ocirc;le</a></li>
+      <li><a href="#satoshi">Satoshi</a></li>
+      <li><a href="#fonctionnement">Cl&eacute;s</a></li>
+      <li><a href="#minage">Minage</a></li>
+      <li><a href="#halving">Halving</a></li>
+      <li><a href="#blockchain">Blockchain</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer de thème">
+      <span class="theme-toggle-icon moon">&#127769;</span>
+      <span class="theme-toggle-icon sun">&#9728;&#65039;</span>
+    </button>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <main>
+
+  <!-- Side Navigation -->
+  <nav class="detail-sidenav" id="detailSidenav">
+    <a href="#intro" class="active">C'est quoi ?</a>
+    <a href="#unique">Pourquoi unique</a>
+    <a href="#controle">Ton argent</a>
+    <a href="#satoshi">Satoshi</a>
+    <a href="#fonctionnement">Cl&eacute;s &amp; r&eacute;seau</a>
+    <a href="#minage">Minage</a>
+    <a href="#halving">Halving</a>
+    <a href="#blockchain">Blockchain</a>
+  </nav>
+
+  <!-- SVG Filters (shared) -->
+  <svg style="position:absolute;width:0;height:0">
+    <defs>
+      <filter id="pencil">
+        <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="4" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ═══════════════ SECTION 1 — C'EST QUOI BITCOIN ? ═══════════════ -->
+  <section class="guide-section section" id="intro">
+    <div class="container">
+      <a href="module1-detail.html#crypto" class="back-link reveal">&larr; Retour aux Cryptos</a>
+
+      <div class="crypto-hero reveal">
+        <!-- SVG: Lingot Bitcoin -->
+        <div class="crypto-hero-symbol">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" filter="url(#pencil)">
+            <circle cx="60" cy="60" r="50" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" stroke-dasharray="4,2" fill="none"/>
+            <text x="60" y="72" text-anchor="middle" font-family="var(--font-display)" font-size="42" font-weight="800" fill="var(--primary)">&#8383;</text>
+            <!-- Small sparkle lines -->
+            <line x1="95" y1="25" x2="105" y2="15" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            <line x1="100" y1="30" x2="110" y2="28" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+            <line x1="92" y1="18" x2="98" y2="10" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <h1 class="crypto-hero-title">L'Or <span class="gradient-text">Num&eacute;rique</span></h1>
+        <p class="crypto-hero-subtitle">Comprendre Bitcoin, la premi&egrave;re cryptomonnaie au monde : rare, d&eacute;centralis&eacute;e et impossible &agrave; falsifier.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 1 CONTENT ═══════════════ -->
+  <section class="guide-section section" style="padding-top:0">
+    <div class="container">
+      <div class="guide-content reveal">
+        <p>Bitcoin est la premi&egrave;re cryptomonnaie, cr&eacute;&eacute;e en 2009. Contrairement aux monnaies traditionnelles contr&ocirc;l&eacute;es par les banques centrales, Bitcoin fonctionne sur un r&eacute;seau d&eacute;centralis&eacute; bas&eacute; sur la blockchain.</p>
+        <p>On le compare souvent &agrave; l'or pour une raison simple : <strong>il est rare</strong>. Il n'existera jamais plus de <strong>21 millions de bitcoins</strong>. Et comme l'extraction d'or, la cr&eacute;ation de nouveaux bitcoins est de plus en plus difficile avec le temps.</p>
+        <p>Dans le monde num&eacute;rique, tout peut &ecirc;tre copi&eacute; : un fichier, un logiciel, une image. Bitcoin a r&eacute;solu ce probl&egrave;me : il est <strong>impossible de copier ou de falsifier un bitcoin</strong>. C'est ce qui en fait un actif unique.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">En r&eacute;sum&eacute;</div>
+          <p>Bitcoin est une monnaie num&eacute;rique rare, d&eacute;centralis&eacute;e et s&eacute;curis&eacute;e par la cryptographie. Personne ne la contr&ocirc;le, et personne ne peut en cr&eacute;er plus que pr&eacute;vu.</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#unique">Section suivante : Pourquoi Bitcoin est unique &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 2 — POURQUOI BITCOIN EST UNIQUE ═══════════════ -->
+  <section class="guide-section section" id="unique">
+    <div class="container">
+      <div class="section-label reveal">02</div>
+      <h2 class="section-title reveal">Pourquoi Bitcoin est unique</h2>
+
+      <div class="guide-content reveal">
+        <p>Trois propri&eacute;t&eacute;s fondamentales rendent Bitcoin diff&eacute;rent de tout ce qui existait avant.</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128274;</span>
+            <div>
+              <strong>Impossible &agrave; falsifier</strong>
+              <p>Gr&acirc;ce &agrave; la cryptographie, chaque transaction est v&eacute;rifi&eacute;e math&eacute;matiquement. Personne ne peut d&eacute;penser des bitcoins qui ne lui appartiennent pas.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128203;</span>
+            <div>
+              <strong>Impossible &agrave; copier</strong>
+              <p>Contrairement &agrave; un fichier num&eacute;rique, un bitcoin ne peut pas &ecirc;tre dupliqu&eacute;. Le r&eacute;seau emp&ecirc;che toute tentative de "double d&eacute;pense".</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SVG: Centralis&eacute; vs D&eacute;centralis&eacute; -->
+        <div class="sketch-illustration">
+          <svg width="400" height="180" viewBox="0 0 400 180" fill="none" filter="url(#pencil)">
+            <!-- Centralis&eacute; -->
+            <circle cx="100" cy="80" r="14" stroke="var(--on-surface-variant)" stroke-width="2" stroke-linecap="round" stroke-dasharray="3,2" fill="none"/>
+            <circle cx="50" cy="35" r="8" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+            <circle cx="150" cy="35" r="8" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+            <circle cx="50" cy="125" r="8" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+            <circle cx="150" cy="125" r="8" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+            <circle cx="30" cy="80" r="8" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+            <circle cx="170" cy="80" r="8" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+            <line x1="100" y1="80" x2="50" y2="35" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="100" y1="80" x2="150" y2="35" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="100" y1="80" x2="50" y2="125" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="100" y1="80" x2="150" y2="125" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="100" y1="80" x2="30" y2="80" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="100" y1="80" x2="170" y2="80" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <text x="100" y="165" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)">Centralis&eacute;</text>
+
+            <!-- D&eacute;centralis&eacute; -->
+            <circle cx="300" cy="40" r="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="3,2" fill="none"/>
+            <circle cx="260" cy="70" r="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="3,2" fill="none"/>
+            <circle cx="340" cy="70" r="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="3,2" fill="none"/>
+            <circle cx="270" cy="115" r="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="3,2" fill="none"/>
+            <circle cx="330" cy="115" r="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="3,2" fill="none"/>
+            <circle cx="300" cy="140" r="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="3,2" fill="none"/>
+            <line x1="300" y1="40" x2="260" y2="70" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="300" y1="40" x2="340" y2="70" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="260" y1="70" x2="340" y2="70" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="260" y1="70" x2="270" y2="115" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="340" y1="70" x2="330" y2="115" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="270" y1="115" x2="330" y2="115" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="270" y1="115" x2="300" y2="140" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="330" y1="115" x2="300" y2="140" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="300" y1="40" x2="270" y2="115" stroke="var(--primary)" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+            <line x1="300" y1="40" x2="300" y2="140" stroke="var(--primary)" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+            <text x="300" y="165" text-anchor="middle" class="sketch-label" fill="var(--primary)">D&eacute;centralis&eacute; (Bitcoin)</text>
+          </svg>
+        </div>
+
+        <p>Dans un r&eacute;seau centralis&eacute; (comme une banque), tout passe par un point unique. Si ce point tombe, tout s'arr&ecirc;te. Dans le r&eacute;seau Bitcoin, <strong>il n'y a pas de centre</strong>. Des milliers d'ordinateurs communiquent entre eux directement. Pour arr&ecirc;ter Bitcoin, il faudrait &eacute;teindre Internet.</p>
+
+        <div class="next-section-link">
+          <a href="#controle">Section suivante : Reprendre le contr&ocirc;le &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 3 — REPRENDRE LE CONTR&Ocirc;LE ═══════════════ -->
+  <section class="guide-section section" id="controle">
+    <div class="container">
+      <div class="section-label reveal">03</div>
+      <h2 class="section-title reveal">Reprendre le contr&ocirc;le de son argent</h2>
+
+      <div class="guide-content reveal">
+        <p>Quand tu utilises de l'argent liquide, cet argent t'appartient. Mais quand ton argent est sur un compte bancaire, tu d&eacute;pends de ta banque pour y acc&eacute;der.</p>
+        <p>Si la banque d&eacute;cide de geler ton compte, de changer ses r&egrave;gles, ou si elle fait faillite &mdash; tu perds l'acc&egrave;s &agrave; tes fonds. Ce n'est pas de la th&eacute;orie : c'est arriv&eacute; r&eacute;cemment.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Liban, 2022</div>
+          <p>Les banques libanaises ont bloqu&eacute; l'acc&egrave;s aux comptes de leurs clients. Des gens ont perdu l'acc&egrave;s &agrave; leurs &eacute;conomies du jour au lendemain. Quand ta banque n'a plus d'argent, <strong>elle n'a plus ton argent</strong>.</p>
+        </div>
+
+        <!-- SVG: Banque &rarr; Wallet -->
+        <div class="sketch-illustration">
+          <svg width="380" height="140" viewBox="0 0 380 140" fill="none" filter="url(#pencil)">
+            <!-- Banque (barr&eacute;e) -->
+            <rect x="30" y="40" width="80" height="60" rx="4" stroke="var(--on-surface-variant)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <polygon points="70,20 25,45 115,45" stroke="var(--on-surface-variant)" stroke-width="2" stroke-dasharray="4,2" fill="none" stroke-linejoin="round"/>
+            <line x1="50" y1="55" x2="50" y2="90" stroke="var(--on-surface-variant)" stroke-width="2" stroke-dasharray="3,2"/>
+            <line x1="70" y1="55" x2="70" y2="90" stroke="var(--on-surface-variant)" stroke-width="2" stroke-dasharray="3,2"/>
+            <line x1="90" y1="55" x2="90" y2="90" stroke="var(--on-surface-variant)" stroke-width="2" stroke-dasharray="3,2"/>
+            <!-- X barr&eacute; -->
+            <line x1="25" y1="25" x2="115" y2="100" stroke="#f87171" stroke-width="3" stroke-linecap="round"/>
+            <line x1="115" y1="25" x2="25" y2="100" stroke="#f87171" stroke-width="3" stroke-linecap="round"/>
+            <text x="70" y="125" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)">Banque</text>
+
+            <!-- Fl&egrave;che -->
+            <line x1="140" y1="70" x2="220" y2="70" stroke="var(--primary)" stroke-width="2" stroke-dasharray="6,3" stroke-linecap="round"/>
+            <polygon points="220,65 230,70 220,75" fill="var(--primary)"/>
+
+            <!-- Wallet -->
+            <rect x="255" y="35" width="90" height="70" rx="12" stroke="var(--primary)" stroke-width="2.5" stroke-dasharray="4,2" fill="none"/>
+            <circle cx="315" cy="70" r="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="3,2" fill="none"/>
+            <text x="300" y="125" text-anchor="middle" class="sketch-label" fill="var(--primary)">Ton Wallet</text>
+          </svg>
+        </div>
+
+        <p>Avec Bitcoin, pas de banque, pas d'interm&eacute;diaire. <strong>Tu poss&egrave;des r&eacute;ellement tes fonds.</strong> Personne ne peut te les bloquer, les saisir ou les geler. Tant que tu as ta cl&eacute; priv&eacute;e, tu as acc&egrave;s &agrave; tes bitcoins, partout dans le monde.</p>
+        <p>C'est une diff&eacute;rence fondamentale avec le syst&egrave;me bancaire traditionnel : avec Bitcoin, tu n'as besoin de la permission de personne.</p>
+
+        <div class="next-section-link">
+          <a href="#satoshi">Section suivante : Satoshi Nakamoto &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 4 — SATOSHI NAKAMOTO ═══════════════ -->
+  <section class="guide-section section" id="satoshi">
+    <div class="container">
+      <div class="section-label reveal">04</div>
+      <h2 class="section-title reveal">Satoshi Nakamoto</h2>
+
+      <div class="guide-content reveal">
+        <p>Bitcoin a &eacute;t&eacute; cr&eacute;&eacute; par une personne (ou un groupe) op&eacute;rant sous le pseudonyme de <strong>Satoshi Nakamoto</strong>. &Agrave; ce jour, personne ne conna&icirc;t sa v&eacute;ritable identit&eacute;.</p>
+        <p>Le r&eacute;seau a &eacute;t&eacute; lanc&eacute; en <strong>janvier 2009</strong>, juste apr&egrave;s la crise financi&egrave;re de 2008. Ce n'est pas un hasard.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Le Genesis Block</div>
+          <p>Le tout premier bloc de la blockchain Bitcoin, min&eacute; le 3 janvier 2009, contient un message cach&eacute; :<br><strong>"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"</strong><br>Traduction : "Le chancelier au bord d'un second plan de sauvetage des banques." Un clin d'&oelig;il &agrave; la d&eacute;faillance du syst&egrave;me financier traditionnel.</p>
+        </div>
+
+        <h3 class="guide-subtitle">Les pionniers</h3>
+        <p>Satoshi n'a pas cr&eacute;&eacute; Bitcoin &agrave; partir de rien. Il s'est appuy&eacute; sur les travaux de plusieurs visionnaires :</p>
+
+        <div class="pioneer-list">
+          <div class="pioneer-item">
+            <strong>Hal Finney</strong>
+            <span>Premi&egrave;re personne &agrave; avoir re&ccedil;u une transaction en Bitcoin</span>
+          </div>
+          <div class="pioneer-item">
+            <strong>Nick Szabo</strong>
+            <span>Inventeur du concept de smart contracts</span>
+          </div>
+          <div class="pioneer-item">
+            <strong>Adam Back</strong>
+            <span>Inventeur de la preuve de travail (Proof of Work)</span>
+          </div>
+          <div class="pioneer-item">
+            <strong>David Chaum</strong>
+            <span>Inventeur des monnaies &eacute;lectroniques eCash (1982)</span>
+          </div>
+          <div class="pioneer-item">
+            <strong>Wei Dai</strong>
+            <span>Inventeur de la b-money (1998)</span>
+          </div>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#fonctionnement">Section suivante : Comment &ccedil;a fonctionne &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 5 — COMMENT &Ccedil;A FONCTIONNE ═══════════════ -->
+  <section class="guide-section section" id="fonctionnement">
+    <div class="container">
+      <div class="section-label reveal">05</div>
+      <h2 class="section-title reveal">Comment &ccedil;a fonctionne</h2>
+
+      <div class="guide-content reveal">
+        <p>Bitcoin repose sur trois &eacute;l&eacute;ments : la <strong>cryptographie</strong> (pour s&eacute;curiser), un <strong>r&eacute;seau d&eacute;centralis&eacute;</strong> (pour fonctionner sans autorit&eacute;), et le <strong>Proof of Work</strong> (pour valider les transactions).</p>
+
+        <h3 class="guide-subtitle">Cl&eacute; priv&eacute;e, cl&eacute; publique, adresse</h3>
+        <p>Chaque utilisateur de Bitcoin dispose de trois &eacute;l&eacute;ments li&eacute;s entre eux :</p>
+
+        <!-- SVG: Flux cl&eacute;s -->
+        <div class="sketch-illustration">
+          <svg width="400" height="120" viewBox="0 0 400 120" fill="none" filter="url(#pencil)">
+            <!-- Cl&eacute; priv&eacute;e -->
+            <rect x="10" y="30" width="100" height="50" rx="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="60" y="50" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="9">CL&Eacute; PRIV&Eacute;E</text>
+            <text x="60" y="68" text-anchor="middle" font-size="20">&#128273;</text>
+
+            <!-- Fl&egrave;che 1 -->
+            <line x1="115" y1="55" x2="148" y2="55" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <polygon points="148,51 155,55 148,59" fill="var(--on-surface-variant)"/>
+
+            <!-- Cl&eacute; publique -->
+            <rect x="158" y="30" width="100" height="50" rx="8" stroke="var(--tertiary)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="208" y="50" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="9">CL&Eacute; PUBLIQUE</text>
+            <text x="208" y="68" text-anchor="middle" font-size="20">&#128275;</text>
+
+            <!-- Fl&egrave;che 2 -->
+            <line x1="263" y1="55" x2="296" y2="55" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <polygon points="296,51 303,55 296,59" fill="var(--on-surface-variant)"/>
+
+            <!-- Adresse -->
+            <rect x="306" y="30" width="85" height="50" rx="8" stroke="var(--on-surface)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="348" y="50" text-anchor="middle" class="sketch-label" fill="var(--on-surface)" font-size="9">ADRESSE</text>
+            <text x="348" y="68" text-anchor="middle" font-size="20">&#128233;</text>
+
+            <!-- Labels en dessous -->
+            <text x="60" y="105" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="9">Ton code PIN</text>
+            <text x="208" y="105" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="9">Ta signature</text>
+            <text x="348" y="105" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="9">Ton IBAN</text>
+          </svg>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128273;</span>
+            <div>
+              <strong>Cl&eacute; priv&eacute;e</strong>
+              <p>Ton code secret. Elle signe tes transactions et autorise les d&eacute;penses. Comme un code PIN : ne jamais la partager.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128233;</span>
+            <div>
+              <strong>Adresse Bitcoin</strong>
+              <p>Ton num&eacute;ro de compte. C'est ce que tu donnes aux autres pour recevoir des bitcoins, comme un IBAN ou une adresse email.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="guide-subtitle">Le r&eacute;seau d&eacute;centralis&eacute;</h3>
+        <p>Le r&eacute;seau Bitcoin est compos&eacute; de <strong>milliers d'ordinateurs ind&eacute;pendants</strong> (appel&eacute;s n&oelig;uds) qui communiquent entre eux. Il n'y a pas de serveur central, pas de si&egrave;ge social, pas de PDG.</p>
+        <p>Chaque n&oelig;ud poss&egrave;de une copie compl&egrave;te de toutes les transactions depuis 2009. Pour pirater Bitcoin, il faudrait compromettre la majorit&eacute; de ces n&oelig;uds simultan&eacute;ment &mdash; <strong>c'est en pratique impossible</strong>.</p>
+
+        <div class="next-section-link">
+          <a href="#minage">Section suivante : Le minage &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 6 — LE MINAGE ═══════════════ -->
+  <section class="guide-section section" id="minage">
+    <div class="container">
+      <div class="section-label reveal">06</div>
+      <h2 class="section-title reveal">Le Minage</h2>
+
+      <div class="guide-content reveal">
+        <p>Les <strong>mineurs</strong> sont les gardiens du r&eacute;seau Bitcoin. Leur r&ocirc;le : v&eacute;rifier les transactions et les inscrire dans la blockchain. En &eacute;change, ils re&ccedil;oivent des bitcoins en r&eacute;compense.</p>
+
+        <h3 class="guide-subtitle">Le Proof of Work</h3>
+        <p>Pour ajouter un nouveau bloc &agrave; la blockchain, les mineurs doivent r&eacute;soudre un calcul math&eacute;matique complexe. C'est la <strong>preuve de travail</strong> (Proof of Work).</p>
+
+        <!-- SVG: Pioche + Bloc -->
+        <div class="sketch-illustration">
+          <svg width="360" height="160" viewBox="0 0 360 160" fill="none" filter="url(#pencil)">
+            <!-- Pioche -->
+            <line x1="60" y1="110" x2="110" y2="40" stroke="var(--on-surface-variant)" stroke-width="3" stroke-linecap="round" stroke-dasharray="5,2"/>
+            <path d="M105,42 L125,25 L130,30 L115,52 Z" stroke="var(--primary)" stroke-width="2" stroke-linejoin="round" stroke-dasharray="3,2" fill="none"/>
+            <path d="M105,42 L88,28 L93,22 L115,38" stroke="var(--primary)" stroke-width="2" stroke-linejoin="round" stroke-dasharray="3,2" fill="none"/>
+            <!-- Effet impact -->
+            <line x1="125" y1="55" x2="135" y2="50" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+            <line x1="130" y1="62" x2="140" y2="60" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+
+            <!-- Bloc -->
+            <rect x="170" y="30" width="170" height="100" rx="8" stroke="var(--primary)" stroke-width="2.5" stroke-dasharray="4,2" fill="none"/>
+            <text x="255" y="55" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="11">BLOC #841,240</text>
+            <line x1="185" y1="65" x2="325" y2="65" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+            <text x="190" y="82" class="sketch-label" fill="var(--on-surface-variant)" font-size="9">Transactions: 2,847</text>
+            <text x="190" y="98" class="sketch-label" fill="var(--on-surface-variant)" font-size="9">R&eacute;compense: 3.125 BTC</text>
+            <text x="190" y="114" class="sketch-label" fill="var(--tertiary)" font-size="8">Hash: 0000...7a3f</text>
+          </svg>
+        </div>
+
+        <div class="strategy-box">
+          <div class="strategy-item">
+            <div class="strategy-num">1</div>
+            <div>
+              <strong>R&eacute;soudre le calcul</strong>
+              <p>Des milliers de mineurs sont en comp&eacute;tition pour trouver la solution. Le premier qui r&eacute;ussit gagne le droit d'ajouter le bloc.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">2</div>
+            <div>
+              <strong>Valider les transactions</strong>
+              <p>Le bloc contient des milliers de transactions v&eacute;rifi&eacute;es. Une fois ajout&eacute; &agrave; la cha&icirc;ne, il est permanent.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">3</div>
+            <div>
+              <strong>Recevoir la r&eacute;compense</strong>
+              <p>Le mineur gagnant re&ccedil;oit des bitcoins tout neufs + les frais de transaction. Un nouveau bloc appara&icirc;t en moyenne toutes les 10 minutes.</p>
+            </div>
+          </div>
+        </div>
+
+        <p>La difficult&eacute; des calculs s'ajuste automatiquement : plus il y a de mineurs sur le r&eacute;seau, plus c'est difficile. Cela garantit qu'<strong>un bloc est toujours cr&eacute;&eacute; toutes les ~10 minutes</strong>, peu importe la puissance totale du r&eacute;seau.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Pourquoi c'est s&eacute;curis&eacute;</div>
+          <p>Pour falsifier une transaction, il faudrait contr&ocirc;ler plus de 50% de la puissance de calcul du r&eacute;seau mondial. Le co&ucirc;t serait astronomique. Bitcoin n'a jamais &eacute;t&eacute; en panne depuis plus de 15 ans &mdash; aucun autre syst&egrave;me financier ne peut dire la m&ecirc;me chose.</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#halving">Section suivante : Le Halving &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 7 — LE HALVING ═══════════════ -->
+  <section class="guide-section section" id="halving">
+    <div class="container">
+      <div class="section-label reveal">07</div>
+      <h2 class="section-title reveal">Le Halving : la raret&eacute; programm&eacute;e</h2>
+
+      <div class="guide-content reveal">
+        <p>Tous les <strong>210 000 blocs</strong> (environ 4 ans), la r&eacute;compense des mineurs est <strong>divis&eacute;e par deux</strong>. C'est le <strong>halving</strong>.</p>
+        <p>C'est le m&eacute;canisme qui rend Bitcoin de plus en plus rare avec le temps :</p>
+
+        <div class="halving-timeline">
+          <div class="halving-item">
+            <div class="halving-year">2009</div>
+            <div class="halving-reward">50 BTC</div>
+            <div class="halving-label">par bloc</div>
+          </div>
+          <div class="halving-item">
+            <div class="halving-year">2012</div>
+            <div class="halving-reward">25 BTC</div>
+            <div class="halving-label">1er halving</div>
+          </div>
+          <div class="halving-item">
+            <div class="halving-year">2016</div>
+            <div class="halving-reward">12.5 BTC</div>
+            <div class="halving-label">2e halving</div>
+          </div>
+          <div class="halving-item">
+            <div class="halving-year">2020</div>
+            <div class="halving-reward">6.25 BTC</div>
+            <div class="halving-label">3e halving</div>
+          </div>
+        </div>
+
+        <div class="halving-timeline" style="grid-template-columns: 1fr;">
+          <div class="halving-item" style="max-width: 220px; margin: 0 auto;">
+            <div class="halving-year">2024</div>
+            <div class="halving-reward">3.125 BTC</div>
+            <div class="halving-label">4e halving (actuel)</div>
+          </div>
+        </div>
+
+        <!-- SVG: Courbe halving -->
+        <div class="sketch-illustration">
+          <svg width="380" height="180" viewBox="0 0 380 180" fill="none" filter="url(#pencil)">
+            <!-- Axes -->
+            <line x1="40" y1="150" x2="360" y2="150" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <line x1="40" y1="150" x2="40" y2="20" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <!-- Y label -->
+            <text x="15" y="85" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8" transform="rotate(-90,15,85)">R&eacute;compense</text>
+
+            <!-- Escalier descendant -->
+            <polyline points="50,35 120,35 120,65 190,65 190,95 260,95 260,120 330,120 330,138 355,138" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5,2" fill="none"/>
+
+            <!-- Labels ann&eacute;es -->
+            <text x="85" y="165" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">2009</text>
+            <text x="155" y="165" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">2012</text>
+            <text x="225" y="165" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">2016</text>
+            <text x="295" y="165" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">2020</text>
+            <text x="345" y="165" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">2024</text>
+
+            <!-- Labels BTC -->
+            <text x="85" y="30" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="9">50</text>
+            <text x="155" y="60" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="9">25</text>
+            <text x="225" y="90" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="9">12.5</text>
+            <text x="295" y="115" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="9">6.25</text>
+            <text x="345" y="133" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="9">3.125</text>
+          </svg>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">21 millions, pas un de plus</div>
+          <p>Le nombre total de bitcoins est <strong>cap&eacute; &agrave; 21 millions</strong>. C'est &eacute;crit dans le code, personne ne peut le changer. Environ 19,5 millions ont d&eacute;j&agrave; &eacute;t&eacute; min&eacute;s. Les derniers bitcoins seront min&eacute;s vers <strong>2140</strong>.</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#blockchain">Section suivante : La Blockchain &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 8 — LA BLOCKCHAIN ═══════════════ -->
+  <section class="guide-section section" id="blockchain">
+    <div class="container">
+      <div class="section-label reveal">08</div>
+      <h2 class="section-title reveal">La Blockchain : une cha&icirc;ne de blocs</h2>
+
+      <div class="guide-content reveal">
+        <p>La blockchain est le registre o&ugrave; sont inscrites toutes les transactions Bitcoin depuis 2009. Chaque bloc contient des transactions et un <strong>hash</strong> &mdash; une empreinte unique.</p>
+
+        <h3 class="guide-subtitle">Le hash : l'empreinte digitale des donn&eacute;es</h3>
+        <p>Imagine une machine &agrave; g&acirc;teaux magique. Tu peux y mettre n'importe quels ingr&eacute;dients : du chocolat, des fruits, m&ecirc;me une chaussure. Peu importe ce que tu y mets, le g&acirc;teau fait <strong>toujours la m&ecirc;me taille</strong>.</p>
+        <p>Mais surtout : si tu changes un seul ingr&eacute;dient &mdash; m&ecirc;me une pinc&eacute;e de sel &mdash; <strong>le g&acirc;teau est compl&egrave;tement diff&eacute;rent</strong>.</p>
+        <p>C'est exactement comme &ccedil;a que fonctionne le hash dans Bitcoin. Les "ingr&eacute;dients" sont les donn&eacute;es d'un bloc. Si quelqu'un modifie ne serait-ce qu'un caract&egrave;re, le hash change totalement &mdash; et tout le monde le voit.</p>
+
+        <h3 class="guide-subtitle">Les blocs sont encha&icirc;n&eacute;s</h3>
+
+        <!-- SVG: Cha&icirc;ne de 3 blocs -->
+        <div class="sketch-illustration">
+          <svg width="400" height="150" viewBox="0 0 400 150" fill="none" filter="url(#pencil)">
+            <!-- Bloc 1 -->
+            <rect x="10" y="20" width="110" height="100" rx="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="65" y="42" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="10">Bloc 1</text>
+            <line x1="20" y1="50" x2="110" y2="50" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+            <text x="25" y="65" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">Tx: Alice &rarr; Bob</text>
+            <text x="25" y="80" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">Tx: Eve &rarr; Dan</text>
+            <line x1="20" y1="90" x2="110" y2="90" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+            <text x="25" y="108" class="sketch-label" fill="var(--tertiary)" font-size="7">Hash: 0a3f...b7</text>
+
+            <!-- Fl&egrave;che 1-2 -->
+            <line x1="125" y1="70" x2="145" y2="70" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <polygon points="145,66 152,70 145,74" fill="var(--on-surface-variant)"/>
+
+            <!-- Bloc 2 -->
+            <rect x="155" y="20" width="110" height="100" rx="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="210" y="42" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="10">Bloc 2</text>
+            <line x1="165" y1="50" x2="255" y2="50" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+            <text x="170" y="65" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">Prev: 0a3f...b7</text>
+            <text x="170" y="80" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">Tx: Bob &rarr; Carol</text>
+            <line x1="165" y1="90" x2="255" y2="90" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+            <text x="170" y="108" class="sketch-label" fill="var(--tertiary)" font-size="7">Hash: 1e8c...d2</text>
+
+            <!-- Fl&egrave;che 2-3 -->
+            <line x1="270" y1="70" x2="290" y2="70" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <polygon points="290,66 297,70 290,74" fill="var(--on-surface-variant)"/>
+
+            <!-- Bloc 3 -->
+            <rect x="300" y="20" width="95" height="100" rx="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="347" y="42" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="10">Bloc 3</text>
+            <line x1="310" y1="50" x2="385" y2="50" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+            <text x="315" y="65" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">Prev: 1e8c...d2</text>
+            <text x="315" y="80" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">Tx: Dan &rarr; Eve</text>
+            <line x1="310" y1="90" x2="385" y2="90" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+            <text x="315" y="108" class="sketch-label" fill="var(--tertiary)" font-size="7">Hash: 9b4a...f1</text>
+          </svg>
+        </div>
+
+        <p>Chaque bloc contient le hash du bloc pr&eacute;c&eacute;dent. Cela cr&eacute;e une <strong>cha&icirc;ne incassable</strong>. Si tu modifies une donn&eacute;e dans le bloc 1, son hash change &mdash; et le bloc 2 ne reconna&icirc;t plus le bloc 1. Toute la cha&icirc;ne devient invalide.</p>
+        <p>C'est gr&acirc;ce &agrave; ce m&eacute;canisme que les milliers de n&oelig;uds du r&eacute;seau peuvent v&eacute;rifier en temps r&eacute;el que <strong>personne n'a modifi&eacute; l'historique des transactions</strong>.</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128274;</span>
+            <div>
+              <strong>D&eacute;centralis&eacute;e</strong>
+              <p>Pas d'autorit&eacute; centrale. Maintenue par un r&eacute;seau de n&oelig;uds ind&eacute;pendants.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128065;</span>
+            <div>
+              <strong>Transparente</strong>
+              <p>Toutes les transactions sont visibles publiquement. Tu n'as pas &agrave; faire confiance : tu peux v&eacute;rifier.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128737;&#65039;</span>
+            <div>
+              <strong>S&eacute;curis&eacute;e</strong>
+              <p>La cryptographie rend toute modification r&eacute;troactive pratiquement impossible.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#9875;</span>
+            <div>
+              <strong>Immuable</strong>
+              <p>Une fois ajout&eacute;, un bloc ne peut plus &ecirc;tre modifi&eacute; ou supprim&eacute;. Les donn&eacute;es sont permanentes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Module CTA Footer -->
+  <section class="section">
+    <div class="container">
+      <div class="module-cta-footer reveal">
+        <h3>Continue ta d&eacute;couverte</h3>
+        <p>Tu comprends maintenant Bitcoin. D&eacute;couvre Ethereum, la plateforme qui a r&eacute;volutionn&eacute; la blockchain.</p>
+        <div class="cta-buttons">
+          <a href="ethereum.html" class="btn-primary">D&eacute;couvrir Ethereum &rarr;</a>
+          <a href="module1-detail.html#crypto" class="btn-secondary">&larr; Retour aux Cryptos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Formation cr&eacute;&eacute;e avec &#10084;&#65039; pour la communaut&eacute; crypto francophone</p>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="module1.html">Cryptos</a>
+        <a href="module1-detail.html#crypto">Crypto-monnaies</a>
+        <a href="module3.html">Airdrops</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Scroll Progress Bar ── */
+    (function () {
+      var bar = document.getElementById('scrollProgress');
+      window.addEventListener('scroll', function () {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        bar.style.width = progress + '%';
+      }, { passive: true });
+    })();
+
+    /* ── Theme Toggle ── */
+    (function () {
+      var toggle = document.getElementById('themeToggle');
+      var root = document.documentElement;
+      var stored = localStorage.getItem('theme');
+      if (stored) root.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', function () {
+        var current = root.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    })();
+
+    /* ── Mobile Nav Hamburger ── */
+    (function () {
+      var hamburger = document.getElementById('navHamburger');
+      var nav = document.getElementById('nav');
+      hamburger.addEventListener('click', function () {
+        nav.classList.toggle('open');
+      });
+      nav.querySelectorAll('.nav-links a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('open');
+        });
+      });
+    })();
+
+    /* ── Scroll Reveal ── */
+    (function () {
+      var reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        reveals.forEach(function (el) { observer.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('visible'); });
+      }
+    })();
+
+    /* ── Active Section Tracking ── */
+    (function () {
+      var sections = document.querySelectorAll('.guide-section');
+      var navLinks = document.querySelectorAll('.nav-links a');
+      var sideLinks = document.querySelectorAll('.detail-sidenav a');
+
+      function updateActive() {
+        var scrollPos = window.scrollY + 120;
+        var currentId = '';
+        sections.forEach(function (section) {
+          if (section.offsetTop <= scrollPos) {
+            currentId = section.getAttribute('id');
+          }
+        });
+        navLinks.forEach(function (link) {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+        });
+        sideLinks.forEach(function (link) {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+        });
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+  </script>
+
+</body>
+</html>

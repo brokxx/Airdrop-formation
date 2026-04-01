@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethereum &mdash; L'ordinateur mondial | Airdrop Formation</title>
+  <meta name="description" content="Ethereum : guide complet. Smart contracts, DeFi, staking et rôle d'ETH dans le Web3.">
+  <meta property="og:title" content="Ethereum — L'ordinateur mondial | Airdrop Formation">
+  <meta property="og:description" content="Ethereum : guide complet. Smart contracts, DeFi, staking et rôle d'ETH dans le Web3.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23efa905'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='bold' fill='%231a1400' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="guide.css">
+  <link rel="stylesheet" href="module1-detail.css">
+  <link rel="stylesheet" href="crypto-detail.css">
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav" id="nav">
+    <a href="module1-detail.html#crypto" class="nav-logo">&larr; Cryptos</a>
+    <ul class="nav-links">
+      <li><a href="#intro" class="active">Ethereum</a></li>
+      <li><a href="#vs-bitcoin">vs Bitcoin</a></li>
+      <li><a href="#ether">Ether</a></li>
+      <li><a href="#smart-contracts">Contracts</a></li>
+      <li><a href="#proof-of-stake">PoS</a></li>
+      <li><a href="#evm">EVM</a></li>
+      <li><a href="#tokens">Tokens</a></li>
+      <li><a href="#ecosysteme">&Eacute;cosyst&egrave;me</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer de thème">
+      <span class="theme-toggle-icon moon">&#127769;</span>
+      <span class="theme-toggle-icon sun">&#9728;&#65039;</span>
+    </button>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <main>
+
+  <nav class="detail-sidenav" id="detailSidenav">
+    <a href="#intro" class="active">C'est quoi ?</a>
+    <a href="#vs-bitcoin">vs Bitcoin</a>
+    <a href="#ether">L'Ether</a>
+    <a href="#smart-contracts">Smart Contracts</a>
+    <a href="#proof-of-stake">Proof of Stake</a>
+    <a href="#evm">L'EVM</a>
+    <a href="#tokens">Les Tokens</a>
+    <a href="#ecosysteme">&Eacute;cosyst&egrave;me</a>
+  </nav>
+
+  <!-- SVG Filters -->
+  <svg style="position:absolute;width:0;height:0">
+    <defs>
+      <filter id="pencil">
+        <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="4" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ═══════════════ SECTION 1 — C'EST QUOI ETHEREUM ? ═══════════════ -->
+  <section class="guide-section section" id="intro">
+    <div class="container">
+      <a href="module1-detail.html#crypto" class="back-link reveal">&larr; Retour aux Cryptos</a>
+
+      <div class="crypto-hero reveal">
+        <div class="crypto-hero-symbol">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" filter="url(#pencil)">
+            <!-- Ethereum diamond -->
+            <polygon points="60,10 30,60 60,78 90,60" stroke="var(--tertiary)" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="4,2" fill="none"/>
+            <polygon points="60,78 30,60 60,110 90,60" stroke="var(--tertiary)" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="4,2" fill="none"/>
+            <line x1="60" y1="10" x2="60" y2="110" stroke="var(--tertiary)" stroke-width="1" stroke-dasharray="3,3" opacity="0.3"/>
+            <!-- Sparkles -->
+            <line x1="95" y1="30" x2="105" y2="22" stroke="var(--tertiary)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            <line x1="100" y1="38" x2="108" y2="36" stroke="var(--tertiary)" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+          </svg>
+        </div>
+        <h1 class="crypto-hero-title">L'Ordinateur <span style="color:var(--tertiary)">Mondial</span></h1>
+        <p class="crypto-hero-subtitle">Ethereum : la blockchain programmable qui a r&eacute;volutionn&eacute; l'&eacute;cosyst&egrave;me crypto avec les smart contracts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section section" style="padding-top:0">
+    <div class="container">
+      <div class="guide-content reveal">
+        <p>En 2013, un jeune Canadien de 19 ans nomm&eacute; <strong>Vitalik Buterin</strong> publie un livre blanc avec une id&eacute;e simple mais r&eacute;volutionnaire : et si une blockchain pouvait faire <strong>bien plus que transf&eacute;rer de l'argent</strong> ?</p>
+        <p>Lanc&eacute; le 30 juillet 2015, Ethereum est une blockchain <strong>d&eacute;centralis&eacute;e et programmable</strong>. Elle permet &agrave; n'importe qui de cr&eacute;er des applications qui s'ex&eacute;cutent sans interm&eacute;diaire, gr&acirc;ce aux <strong>smart contracts</strong>.</p>
+        <p>L&agrave; o&ugrave; Bitcoin est de l'or num&eacute;rique, Ethereum est un <strong>ordinateur mondial</strong> : une plateforme sur laquelle on peut construire des applications financi&egrave;res, des march&eacute;s, des jeux &mdash; tout ce qu'on peut imaginer.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">En r&eacute;sum&eacute;</div>
+          <p>Ethereum est la blockchain la plus utilis&eacute;e au monde. Elle h&eacute;berge des milliers d'applications d&eacute;centralis&eacute;es et a donn&eacute; naissance &agrave; la DeFi, aux NFTs et &agrave; tout l'&eacute;cosyst&egrave;me Web3.</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#vs-bitcoin">Section suivante : Ethereum vs Bitcoin &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 2 — ETHEREUM vs BITCOIN ═══════════════ -->
+  <section class="guide-section section" id="vs-bitcoin">
+    <div class="container">
+      <div class="section-label reveal">02</div>
+      <h2 class="section-title reveal">Ethereum vs Bitcoin</h2>
+
+      <div class="guide-content reveal">
+        <p>Bitcoin a prouv&eacute; qu'on pouvait transf&eacute;rer de la valeur sans banque. Mais son langage de programmation est volontairement simple : il fait <strong>une seule chose, et il la fait tr&egrave;s bien</strong>.</p>
+        <p>Vitalik Buterin voyait plus loin. Il voulait une blockchain capable d'ex&eacute;cuter <strong>n'importe quel programme</strong>, pas seulement des transferts d'argent.</p>
+
+        <!-- SVG: Bitcoin vs Ethereum -->
+        <div class="sketch-illustration">
+          <svg width="400" height="160" viewBox="0 0 400 160" fill="none" filter="url(#pencil)">
+            <!-- Bitcoin side -->
+            <rect x="20" y="25" width="150" height="105" rx="12" stroke="var(--primary)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="95" y="50" text-anchor="middle" font-family="var(--font-display)" font-size="22" font-weight="800" fill="var(--primary)">&#8383;</text>
+            <text x="95" y="72" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="11">Bitcoin</text>
+            <line x1="40" y1="82" x2="150" y2="82" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="3,3" opacity="0.3"/>
+            <text x="95" y="100" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="9">Transfert de valeur</text>
+            <text x="95" y="118" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="9">Or num&eacute;rique</text>
+
+            <!-- Ethereum side -->
+            <rect x="230" y="25" width="150" height="105" rx="12" stroke="var(--tertiary)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="305" y="52" text-anchor="middle" font-family="var(--font-display)" font-size="22" font-weight="800" fill="var(--tertiary)">&#9830;</text>
+            <text x="305" y="72" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="11">Ethereum</text>
+            <line x1="250" y1="82" x2="360" y2="82" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="3,3" opacity="0.3"/>
+            <text x="305" y="100" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="9">Programmable</text>
+            <text x="305" y="118" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="9">Ordinateur mondial</text>
+
+            <!-- VS -->
+            <text x="200" y="85" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="12">vs</text>
+          </svg>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128176;</span>
+            <div>
+              <strong>Bitcoin</strong>
+              <p>Transfert de valeur, r&eacute;serve de valeur. Langage simple volontairement. S&eacute;curit&eacute; maximale, fonctionnalit&eacute;s limit&eacute;es.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128187;</span>
+            <div>
+              <strong>Ethereum</strong>
+              <p>Plateforme programmable. Langage complet (Turing complete). Permet de cr&eacute;er des applications, pas seulement d'envoyer de l'argent.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">The DAO &mdash; un &eacute;pisode fondateur</div>
+          <p>En juin 2016, un smart contract appel&eacute; The DAO a &eacute;t&eacute; pirat&eacute; : 50 millions de dollars vol&eacute;s. La communaut&eacute; s'est divis&eacute;e : faut-il annuler le hack ? R&eacute;sultat : Ethereum s'est scind&eacute; en deux. <strong>Ethereum</strong> (la version corrig&eacute;e, celle qu'on utilise aujourd'hui) et <strong>Ethereum Classic</strong> (la version originale, toujours active).</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#ether">Section suivante : L'Ether &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 3 — L'ETHER ═══════════════ -->
+  <section class="guide-section section" id="ether">
+    <div class="container">
+      <div class="section-label reveal">03</div>
+      <h2 class="section-title reveal">L'Ether : le carburant d'Ethereum</h2>
+
+      <div class="guide-content reveal">
+        <p>L'<strong>ether (ETH)</strong> est la cryptomonnaie native d'Ethereum. C'est le carburant qui fait tourner tout le r&eacute;seau.</p>
+        <p>Chaque action sur Ethereum (envoyer de l'ETH, interagir avec un smart contract, cr&eacute;er un NFT) n&eacute;cessite de payer des <strong>frais de gas</strong> en ether. C'est le co&ucirc;t de la puissance de calcul que tu consommes.</p>
+
+        <!-- SVG: Gas pump -->
+        <div class="sketch-illustration">
+          <svg width="300" height="150" viewBox="0 0 300 150" fill="none" filter="url(#pencil)">
+            <!-- Pump body -->
+            <rect x="90" y="30" width="60" height="90" rx="6" stroke="var(--tertiary)" stroke-width="2.5" stroke-dasharray="4,2" fill="none"/>
+            <rect x="100" y="45" width="40" height="25" rx="4" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+            <text x="120" y="62" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="10">GAS</text>
+            <!-- Nozzle -->
+            <path d="M150,70 L175,70 L175,50 L190,50" stroke="var(--on-surface-variant)" stroke-width="2" stroke-linecap="round" stroke-dasharray="4,2" fill="none"/>
+            <!-- Drop -->
+            <path d="M190,48 Q195,55 190,62 Q185,55 190,48" stroke="var(--tertiary)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+            <!-- Labels -->
+            <text x="120" y="140" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="9">Frais de gas</text>
+            <!-- Cost display -->
+            <text x="120" y="95" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="9">21 Gwei</text>
+          </svg>
+        </div>
+
+        <p>Les frais de gas fonctionnent comme un <strong>march&eacute; aux ench&egrave;res</strong> : quand le r&eacute;seau est congestionn&eacute;, les frais augmentent. Tu peux payer plus pour passer en priorit&eacute;.</p>
+        <p>Les frais sont exprim&eacute;s en <strong>Gwei</strong> (1 Gwei = 0,000000001 ETH). C'est comme les centimes pour l'euro &mdash; une unit&eacute; plus pratique pour les petits montants.</p>
+
+        <h3 class="guide-subtitle">Un mod&egrave;le d&eacute;flationniste</h3>
+        <p>Contrairement &agrave; Bitcoin (21 millions max), Ethereum n'a <strong>pas de limite de supply</strong>. Mais depuis la mise &agrave; jour <strong>EIP-1559</strong> (2021), une partie des frais de gas est <strong>br&ucirc;l&eacute;e</strong> (d&eacute;truite d&eacute;finitivement) &agrave; chaque transaction.</p>
+        <p>R&eacute;sultat : quand le r&eacute;seau est tr&egrave;s utilis&eacute;, <strong>plus d'ETH sont br&ucirc;l&eacute;s que cr&eacute;&eacute;s</strong>. L'ether devient alors d&eacute;flationniste &mdash; il y en a de moins en moins, ce qui augmente potentiellement sa valeur.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Supply actuelle</div>
+          <p>Environ <strong>120 millions d'ETH</strong> en circulation. Depuis The Merge (2022), plus de 400 000 ETH ont &eacute;t&eacute; br&ucirc;l&eacute;s, soit environ 800 millions de dollars retir&eacute;s de la circulation.</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#smart-contracts">Section suivante : Les Smart Contracts &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 4 — SMART CONTRACTS ═══════════════ -->
+  <section class="guide-section section" id="smart-contracts">
+    <div class="container">
+      <div class="section-label reveal">04</div>
+      <h2 class="section-title reveal">Les Smart Contracts</h2>
+
+      <div class="guide-content reveal">
+        <p>La grande r&eacute;volution d'Ethereum, c'est le <strong>smart contract</strong> (contrat intelligent). C'est un programme qui s'ex&eacute;cute automatiquement sur la blockchain quand certaines conditions sont remplies.</p>
+
+        <!-- SVG: Smart Contract flow -->
+        <div class="sketch-illustration">
+          <svg width="400" height="130" viewBox="0 0 400 130" fill="none" filter="url(#pencil)">
+            <!-- Condition -->
+            <rect x="15" y="30" width="100" height="60" rx="8" stroke="var(--on-surface-variant)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="65" y="55" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="9">SI condition</text>
+            <text x="65" y="72" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="9">est remplie...</text>
+
+            <!-- Arrow -->
+            <line x1="120" y1="60" x2="155" y2="60" stroke="var(--tertiary)" stroke-width="2" stroke-dasharray="5,3"/>
+            <polygon points="155,56 163,60 155,64" fill="var(--tertiary)"/>
+
+            <!-- Smart Contract -->
+            <rect x="168" y="20" width="100" height="80" rx="8" stroke="var(--tertiary)" stroke-width="2.5" stroke-dasharray="4,2" fill="none"/>
+            <text x="218" y="42" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="9">SMART</text>
+            <text x="218" y="55" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="9">CONTRACT</text>
+            <text x="218" y="75" text-anchor="middle" font-size="22">&#9881;&#65039;</text>
+
+            <!-- Arrow -->
+            <line x1="273" y1="60" x2="308" y2="60" stroke="var(--tertiary)" stroke-width="2" stroke-dasharray="5,3"/>
+            <polygon points="308,56 316,60 308,64" fill="var(--tertiary)"/>
+
+            <!-- Result -->
+            <rect x="320" y="30" width="70" height="60" rx="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="355" y="55" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="9">...ALORS</text>
+            <text x="355" y="72" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="9">ex&eacute;cute !</text>
+
+            <!-- Label -->
+            <text x="218" y="120" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">Automatique, sans interm&eacute;diaire, irr&eacute;versible</text>
+          </svg>
+        </div>
+
+        <p>Imagine un distributeur automatique : tu mets une pi&egrave;ce, tu appuies sur un bouton, la boisson sort. Pas besoin de vendeur. Le smart contract fonctionne pareil : les r&egrave;gles sont &eacute;crites dans le code, et <strong>personne ne peut tricher</strong>.</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128221;</span>
+            <div>
+              <strong>Programmable</strong>
+              <p>N'importe qui peut cr&eacute;er un smart contract en Solidity (le langage d'Ethereum) et le d&eacute;ployer sur le r&eacute;seau.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128274;</span>
+            <div>
+              <strong>Irr&eacute;versible</strong>
+              <p>Une fois d&eacute;ploy&eacute;, le contrat s'ex&eacute;cute selon ses r&egrave;gles. Pas de modification possible, pas de censure.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128279;</span>
+            <div>
+              <strong>Composable</strong>
+              <p>Les smart contracts peuvent interagir entre eux. C'est comme des Legos : on peut construire des applications complexes en combinant des contrats simples.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128065;</span>
+            <div>
+              <strong>Transparent</strong>
+              <p>Le code est public. Tout le monde peut v&eacute;rifier ce que fait un smart contract avant d'interagir avec.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#proof-of-stake">Section suivante : Le Proof of Stake &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 5 — PROOF OF STAKE ═══════════════ -->
+  <section class="guide-section section" id="proof-of-stake">
+    <div class="container">
+      <div class="section-label reveal">05</div>
+      <h2 class="section-title reveal">The Merge &amp; Proof of Stake</h2>
+
+      <div class="guide-content reveal">
+        <p>&Agrave; ses d&eacute;buts, Ethereum utilisait le m&ecirc;me m&eacute;canisme que Bitcoin : le <strong>Proof of Work</strong> (minage). Mais le 15 septembre 2022, une mise &agrave; jour majeure appel&eacute;e <strong>The Merge</strong> a tout chang&eacute;.</p>
+        <p>Ethereum est pass&eacute; au <strong>Proof of Stake</strong> (preuve d'enjeu) : au lieu de miner avec de la puissance de calcul, les validateurs bloquent (stakent) des ETH pour s&eacute;curiser le r&eacute;seau.</p>
+
+        <!-- SVG: PoW vs PoS -->
+        <div class="sketch-illustration">
+          <svg width="400" height="140" viewBox="0 0 400 140" fill="none" filter="url(#pencil)">
+            <!-- PoW (barr&eacute;) -->
+            <rect x="30" y="25" width="130" height="80" rx="10" stroke="var(--on-surface-variant)" stroke-width="2" stroke-dasharray="4,2" fill="none" opacity="0.5"/>
+            <text x="95" y="50" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="10" opacity="0.6">Proof of Work</text>
+            <text x="95" y="70" text-anchor="middle" font-size="18" opacity="0.5">&#9935;&#65039;</text>
+            <text x="95" y="90" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8" opacity="0.5">Minage (&eacute;nergivore)</text>
+            <line x1="30" y1="25" x2="160" y2="105" stroke="#f87171" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+
+            <!-- Arrow -->
+            <line x1="170" y1="65" x2="220" y2="65" stroke="var(--tertiary)" stroke-width="2" stroke-dasharray="5,3"/>
+            <polygon points="220,61 228,65 220,69" fill="var(--tertiary)"/>
+
+            <!-- PoS -->
+            <rect x="240" y="25" width="130" height="80" rx="10" stroke="var(--tertiary)" stroke-width="2.5" stroke-dasharray="4,2" fill="none"/>
+            <text x="305" y="50" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="10">Proof of Stake</text>
+            <text x="305" y="70" text-anchor="middle" font-size="18">&#128274;</text>
+            <text x="305" y="90" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="8">Staking (32 ETH min.)</text>
+
+            <text x="200" y="130" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">The Merge &mdash; 15 sept. 2022</text>
+          </svg>
+        </div>
+
+        <div class="strategy-box">
+          <div class="strategy-item">
+            <div class="strategy-num">1</div>
+            <div>
+              <strong>Devenir validateur</strong>
+              <p>Tu bloques 32 ETH sur le r&eacute;seau. Tes ETH servent de garantie : si tu triches, tu perds une partie de ta mise.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">2</div>
+            <div>
+              <strong>&Ecirc;tre tir&eacute; au sort</strong>
+              <p>Toutes les 12 secondes, un validateur est choisi al&eacute;atoirement pour proposer un nouveau bloc. Plus tu stakes, plus tu as de chances.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">3</div>
+            <div>
+              <strong>Recevoir les r&eacute;compenses</strong>
+              <p>Le validateur s&eacute;lectionn&eacute; re&ccedil;oit les frais de transaction du bloc. Comportement malveillant = p&eacute;nalit&eacute;s (slashing).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Pas 32 ETH ?</div>
+          <p>Tu peux quand m&ecirc;me participer via des <strong>pools de staking</strong> comme Lido ou RocketPool. Tu d&eacute;poses n'importe quel montant d'ETH et tu re&ccedil;ois des r&eacute;compenses proportionnelles.</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#evm">Section suivante : L'EVM &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 6 — L'EVM ═══════════════ -->
+  <section class="guide-section section" id="evm">
+    <div class="container">
+      <div class="section-label reveal">06</div>
+      <h2 class="section-title reveal">L'EVM : le moteur d'Ethereum</h2>
+
+      <div class="guide-content reveal">
+        <p>L'<strong>EVM</strong> (Ethereum Virtual Machine) est le moteur qui fait tourner Ethereum. C'est elle qui ex&eacute;cute les smart contracts et synchronise l'&eacute;tat de la blockchain entre tous les n&oelig;uds du r&eacute;seau.</p>
+        <p>Chaque n&oelig;ud du r&eacute;seau ex&eacute;cute sa propre copie de l'EVM. C'est ce qui garantit que <strong>tous les n&oelig;uds sont d'accord</strong> sur l'&eacute;tat de la blockchain &agrave; tout moment.</p>
+
+        <h3 class="guide-subtitle">L'impact de l'EVM sur l'&eacute;cosyst&egrave;me</h3>
+        <p>L'EVM est devenue un <strong>standard</strong>. De nombreuses blockchains l'ont copi&eacute;e pour profiter de sa compatibilit&eacute; :</p>
+
+        <!-- SVG: EVM compatibility -->
+        <div class="sketch-illustration">
+          <svg width="380" height="170" viewBox="0 0 380 170" fill="none" filter="url(#pencil)">
+            <!-- EVM center -->
+            <circle cx="190" cy="85" r="35" stroke="var(--tertiary)" stroke-width="2.5" stroke-dasharray="4,2" fill="none"/>
+            <text x="190" y="82" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="12">EVM</text>
+            <text x="190" y="96" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="7">Standard</text>
+
+            <!-- Connected chains -->
+            <circle cx="70" cy="45" r="22" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+            <text x="70" y="48" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="8">BNB</text>
+            <line x1="92" y1="55" x2="157" y2="75" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+            <circle cx="310" cy="45" r="22" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+            <text x="310" y="48" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="8">Polygon</text>
+            <line x1="288" y1="55" x2="223" y2="75" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+            <circle cx="70" cy="130" r="22" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+            <text x="70" y="133" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="8">Avalanche</text>
+            <line x1="92" y1="120" x2="157" y2="98" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+            <circle cx="310" cy="130" r="22" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+            <text x="310" y="133" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="8">Fantom</text>
+            <line x1="288" y1="120" x2="223" y2="98" stroke="var(--on-surface-variant)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+          </svg>
+        </div>
+
+        <p>Concr&egrave;tement, une blockchain "EVM compatible" signifie que :</p>
+        <ul class="checklist">
+          <li>Tu peux utiliser le m&ecirc;me wallet (MetaMask) sur toutes ces blockchains</li>
+          <li>Les d&eacute;veloppeurs peuvent d&eacute;ployer leurs apps sur plusieurs cha&icirc;nes facilement</li>
+          <li>Tu peux transf&eacute;rer tes actifs d'une cha&icirc;ne &agrave; l'autre</li>
+        </ul>
+
+        <div class="next-section-link">
+          <a href="#tokens">Section suivante : Les Tokens &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 7 — LES TOKENS ═══════════════ -->
+  <section class="guide-section section" id="tokens">
+    <div class="container">
+      <div class="section-label reveal">07</div>
+      <h2 class="section-title reveal">Les Tokens : les standards d'Ethereum</h2>
+
+      <div class="guide-content reveal">
+        <p>Gr&acirc;ce aux smart contracts, n'importe qui peut cr&eacute;er un <strong>token</strong> sur Ethereum. Mais tous les tokens ne se valent pas : il existe des <strong>standards</strong> (des r&egrave;gles) qui d&eacute;finissent ce qu'un token peut faire.</p>
+
+        <p>Petite pr&eacute;cision importante : un <strong>coin</strong> (comme ETH) est natif &agrave; sa blockchain. Un <strong>token</strong> (comme USDT) est cr&eacute;&eacute; par un smart contract sur une blockchain existante.</p>
+
+        <div class="method-cards">
+          <div class="method-card">
+            <div class="method-header">
+              <span class="method-icon">&#129689;</span>
+              <h4>ERC-20 &mdash; Tokens fongibles</h4>
+            </div>
+            <p>Le standard le plus utilis&eacute;. Un token ERC-20 est <strong>interchangeable</strong> : 1 USDT = 1 USDT, comme un billet de 5&euro; est &eacute;changeable contre un autre billet de 5&euro;. Utilis&eacute; pour les stablecoins, les tokens de gouvernance, les utility tokens.</p>
+          </div>
+          <div class="method-card">
+            <div class="method-header">
+              <span class="method-icon">&#127912;</span>
+              <h4>ERC-721 &mdash; NFTs</h4>
+            </div>
+            <p>Token <strong>non fongible</strong> : chaque NFT est unique. Utilis&eacute; comme certificat d'authenticit&eacute;, titre de propri&eacute;t&eacute; num&eacute;rique, &oelig;uvre d'art, collectible. Chaque token a un identifiant unique.</p>
+          </div>
+          <div class="method-card">
+            <div class="method-header">
+              <span class="method-icon">&#128260;</span>
+              <h4>ERC-1155 &mdash; Multi-token</h4>
+            </div>
+            <p>Standard <strong>hybride</strong> : g&egrave;re les tokens fongibles ET non fongibles dans un seul contrat. Plus efficace et moins co&ucirc;teux en gas. Utilis&eacute; dans le gaming et les collections.</p>
+          </div>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#ecosysteme">Section suivante : L'&Eacute;cosyst&egrave;me &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 8 — L'&Eacute;COSYST&Egrave;ME ═══════════════ -->
+  <section class="guide-section section" id="ecosysteme">
+    <div class="container">
+      <div class="section-label reveal">08</div>
+      <h2 class="section-title reveal">L'&Eacute;cosyst&egrave;me Ethereum</h2>
+
+      <div class="guide-content reveal">
+        <p>Ethereum n'est pas juste une blockchain : c'est un &eacute;cosyst&egrave;me entier d'applications d&eacute;centralis&eacute;es (dApps) construites sur ses smart contracts.</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#127974;</span>
+            <div>
+              <strong>DeFi</strong>
+              <p>Finance d&eacute;centralis&eacute;e : pr&ecirc;ts, emprunts, &eacute;changes, rendements &mdash; tout &ccedil;a sans banque. Des protocoles comme Uniswap, Aave ou Compound g&egrave;rent des milliards.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#127912;</span>
+            <div>
+              <strong>NFTs</strong>
+              <p>Propri&eacute;t&eacute; num&eacute;rique v&eacute;rifiable : art, collectibles, tickets, identit&eacute;. Les NFTs ont prouv&eacute; qu'on pouvait poss&eacute;der quelque chose d'unique sur Internet.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#127918;</span>
+            <div>
+              <strong>Gaming</strong>
+              <p>Jeux on-chain o&ugrave; les joueurs poss&egrave;dent r&eacute;ellement leurs objets (sous forme de NFTs). Play-to-earn, m&eacute;tavers, &eacute;conomies virtuelles.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128640;</span>
+            <div>
+              <strong>Layer 2</strong>
+              <p>Des r&eacute;seaux comme Arbitrum, Optimism ou Base construits au-dessus d'Ethereum pour des transactions plus rapides et moins ch&egrave;res, tout en gardant la s&eacute;curit&eacute;.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Pourquoi c'est important pour les airdrops</div>
+          <p>La quasi-totalit&eacute; des airdrops se passent sur Ethereum ou ses Layer 2. Comprendre Ethereum, ses smart contracts et ses standards de tokens, c'est <strong>comprendre le terrain de jeu</strong> sur lequel tu vas farmer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Footer -->
+  <section class="section">
+    <div class="container">
+      <div class="module-cta-footer reveal">
+        <h3>Continue ta d&eacute;couverte</h3>
+        <p>Tu comprends maintenant Ethereum. D&eacute;couvre les Stablecoins, les monnaies stables de l'&eacute;cosyst&egrave;me.</p>
+        <div class="cta-buttons">
+          <a href="stablecoins.html" class="btn-primary">D&eacute;couvrir les Stablecoins &rarr;</a>
+          <a href="module1-detail.html#crypto" class="btn-secondary">&larr; Retour aux Cryptos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Formation cr&eacute;&eacute;e avec &#10084;&#65039; pour la communaut&eacute; crypto francophone</p>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="module1.html">Cryptos</a>
+        <a href="bitcoin.html">Bitcoin</a>
+        <a href="module3.html">Airdrops</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){var b=document.getElementById('scrollProgress');window.addEventListener('scroll',function(){var s=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;b.style.width=(h>0?(s/h)*100:0)+'%';},{passive:true})})();
+    (function(){var t=document.getElementById('themeToggle'),r=document.documentElement,s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s);t.addEventListener('click',function(){var c=r.getAttribute('data-theme'),n=c==='dark'?'light':'dark';r.setAttribute('data-theme',n);localStorage.setItem('theme',n)})})();
+    (function(){var h=document.getElementById('navHamburger'),n=document.getElementById('nav');h.addEventListener('click',function(){n.classList.toggle('open')});n.querySelectorAll('.nav-links a').forEach(function(l){l.addEventListener('click',function(){n.classList.remove('open')})})})();
+    (function(){var r=document.querySelectorAll('.reveal');if('IntersectionObserver' in window){var o=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});r.forEach(function(el){o.observe(el)})}else{r.forEach(function(el){el.classList.add('visible')})}})();
+    (function(){var ss=document.querySelectorAll('.guide-section'),nl=document.querySelectorAll('.nav-links a'),sl=document.querySelectorAll('.detail-sidenav a');function u(){var p=window.scrollY+120,c='';ss.forEach(function(s){if(s.offsetTop<=p)c=s.getAttribute('id')});nl.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+c)});sl.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+c)});}window.addEventListener('scroll',u,{passive:true});u()})();
+  </script>
+
+</body>
+</html>

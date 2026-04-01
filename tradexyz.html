@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guide Trade[XYZ] — Airdrop Formation</title>
+  <meta name="description" content="Guide Trade[XYZ] : DEX perps cross-asset sur Hyperliquid. Actions, indices, crypto on-chain.">
+  <meta property="og:title" content="Guide Trade[XYZ] — Airdrop Formation">
+  <meta property="og:description" content="Guide Trade[XYZ] : DEX perps cross-asset sur Hyperliquid. Actions, indices, crypto on-chain.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23efa905'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='bold' fill='%231a1400' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,57 +17,111 @@
 </head>
 <body>
 
-  <!-- Scroll Progress -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- Navigation -->
   <nav class="nav" id="nav">
     <a href="index.html" class="nav-logo">AF</a>
     <ul class="nav-links">
-      <li><a href="#intro" class="active">Introduction</a></li>
-      <li><a href="#trading">Trading</a></li>
+      <li><a href="#hook" class="active">L'Opportunit&eacute;</a></li>
+      <li><a href="#understand">Comprendre</a></li>
       <li><a href="#tradfi">TradFi</a></li>
-      <li><a href="#farming">Farming</a></li>
+      <li><a href="#double">2 en 1</a></li>
+      <li><a href="#steps">Guide</a></li>
     </ul>
-    <div class="theme-toggle" id="themeToggle" role="button" aria-label="Basculer thème clair/sombre">
-      <span class="theme-toggle-icon moon">🌙</span>
-      <span class="theme-toggle-icon sun">☀️</span>
-    </div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">☰</button>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer de th&egrave;me">
+      <span class="theme-toggle-icon moon">&#127769;</span>
+      <span class="theme-toggle-icon sun">&#9728;&#65039;</span>
+    </button>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">&#9776;</button>
   </nav>
 
-  <!-- ═══════════════ SECTION 1 — INTRODUCTION ═══════════════ -->
-  <section class="guide-section section" id="intro">
+  <main>
+
+  <!-- ═══════════════ SECTION 1 — HOOK ═══════════════ -->
+  <section class="guide-section section" id="hook">
     <div class="container">
-      <a href="hyperliquid.html" class="back-link reveal">← Retour au guide Hyperliquid</a>
+      <a href="module5.html" class="back-link reveal">&larr; Retour aux Plays</a>
 
       <div class="guide-hero reveal reveal-delay-1">
+        <img src="tradexyz.svg" alt="Trade[XYZ]" class="guide-hero-logo">
         <div class="guide-hero-badge">Trade[XYZ]</div>
-        <h1 class="guide-hero-title">Comprendre<br><img src="tradexyz.svg" alt="Trade[XYZ]" class="title-logo"></h1>
-        <p class="guide-hero-subtitle">Un HIP-3 construit sur Hyperliquid qui ouvre l'accès aux actions, indices et matières premières directement on-chain.</p>
+        <h1 class="guide-hero-title">Le DEX qui am&egrave;ne la <span class="gradient-text">TradFi</span> on-chain</h1>
+        <p class="guide-hero-subtitle">Actions, indices, mati&egrave;res premi&egrave;res en perps sur Hyperliquid. Pas de token lanc&eacute;. Farming 2 en 1.</p>
       </div>
 
-      <div class="guide-content reveal reveal-delay-2">
-        <p>Après avoir compris Hyperliquid et Kinetiq, on va voir un autre élément important de l'écosystème : <strong>Trade[XYZ]</strong>. C'est une plateforme construite directement sur Hyperliquid. Un <strong>HIP-3</strong>.</p>
-        <p>Pour bien la comprendre, il faut voir Hyperliquid comme le moteur, l'infrastructure principale. Trade[XYZ] vient se construire au-dessus pour proposer plus de possibilités et ouvrir l'accès à davantage d'actifs.</p>
+      <div class="stats-row reveal reveal-delay-2">
+        <div class="stat-card">
+          <div class="stat-value">$35M+</div>
+          <div class="stat-label">Volume au lancement (Nasdaq 100)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">HIP-3</div>
+          <div class="stat-label">Construit sur Hyperliquid L1</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">Pas de token</div>
+          <div class="stat-label">Phase pr&eacute;-TGE</div>
+        </div>
+      </div>
+
+      <div class="guide-content reveal reveal-delay-3">
+        <p>Depuis le succ&egrave;s de l'airdrop Hyperliquid fin 2024, une logique s'est install&eacute;e dans l'&eacute;cosyst&egrave;me : chaque protocole qui g&eacute;n&egrave;re du volume important <strong>sans avoir encore lanc&eacute; de token</strong> devient un candidat s&eacute;rieux pour une distribution r&eacute;troactive.</p>
+        <p>C'est exactement le cas de <strong>Trade[XYZ]</strong>. La plateforme s'est distingu&eacute;e avec plus de 35 millions de dollars de volume d&egrave;s le lancement de son premier produit, un contrat perp sur le Nasdaq 100.</p>
+        <p>Aujourd'hui, Trade[XYZ] se situe dans la phase la plus recherch&eacute;e : <strong>une plateforme fonctionnelle, des utilisateurs actifs, mais aucun token</strong>.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Pourquoi c'est int&eacute;ressant</div>
+          <p>En utilisant Trade[XYZ], tu interagis directement avec l'infrastructure Hyperliquid. Ton activit&eacute; est pertinente &agrave; la fois pour <strong>Trade[XYZ]</strong> et pour <strong>l'&eacute;cosyst&egrave;me Hyperliquid</strong> dans son ensemble. C'est du farming 2 en 1.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ SECTION 2 — CE QUE PERMET TRADE[XYZ] ═══════════════ -->
-  <section class="guide-section section" id="trading">
+  <!-- ═══════════════ SECTION 2 — COMPRENDRE ═══════════════ -->
+  <section class="guide-section section" id="understand">
     <div class="container">
-      <div class="section-label reveal">Fonctionnement</div>
-      <h2 class="section-title reveal reveal-delay-1">Ce que permet Trade[XYZ]</h2>
+      <div class="section-label reveal">Comprendre</div>
+      <h2 class="section-title reveal reveal-delay-1">Qu'est-ce que Trade[XYZ] ?</h2>
 
       <div class="guide-content reveal reveal-delay-2">
-        <p>Trade[XYZ] est une plateforme de trading. Comme sur Hyperliquid, tu peux ouvrir des positions, générer du volume et être actif. Mais ici, <strong>tu ne te limites pas aux cryptos</strong>.</p>
-        <p>Tu peux aussi accéder à des actifs comme des <strong>actions, des indices ou des matières premières</strong>. Tout cela se fait sous forme de "perps".</p>
+        <p>Trade[XYZ] est un <strong>DEX de contrats perp&eacute;tuels cross-asset</strong>, construit sur Hyperliquid L1.</p>
+        <p>Un contrat perp&eacute;tuel (perp) te permet de prendre position sur le prix d'un actif, &agrave; la hausse ou &agrave; la baisse, <strong>sans date d'expiration</strong> et sans poss&eacute;der r&eacute;ellement l'actif.</p>
+        <p>Le terme <strong>cross-asset</strong> signifie que tu peux trader plusieurs types d'actifs sur une seule plateforme. C'est ce qui diff&eacute;rencie Trade[XYZ] de la plupart des DEX :</p>
 
-        <div class="highlight-box">
-          <div class="highlight-box-title">C'est quoi un perp ?</div>
-          <p>Un perp, c'est simplement une position qui te permet de prendre une exposition sur le prix d'un actif, à la hausse ou à la baisse, <strong>sans avoir besoin de le posséder directement</strong>.</p>
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128200;</span>
+            <div>
+              <strong>Actions am&eacute;ricaines</strong>
+              <p>Tesla, Nvidia, Meta, Apple... en perps directement on-chain, sans courtier.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128202;</span>
+            <div>
+              <strong>Indices</strong>
+              <p>Nasdaq 100 (XYZ100), S&P 500... accessibles 24h/24, sans les horaires de march&eacute; traditionnels.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#129689;</span>
+            <div>
+              <strong>Cryptomonnaies</strong>
+              <p>BTC, ETH et autres cryptos en perps, comme sur n'importe quel DEX perps.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#127758;</span>
+            <div>
+              <strong>Forex &amp; mati&egrave;res premi&egrave;res</strong>
+              <p>EUR/USD, or, p&eacute;trole... des march&eacute;s traditionnels directement sur la blockchain.</p>
+            </div>
+          </div>
         </div>
+
+        <p>La plateforme est <strong>non-custodiale</strong> : tes fonds restent dans ton wallet, tu gardes le contr&ocirc;le total. Elle fonctionne sur Hyperliquid L1, ce qui garantit une ex&eacute;cution rapide, des frais faibles et une bonne profondeur de march&eacute;.</p>
+
+        <p>Fin 2025, Trade[XYZ] a &eacute;t&eacute; ouverte au public apr&egrave;s une phase d'acc&egrave;s restreint r&eacute;serv&eacute;e aux wallets avec un historique de volume.</p>
       </div>
     </div>
   </section>
@@ -74,98 +133,182 @@
       <h2 class="section-title reveal reveal-delay-1">La finance traditionnelle arrive on-chain</h2>
 
       <div class="guide-content reveal reveal-delay-2">
-        <p>Un point clé à comprendre avec Trade[XYZ], c'est son <strong>partenariat récent avec S&P Dow Jones Indices</strong>.</p>
-        <p>Grâce à cette collaboration, la plateforme propose une version du <strong>S&P 500 directement en perp sur la blockchain</strong>. Le S&P 500 est l'un des indices les plus importants au monde. Il sert de référence pour une grande partie de la finance traditionnelle.</p>
-        <p>Jusqu'à maintenant, l'accès à ce type d'actif était limité par les horaires de marché, par des intermédiaires et parfois par des contraintes géographiques.</p>
+        <p>Trade[XYZ] s'est notamment associ&eacute; &agrave; l'infrastructure du <strong>S&P 500</strong> pour proposer des d&eacute;riv&eacute;s bas&eacute;s sur cet indice, accessible en continu, sans passer par les march&eacute;s traditionnels et leurs horaires limit&eacute;s.</p>
+
+        <div class="hip-cards">
+          <div class="hip-card">
+            <div class="hip-badge">XYZ100</div>
+            <h4>Nasdaq 100 Perp</h4>
+            <p>Le premier produit lanc&eacute; par Trade[XYZ]. Plus de <strong>35 millions de dollars</strong> de volume d&egrave;s le lancement. Acc&egrave;s 24/7 aux 100 plus grandes entreprises tech du monde.</p>
+          </div>
+          <div class="hip-card">
+            <div class="hip-badge">S&P 500</div>
+            <h4>Indice mondial</h4>
+            <p>L'un des indices les plus importants au monde, d&eacute;sormais accessible <strong>directement en perp sur la blockchain</strong>. Plus besoin de courtier traditionnel ni d'horaires de march&eacute;.</p>
+          </div>
+        </div>
 
         <div class="features-grid">
           <div class="feature-item">
-            <span class="feature-icon">🕐</span>
+            <span class="feature-icon">&#128339;</span>
             <div>
               <strong>24/7, sans interruption</strong>
-              <p>Accède au S&P 500 et autres actifs traditionnels à tout moment, sans horaires de marché.</p>
+              <p>Acc&egrave;de au S&P 500, Nasdaq et autres actifs &agrave; tout moment. Pas de fermeture le week-end ni la nuit.</p>
             </div>
           </div>
           <div class="feature-item">
-            <span class="feature-icon">🌍</span>
+            <span class="feature-icon">&#127758;</span>
             <div>
-              <strong>Sans frontières</strong>
-              <p>Plus de contraintes géographiques ni d'intermédiaires. Directement on-chain, accessible à tous.</p>
+              <strong>Sans fronti&egrave;res</strong>
+              <p>Plus de contraintes g&eacute;ographiques. Directement on-chain, accessible &agrave; tous avec un simple wallet.</p>
             </div>
           </div>
         </div>
 
-        <p>C'est un changement majeur, parce que ça montre que des éléments centraux de la finance traditionnelle commencent à être intégrés dans des systèmes ouverts.</p>
-
-        <h3 class="guide-subtitle">Le lien direct avec Hyperliquid</h3>
-        <p>Trade[XYZ] ne fonctionne pas seul. Il repose <strong>entièrement sur Hyperliquid</strong>. Cela signifie que toute l'activité générée sur Trade[XYZ] passe par l'infrastructure Hyperliquid.</p>
-        <p>Quand tu utilises Trade[XYZ], tu es donc actif à <strong>deux niveaux</strong> : tu utilises Trade[XYZ], mais tu utilises aussi Hyperliquid en même temps. C'est pour ça que dans une logique de farming, on considère que <strong>tu travailles sur les deux en parallèle</strong>.</p>
+        <p>C'est un changement majeur : des actifs centraux de la finance traditionnelle deviennent accessibles dans des syst&egrave;mes ouverts et d&eacute;centralis&eacute;s.</p>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ SECTION 4 — PLAN D'ACTION ═══════════════ -->
-  <section class="guide-section section" id="farming">
+  <!-- ═══════════════ SECTION 4 — DOUBLE FARMING ═══════════════ -->
+  <section class="guide-section section" id="double">
     <div class="container">
-      <div class="section-label reveal">Plan d'action</div>
-      <h2 class="section-title reveal reveal-delay-1">Comment farmer Trade[XYZ]</h2>
+      <div class="section-label reveal">Strat&eacute;gie</div>
+      <h2 class="section-title reveal reveal-delay-1">Farming 2 en 1</h2>
 
       <div class="guide-content reveal reveal-delay-2">
-        <p>Alors comment on farm ? C'est du <strong>2 en 1</strong> : on fait des transactions sur Hyperliquid avec des tokens qui ont été lancés par Trade[XYZ]. Le but ? <strong>Faire le plus de volume de transactions, pour le moins cher possible.</strong></p>
+        <p>Trade[XYZ] ne fonctionne pas isol&eacute;ment : il repose <strong>enti&egrave;rement sur l'infrastructure Hyperliquid</strong>. Toute l'activit&eacute; g&eacute;n&eacute;r&eacute;e passe par Hyperliquid L1.</p>
+        <p>Concr&egrave;tement, quand tu utilises Trade[XYZ], <strong>tu es actif &agrave; deux niveaux</strong> :</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128202;</span>
+            <div>
+              <strong>Trade[XYZ]</strong>
+              <p>Tu g&eacute;n&egrave;res du volume et de l'activit&eacute; sur la plateforme, ce qui te positionne pour un &eacute;ventuel airdrop Trade[XYZ].</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128154;</span>
+            <div>
+              <strong>Hyperliquid</strong>
+              <p>Chaque transaction passe par l'infrastructure Hyperliquid. Ton volume compte &eacute;galement dans l'&eacute;cosyst&egrave;me HL pour la saison 2.</p>
+            </div>
+          </div>
+        </div>
 
         <div class="highlight-box">
-          <div class="highlight-box-title">Exemple concret</div>
-          <p>Si tu as 100 $, tu peux acheter 1 000 $ de S&P 500 et revendre instantanément. Tu as fait <strong>2 000 $ de volume</strong>. Répète ça en boucle, et c'est ça le farming. Chaque transaction te coûte des frais et tu es exposé au marché pendant quelques secondes.</p>
-        </div>
-
-        <h3 class="guide-subtitle">Le meilleur outil : les bots</h3>
-        <p>Le meilleur moyen qu'on a pour farmer : <strong>les bots</strong>. On travaille avec <strong>Tradoor0.xyz</strong>, qui te permet de faire un grand volume de transactions pour peu cher.</p>
-
-        <div class="strategy-box">
-          <div class="strategy-item">
-            <div class="strategy-num">1</div>
-            <div>
-              <strong>Connecte-toi à Trade[XYZ]</strong>
-              <p>Utilise ton wallet connecté à Hyperliquid. Trade[XYZ] fonctionne directement via l'infrastructure Hyperliquid.</p>
-            </div>
-          </div>
-          <div class="strategy-item">
-            <div class="strategy-num">2</div>
-            <div>
-              <strong>Choisis tes actifs</strong>
-              <p>Sélectionne les tokens Trade[XYZ] comme le S&P 500 perp. Ce sont les marchés où tu vas générer du volume.</p>
-            </div>
-          </div>
-          <div class="strategy-item">
-            <div class="strategy-num">3</div>
-            <div>
-              <strong>Lance le bot</strong>
-              <p>Configure le bot sur Tradoor0.xyz pour automatiser tes achats/ventes et maximiser ton volume. Apprends comment le lancer et fais ton premier million de volume !</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="warning-box">
-          <span style="font-size:1.25rem;">⚠️</span>
-          <p><strong>Rappel :</strong> Chaque transaction a un coût en frais. Commence petit pour comprendre le fonctionnement, puis augmente progressivement. Ne risque jamais plus que ce que tu peux te permettre de perdre.</p>
+          <div class="highlight-box-title">Le point cl&eacute;</div>
+          <p>Dans les protocoles qui n'ont pas encore de token, les plateformes r&eacute;compensent souvent les utilisateurs les plus actifs <strong>avant le TGE</strong> (Token Generation Event). L'objectif est donc clair : g&eacute;n&eacute;rer du volume de mani&egrave;re <strong>r&eacute;guli&egrave;re et coh&eacute;rente</strong>.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <!-- ═══════════════ SECTION 5 — GUIDE PAS &Agrave; PAS ═══════════════ -->
+  <section class="guide-section section" id="steps">
+    <div class="container">
+      <div class="section-label reveal">Pas &agrave; Pas</div>
+      <h2 class="section-title reveal reveal-delay-1">Comment farmer Trade[XYZ]</h2>
+
+      <div class="guide-steps">
+
+        <div class="guide-step reveal">
+          <div class="guide-step-number">1</div>
+          <div class="guide-step-content">
+            <h3>Connecte-toi &agrave; Trade[XYZ]</h3>
+            <p>Rends-toi sur <strong>trade.xyz</strong> et connecte ton wallet (MetaMask ou Rabby). La plateforme fonctionne directement via l'infrastructure Hyperliquid &mdash; tu dois avoir des fonds sur Hyperliquid L1.</p>
+            <div class="tip-box">
+              <span style="font-size:1.25rem;">&#128161;</span>
+              <p><strong>Astuce :</strong> Si tu n'as pas encore de fonds sur Hyperliquid, consulte notre <a href="hyperliquid.html" style="color:var(--primary)">guide Hyperliquid</a> pour les &eacute;tapes de d&eacute;p&ocirc;t.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-step reveal reveal-delay-1">
+          <div class="guide-step-number">2</div>
+          <div class="guide-step-content">
+            <h3>Choisis tes march&eacute;s</h3>
+            <p>S&eacute;lectionne les actifs sur lesquels tu veux trader. Les march&eacute;s les plus liquides (Nasdaq, S&P 500, BTC, ETH) offrent <strong>moins de slippage</strong> et sont les plus adapt&eacute;s pour g&eacute;n&eacute;rer du volume proprement.</p>
+            <p>Tu peux ouvrir des positions <strong>long</strong> (hausse) ou <strong>short</strong> (baisse). Dans une logique de farming, les deux fonctionnent &mdash; c'est le volume qui compte.</p>
+          </div>
+        </div>
+
+        <div class="guide-step reveal reveal-delay-2">
+          <div class="guide-step-number">3</div>
+          <div class="guide-step-content">
+            <h3>G&eacute;n&egrave;re du volume</h3>
+            <p>L'objectif est de <strong>faire le plus de volume de transactions pour le moins cher possible</strong>. Ouvre et ferme des positions rapidement sur des march&eacute;s liquides.</p>
+
+            <div class="highlight-box">
+              <div class="highlight-box-title">Exemple concret</div>
+              <p>Avec 100$, tu peux acheter 1 000$ de S&P 500 perp (levier x10) et revendre imm&eacute;diatement. Tu as fait <strong>2 000$ de volume</strong>. R&eacute;p&egrave;te &ccedil;a en boucle. Chaque transaction co&ucirc;te des frais minimes et tu es expos&eacute; au march&eacute; pendant quelques secondes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-step reveal reveal-delay-3">
+          <div class="guide-step-number">4</div>
+          <div class="guide-step-content">
+            <h3>Automatise avec un bot</h3>
+            <p>Pour maximiser ton volume sans y passer la journ&eacute;e, tu peux utiliser un <strong>bot de trading</strong>. On travaille avec <strong>Tradoor0.xyz</strong>, qui permet de faire un grand volume de transactions pour peu cher.</p>
+            <p>Le bot ouvre et ferme des positions automatiquement, de mani&egrave;re r&eacute;guli&egrave;re et optimis&eacute;e. Tu g&eacute;n&egrave;res du volume m&ecirc;me quand tu n'es pas devant ton &eacute;cran.</p>
+          </div>
+        </div>
+
+        <div class="guide-step reveal">
+          <div class="guide-step-number">5</div>
+          <div class="guide-step-content">
+            <h3>Utilise le referral</h3>
+            <p>Trade[XYZ] dispose d'un <strong>programme de referral</strong>. Invite d'autres utilisateurs pour potentiellement accumuler des avantages suppl&eacute;mentaires dans l'&eacute;cosyst&egrave;me.</p>
+          </div>
+        </div>
+
+        <div class="guide-step reveal reveal-delay-1">
+          <div class="guide-step-number">6</div>
+          <div class="guide-step-content">
+            <h3>Sois r&eacute;gulier</h3>
+            <p>Comme pour tout farming, la <strong>constance</strong> prime sur l'intensit&eacute;. Reviens r&eacute;guli&egrave;rement g&eacute;n&eacute;rer du volume plut&ocirc;t que de tout faire en un jour.</p>
+
+            <div class="highlight-box">
+              <div class="highlight-box-title">Checklist hebdomadaire</div>
+              <ul class="checklist">
+                <li>G&eacute;n&eacute;rer du volume sur Trade[XYZ] (manuellement ou via bot)</li>
+                <li>V&eacute;rifier que le bot fonctionne correctement si automatis&eacute;</li>
+                <li>Diversifier les march&eacute;s (crypto + indices + actions)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="guide-content">
+        <div class="warning-box">
+          <span style="font-size:1.25rem;">&#9888;&#65039;</span>
+          <p><strong>Rappel :</strong> Chaque transaction a un co&ucirc;t en frais. Commence petit pour comprendre le fonctionnement, puis augmente progressivement. L'objectif est de g&eacute;n&eacute;rer du volume, pas de trader pour gagner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p class="footer-text">Formation créée avec ❤️ pour la communauté crypto francophone</p>
+      <p class="footer-text">Formation cr&eacute;&eacute;e avec &#10084;&#65039; pour la communaut&eacute; crypto francophone</p>
       <div class="footer-links">
         <a href="index.html">Accueil</a>
-        <a href="hyperliquid.html">Guide Hyperliquid</a>
-        <a href="#intro">Introduction</a>
-        <a href="#farming">Farming</a>
+        <a href="module5.html">Les Plays</a>
+        <a href="hyperliquid.html">Hyperliquid</a>
+        <a href="markets.html">Markets</a>
       </div>
     </div>
   </footer>
 
+  <script>(function(){var s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s);})();</script>
   <script src="script.js"></script>
+  <script>(function(){var t=document.getElementById('themeToggle');if(t)t.addEventListener('click',function(){localStorage.setItem('theme',document.documentElement.getAttribute('data-theme'));});})();</script>
 </body>
 </html>

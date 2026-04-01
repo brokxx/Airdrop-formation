@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Module 06 — Stratégie & Optimisation | Airdrop Formation</title>
+  <meta name="description" content="Module 6 : Optimise ton farming. Stratégies avancées pour maximiser tes gains en airdrops et DeFi.">
+  <meta property="og:title" content="Module 06 — Stratégie & Optimisation | Airdrop Formation">
+  <meta property="og:description" content="Module 6 : Optimise ton farming. Stratégies avancées pour maximiser tes gains en airdrops et DeFi.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23efa905'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='bold' fill='%231a1400' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,12 +31,14 @@
       <li><a href="module5.html">Plays</a></li>
       <li><a href="module6.html" class="active">Stratégie</a></li>
     </ul>
-    <div class="theme-toggle" id="themeToggle" role="button" aria-label="Basculer thème clair/sombre">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer de thème">
       <span class="theme-toggle-icon moon">🌙</span>
       <span class="theme-toggle-icon sun">☀️</span>
-    </div>
+    </button>
     <button class="nav-hamburger" id="navHamburger" aria-label="Menu">☰</button>
   </nav>
+
+  <main>
 
   <!-- Module Hero -->
   <section class="module-hero section">
@@ -100,6 +107,50 @@
           <p>Après un airdrop, ne panique pas. Analyse la tokenomics, le vesting schedule, et le sentiment du marché. Certains tokens explosent après le claim, d'autres chutent. Définis ton plan avant de recevoir les tokens.</p>
         </div>
 
+        <!-- Card 6 — Order Book & Volume -->
+        <div class="strategy-card reveal">
+          <div class="strategy-card-header">
+            <div class="strategy-card-icon cyan">📊</div>
+            <h3>Maîtriser l'Order Book pour le Volume</h3>
+          </div>
+          <p>Dans une stratégie de volume, l'objectif n'est pas de prédire le marché mais d'exécuter proprement en limitant les pertes. Avant chaque action, observe les prix les plus proches, vérifie la profondeur de liquidité, et assure-toi que ton ordre ne traversera pas plusieurs niveaux du carnet.</p>
+          <div class="strategy-tags">
+            <span class="strategy-tag">Spread</span>
+            <span class="strategy-tag">Profondeur</span>
+            <span class="strategy-tag">Murs</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: var(--sp-3); margin-top: var(--sp-4);">
+            <div style="padding: var(--sp-3) var(--sp-4); background: var(--surface-container-high); border-radius: 0.75rem;">
+              <p style="font-size: var(--body-md); color: var(--on-surface-variant); line-height: 1.6;"><strong style="color: var(--on-surface);">Anticiper la sortie</strong> — Avant même d'entrer, vérifie que tu pourras revendre sans dégrader ton prix d'exécution. Si ce n'est pas le cas, l'opération entraîne mécaniquement une perte.</p>
+            </div>
+            <div style="padding: var(--sp-3) var(--sp-4); background: var(--surface-container-high); border-radius: 0.75rem;">
+              <p style="font-size: var(--body-md); color: var(--on-surface-variant); line-height: 1.6;"><strong style="color: var(--on-surface);">Repérer les murs</strong> — Les fortes concentrations d'ordres (murs d'achat/vente) agissent comme des zones de réaction. Mais attention : ces ordres peuvent être retirés à tout moment.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 — Bots de Trading -->
+        <div class="strategy-card reveal">
+          <div class="strategy-card-header">
+            <div class="strategy-card-icon brown">🤖</div>
+            <h3>Bots de Trading</h3>
+          </div>
+          <p>Un bot de trading est un programme qui exécute des actions automatiquement : ouvrir des positions, les fermer, et répéter selon des règles définies. Dans une stratégie de volume, il ne sert pas à "trader mieux" mais à maintenir une activité régulière et constante, même quand tu n'es pas devant ton écran.</p>
+          <div class="strategy-tags">
+            <span class="strategy-tag">Automatisation</span>
+            <span class="strategy-tag">Volume Farming</span>
+            <span class="strategy-tag">Tradoor0.xyz</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: var(--sp-3); margin-top: var(--sp-4);">
+            <div style="padding: var(--sp-3) var(--sp-4); background: var(--surface-container-high); border-radius: 0.75rem;">
+              <p style="font-size: var(--body-md); color: var(--on-surface-variant); line-height: 1.6;"><strong style="color: var(--on-surface);">Ce que fait un bot</strong> — Il ouvre et ferme des positions en continu, génère du volume automatiquement, et s'adapte aux conditions du marché via l'order book pour limiter les pertes d'exécution.</p>
+            </div>
+            <div style="padding: var(--sp-3) var(--sp-4); background: var(--surface-container-high); border-radius: 0.75rem;">
+              <p style="font-size: var(--body-md); color: var(--on-surface-variant); line-height: 1.6;"><strong style="color: var(--on-surface);">Ce qu'un bot n'est pas</strong> — Un outil magique. Il ne garantit pas de profit. Son rôle est d'automatiser ton activité et de structurer ton volume pour maximiser ton exposition aux récompenses.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -118,6 +169,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -135,6 +188,8 @@
   </footer>
 
   <script>
+    (function(){var s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s);})();
+
     /* ═══════════════════════════════════════════
        SCROLL REVEAL
        ═══════════════════════════════════════════ */
@@ -143,6 +198,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
@@ -157,9 +213,10 @@
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
       const progress = (scrollTop / docHeight) * 100;
       scrollProgress.style.width = progress + '%';
-    });
+    }, { passive: true });
 
     /* ═══════════════════════════════════════════
        THEME TOGGLE
@@ -168,7 +225,9 @@
     themeToggle.addEventListener('click', () => {
       const html = document.documentElement;
       const current = html.getAttribute('data-theme');
-      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
     });
 
     /* ═══════════════════════════════════════════

@@ -487,6 +487,29 @@
   color: var(--primary);
 }
 
+/* ── Bento card as link ── */
+a.bento-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a.bento-card .expand-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-4);
+  font-size: var(--label-sm);
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+a.bento-card:hover .expand-hint {
+  color: var(--on-surface);
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .bento-grid {
