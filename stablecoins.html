@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stablecoins &mdash; Les monnaies stables | Airdrop Formation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="guide.css">
+  <link rel="stylesheet" href="module1-detail.css">
+  <link rel="stylesheet" href="crypto-detail.css">
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav" id="nav">
+    <a href="module1-detail.html#crypto" class="nav-logo">&larr; Cryptos</a>
+    <ul class="nav-links">
+      <li><a href="#intro" class="active">Stablecoins</a></li>
+      <li><a href="#fonctionnement">Types</a></li>
+      <li><a href="#usdt">USDT</a></li>
+      <li><a href="#usdc">USDC</a></li>
+      <li><a href="#dai">DAI</a></li>
+      <li><a href="#usages">Usages</a></li>
+      <li><a href="#risques">Risques</a></li>
+      <li><a href="#airdrops">Airdrops</a></li>
+    </ul>
+    <div class="theme-toggle" id="themeToggle" role="button" aria-label="Basculer th&egrave;me">
+      <span class="theme-toggle-icon moon">&#127769;</span>
+      <span class="theme-toggle-icon sun">&#9728;&#65039;</span>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <nav class="detail-sidenav" id="detailSidenav">
+    <a href="#intro" class="active">C'est quoi ?</a>
+    <a href="#fonctionnement">Comment &ccedil;a marche</a>
+    <a href="#usdt">USDT (Tether)</a>
+    <a href="#usdc">USDC (Circle)</a>
+    <a href="#dai">DAI (d&eacute;centralis&eacute;)</a>
+    <a href="#usages">&Agrave; quoi &ccedil;a sert</a>
+    <a href="#risques">Les risques</a>
+    <a href="#airdrops">Airdrops &amp; farming</a>
+  </nav>
+
+  <svg style="position:absolute;width:0;height:0">
+    <defs>
+      <filter id="pencil">
+        <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="4" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ═══════════════ SECTION 1 — C'EST QUOI ? ═══════════════ -->
+  <section class="guide-section section" id="intro">
+    <div class="container">
+      <a href="module1-detail.html#crypto" class="back-link reveal">&larr; Retour aux Cryptos</a>
+
+      <div class="crypto-hero reveal">
+        <div class="crypto-hero-symbol">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" filter="url(#pencil)">
+            <circle cx="60" cy="60" r="50" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" stroke-dasharray="4,2" fill="none"/>
+            <text x="60" y="70" text-anchor="middle" font-family="var(--font-display)" font-size="36" font-weight="800" fill="var(--primary)">$</text>
+            <!-- Stable line -->
+            <line x1="20" y1="60" x2="100" y2="60" stroke="var(--tertiary)" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.4"/>
+            <!-- = signs -->
+            <line x1="95" y1="25" x2="110" y2="25" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            <line x1="95" y1="30" x2="110" y2="30" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <h1 class="crypto-hero-title">Les <span class="gradient-text">Stablecoins</span></h1>
+        <p class="crypto-hero-subtitle">Des cryptomonnaies con&ccedil;ues pour valoir toujours 1 dollar. Le pont entre la finance traditionnelle et le monde crypto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section section" style="padding-top:0">
+    <div class="container">
+      <div class="guide-content reveal">
+        <p>Bitcoin peut perdre 30% en une semaine. Ethereum peut chuter de 20% en une journ&eacute;e. C'est excitant pour les traders, mais impraticable pour faire des paiements ou stocker de la valeur &agrave; court terme.</p>
+        <p>Les <strong>stablecoins</strong> r&egrave;glent ce probl&egrave;me : ce sont des cryptomonnaies dont la valeur est index&eacute;e sur une monnaie stable, g&eacute;n&eacute;ralement <strong>le dollar am&eacute;ricain</strong>. 1 USDT = 1 USD. Toujours.</p>
+        <p>Pense aux <strong>jetons de casino</strong> : ils repr&eacute;sentent des dollars, mais vivent &agrave; l'int&eacute;rieur de l'&eacute;cosyst&egrave;me, rendant les transactions plus rapides et plus simples.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">En chiffres</div>
+          <p>Le march&eacute; des stablecoins repr&eacute;sente plus de <strong>200 milliards de dollars</strong>. L'USDT &agrave; lui seul d&eacute;passe les 140 milliards &mdash; c'est l'actif le plus &eacute;chang&eacute; de tout l'&eacute;cosyst&egrave;me crypto, devant Bitcoin.</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#fonctionnement">Section suivante : Comment &ccedil;a marche &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 2 — COMMENT &Ccedil;A FONCTIONNE ═══════════════ -->
+  <section class="guide-section section" id="fonctionnement">
+    <div class="container">
+      <div class="section-label reveal">02</div>
+      <h2 class="section-title reveal">Comment &ccedil;a maintient sa valeur ?</h2>
+
+      <div class="guide-content reveal">
+        <p>Il existe trois m&eacute;thodes principales pour qu'un stablecoin reste &agrave; 1$. Chacune a ses avantages et ses risques.</p>
+
+        <!-- SVG: 3 types -->
+        <div class="sketch-illustration">
+          <svg width="400" height="170" viewBox="0 0 400 170" fill="none" filter="url(#pencil)">
+            <!-- Fiat-backed -->
+            <rect x="10" y="20" width="110" height="110" rx="10" stroke="var(--primary)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="65" y="48" text-anchor="middle" font-size="22">&#127974;</text>
+            <text x="65" y="70" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="9">FIAT-BACKED</text>
+            <text x="65" y="88" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">Dollars en banque</text>
+            <text x="65" y="102" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">USDT, USDC</text>
+            <text x="65" y="148" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="8">&#10003; Le plus s&ucirc;r</text>
+
+            <!-- Crypto-backed -->
+            <rect x="145" y="20" width="110" height="110" rx="10" stroke="var(--tertiary)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="200" y="48" text-anchor="middle" font-size="22">&#128274;</text>
+            <text x="200" y="70" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="9">CRYPTO-BACKED</text>
+            <text x="200" y="88" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">Sur-collat&eacute;ralis&eacute;</text>
+            <text x="200" y="102" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">DAI</text>
+            <text x="200" y="148" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="8">&#128279; D&eacute;centralis&eacute;</text>
+
+            <!-- Algorithmic -->
+            <rect x="280" y="20" width="110" height="110" rx="10" stroke="#f87171" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="335" y="48" text-anchor="middle" font-size="22">&#9888;&#65039;</text>
+            <text x="335" y="70" text-anchor="middle" class="sketch-label" fill="#f87171" font-size="9">ALGORITHMIQUE</text>
+            <text x="335" y="88" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">Pas de garantie</text>
+            <text x="335" y="102" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">UST (crash)</text>
+            <text x="335" y="148" text-anchor="middle" class="sketch-label" fill="#f87171" font-size="8">&#10007; Tr&egrave;s risqu&eacute;</text>
+          </svg>
+        </div>
+
+        <div class="method-cards">
+          <div class="method-card">
+            <div class="method-header">
+              <span class="method-icon">&#127974;</span>
+              <h4>Adoss&eacute;s au dollar (Fiat-backed)</h4>
+            </div>
+            <p>Une entreprise d&eacute;tient de vrais dollars (ou bons du Tr&eacute;sor) en banque. Pour chaque stablecoin &eacute;mis, il y a th&eacute;oriquement 1$ en r&eacute;serve. C'est le mod&egrave;le de <strong>USDT</strong> et <strong>USDC</strong>. Simple, liquide, mais centralis&eacute; : tu dois faire confiance &agrave; l'&eacute;metteur.</p>
+          </div>
+          <div class="method-card">
+            <div class="method-header">
+              <span class="method-icon">&#128274;</span>
+              <h4>Adoss&eacute;s &agrave; la crypto (Crypto-backed)</h4>
+            </div>
+            <p>Tu d&eacute;poses de la crypto (ex: ETH) dans un smart contract et tu g&eacute;n&egrave;res des stablecoins en retour. Le syst&egrave;me est <strong>sur-collat&eacute;ralis&eacute;</strong> : pour 100$ de DAI, tu dois d&eacute;poser 150$+ d'ETH. D&eacute;centralis&eacute; et transparent, mais moins efficace en capital.</p>
+          </div>
+          <div class="method-card">
+            <div class="method-header">
+              <span class="method-icon">&#9888;&#65039;</span>
+              <h4>Algorithmiques (sans garantie)</h4>
+            </div>
+            <p>Des algorithmes ajustent l'offre pour maintenir le prix. <strong>Mod&egrave;le largement discr&eacute;dit&eacute;</strong> depuis le crash de UST/Terra Luna en mai 2022 : 40 milliards de dollars &eacute;vapor&eacute;s en quelques jours dans une spirale de la mort.</p>
+          </div>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#usdt">Section suivante : USDT &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 3 — USDT ═══════════════ -->
+  <section class="guide-section section" id="usdt">
+    <div class="container">
+      <div class="section-label reveal">03</div>
+      <h2 class="section-title reveal">USDT &mdash; Tether</h2>
+
+      <div class="guide-content reveal">
+        <p>Le premier stablecoin de l'histoire, lanc&eacute; en <strong>2014</strong> par Tether Limited. C'est aujourd'hui le <strong>stablecoin dominant</strong> et l'actif le plus &eacute;chang&eacute; de tout l'&eacute;cosyst&egrave;me crypto.</p>
+
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-value">~$145 Mds</div>
+            <div class="stat-label">Market cap</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">~70%</div>
+            <div class="stat-label">Part du march&eacute; stablecoin</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">2014</div>
+            <div class="stat-label">Lancement</div>
+          </div>
+        </div>
+
+        <p>USDT est disponible sur presque toutes les blockchains : Ethereum, Tron (qui repr&eacute;sente plus de 50% des transferts USDT), Solana, Avalanche, etc.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Controverses</div>
+          <p>Tether a longtemps &eacute;t&eacute; critiqu&eacute; pour son manque de transparence sur ses r&eacute;serves. En 2021, l'entreprise a pay&eacute; 18,5 millions de dollars d'amende au procureur de New York apr&egrave;s avoir admis que ses r&eacute;serves n'&eacute;taient pas toujours enti&egrave;rement adoss&eacute;es au dollar. Malgr&eacute; cela, USDT <strong>n'a jamais perdu son peg durablement</strong> et reste incontournable.</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#usdc">Section suivante : USDC &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 4 — USDC ═══════════════ -->
+  <section class="guide-section section" id="usdc">
+    <div class="container">
+      <div class="section-label reveal">04</div>
+      <h2 class="section-title reveal">USDC &mdash; Circle</h2>
+
+      <div class="guide-content reveal">
+        <p>&Eacute;mis par <strong>Circle</strong> depuis 2018, l'USDC est consid&eacute;r&eacute; comme le stablecoin le plus <strong>transparent et r&eacute;gul&eacute;</strong>. Ses r&eacute;serves sont audit&eacute;es mensuellement par Deloitte et compos&eacute;es principalement de bons du Tr&eacute;sor am&eacute;ricain.</p>
+
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-value">~$50 Mds</div>
+            <div class="stat-label">Market cap</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">Deloitte</div>
+            <div class="stat-label">Auditeur</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">2018</div>
+            <div class="stat-label">Lancement</div>
+          </div>
+        </div>
+
+        <p>USDC est dominant dans la DeFi am&eacute;ricaine et largement utilis&eacute; sur Coinbase, Ethereum, Solana et Base.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">L'&eacute;pisode SVB (mars 2023)</div>
+          <p>Quand Silicon Valley Bank a fait faillite, Circle avait 3,3 milliards de dollars bloqu&eacute;s dans cette banque. L'USDC a bri&egrave;vement chut&eacute; &agrave; <strong>0,87$</strong>. Le peg a &eacute;t&eacute; r&eacute;tabli en quelques jours apr&egrave;s que la FDIC a garanti tous les d&eacute;posants. <strong>Le&ccedil;on</strong> : m&ecirc;me les stablecoins "s&ucirc;rs" d&eacute;pendent de la solidit&eacute; de leurs banques.</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#dai">Section suivante : DAI &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 5 — DAI ═══════════════ -->
+  <section class="guide-section section" id="dai">
+    <div class="container">
+      <div class="section-label reveal">05</div>
+      <h2 class="section-title reveal">DAI &mdash; Le stablecoin d&eacute;centralis&eacute;</h2>
+
+      <div class="guide-content reveal">
+        <p>DAI est diff&eacute;rent des autres : il n'est &eacute;mis par <strong>aucune entreprise</strong>. Il est g&eacute;r&eacute; par <strong>MakerDAO</strong>, un protocole d&eacute;centralis&eacute; gouvern&eacute; par sa communaut&eacute;.</p>
+
+        <h3 class="guide-subtitle">Comment &ccedil;a fonctionne</h3>
+
+        <!-- SVG: DAI mechanism -->
+        <div class="sketch-illustration">
+          <svg width="380" height="120" viewBox="0 0 380 120" fill="none" filter="url(#pencil)">
+            <!-- ETH deposit -->
+            <rect x="15" y="25" width="90" height="60" rx="8" stroke="var(--tertiary)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="60" y="48" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="9">D&eacute;pose 150$</text>
+            <text x="60" y="65" text-anchor="middle" class="sketch-label" fill="var(--tertiary)" font-size="9">d'ETH</text>
+
+            <!-- Arrow -->
+            <line x1="110" y1="55" x2="148" y2="55" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <polygon points="148,51 155,55 148,59" fill="var(--on-surface-variant)"/>
+
+            <!-- Smart Contract -->
+            <rect x="160" y="20" width="80" height="70" rx="8" stroke="var(--primary)" stroke-width="2.5" stroke-dasharray="4,2" fill="none"/>
+            <text x="200" y="42" text-anchor="middle" font-size="18">&#9881;&#65039;</text>
+            <text x="200" y="60" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="8">VAULT</text>
+            <text x="200" y="75" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="7">Smart contract</text>
+
+            <!-- Arrow -->
+            <line x1="245" y1="55" x2="283" y2="55" stroke="var(--on-surface-variant)" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <polygon points="283,51 290,55 283,59" fill="var(--on-surface-variant)"/>
+
+            <!-- DAI output -->
+            <rect x="295" y="25" width="75" height="60" rx="8" stroke="var(--primary)" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+            <text x="332" y="48" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="9">Re&ccedil;ois 100</text>
+            <text x="332" y="65" text-anchor="middle" class="sketch-label" fill="var(--primary)" font-size="9">DAI</text>
+
+            <!-- Label -->
+            <text x="200" y="110" text-anchor="middle" class="sketch-label" fill="var(--on-surface-variant)" font-size="8">Sur-collat&eacute;ralis&eacute; : toujours plus de garantie que de dette</text>
+          </svg>
+        </div>
+
+        <p>Tu d&eacute;poses de la crypto (ex: 150$ d'ETH) dans un "vault" (coffre-fort smart contract) et tu g&eacute;n&egrave;res 100 DAI. Si la valeur de ton ETH baisse trop, le syst&egrave;me <strong>liquide automatiquement</strong> ta position pour prot&eacute;ger le syst&egrave;me.</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128279;</span>
+            <div>
+              <strong>D&eacute;centralis&eacute;</strong>
+              <p>Pas d'entreprise derri&egrave;re. Personne ne peut geler tes DAI. Gouvern&eacute; par la communaut&eacute; MakerDAO.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128065;</span>
+            <div>
+              <strong>Transparent</strong>
+              <p>Tout le collat&eacute;ral est v&eacute;rifiable on-chain en temps r&eacute;el. Pas besoin de faire confiance &agrave; un audit.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#usages">Section suivante : &Agrave; quoi &ccedil;a sert &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 6 — USAGES ═══════════════ -->
+  <section class="guide-section section" id="usages">
+    <div class="container">
+      <div class="section-label reveal">06</div>
+      <h2 class="section-title reveal">&Agrave; quoi servent les stablecoins ?</h2>
+
+      <div class="guide-content reveal">
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-icon">&#128200;</span>
+            <div>
+              <strong>Trading sans volatilit&eacute;</strong>
+              <p>Convertis tes gains en USDT pour les "garer" sans quitter l'&eacute;cosyst&egrave;me crypto. Pr&ecirc;t &agrave; r&eacute;investir instantan&eacute;ment.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#127974;</span>
+            <div>
+              <strong>DeFi</strong>
+              <p>D&eacute;pose des stablecoins sur Aave ou Compound pour g&eacute;n&eacute;rer du rendement (3-10% par an). Fournis de la liquidit&eacute; sur les DEX. Emprunte contre tes cryptos.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#127758;</span>
+            <div>
+              <strong>Paiements internationaux</strong>
+              <p>Envoyer 10 000$ de USDT sur Tron co&ucirc;te ~1$ et prend quelques secondes. Un virement international co&ucirc;te 25-50$ et prend 1-3 jours.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">&#128260;</span>
+            <div>
+              <strong>Passerelle fiat/crypto</strong>
+              <p>Ach&egrave;te de l'USDC par virement bancaire, puis utilise-le pour acheter n'importe quelle crypto. Beaucoup plus rapide que d'attendre le r&egrave;glement fiat.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Avantage fiscal</div>
+          <p>Dans de nombreux pays (dont la France), convertir une crypto en stablecoin (ex: ETH &rarr; USDT) <strong>ne constitue pas un &eacute;v&eacute;nement imposable</strong> tant que tu restes dans l'&eacute;cosyst&egrave;me crypto. L'imposition ne se d&eacute;clenche que lors de la conversion en monnaie fiat (euros, dollars). Les stablecoins te permettent donc de <strong>s&eacute;curiser tes gains sans passer &agrave; la caisse</strong> : tu sors de la volatilit&eacute; sans sortir du cadre crypto.</p>
+          <p style="font-size:var(--label-sm); color:var(--on-surface-variant); margin-top:var(--sp-3); margin-bottom:0;"><em>Note : la fiscalit&eacute; varie selon les pays et &eacute;volue r&eacute;guli&egrave;rement. V&eacute;rifie toujours la l&eacute;gislation en vigueur dans ton pays.</em></p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#risques">Section suivante : Les risques &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 7 — RISQUES ═══════════════ -->
+  <section class="guide-section section" id="risques">
+    <div class="container">
+      <div class="section-label reveal">07</div>
+      <h2 class="section-title reveal">Les risques</h2>
+
+      <div class="guide-content reveal">
+        <p>Les stablecoins ne sont <strong>pas sans risque</strong>. Comprendre ces risques est essentiel avant de les utiliser.</p>
+
+        <div class="method-cards">
+          <div class="method-card" style="border-left: 3px solid #f87171;">
+            <div class="method-header">
+              <span class="method-icon">&#128200;</span>
+              <h4>De-pegging</h4>
+            </div>
+            <p>Un stablecoin peut temporairement perdre son ancrage &agrave; 1$. L'USDC est tomb&eacute; &agrave; 0,87$ pendant la faillite de SVB. L'UST s'est <strong>effondr&eacute; &agrave; 0$</strong> d&eacute;finitivement. Les stablecoins mineurs sont encore plus vuln&eacute;rables.</p>
+          </div>
+          <div class="method-card" style="border-left: 3px solid #f87171;">
+            <div class="method-header">
+              <span class="method-icon">&#127974;</span>
+              <h4>Risque de contrepartie</h4>
+            </div>
+            <p>Pour les stablecoins centralis&eacute;s, tu fais confiance &agrave; l'&eacute;metteur pour d&eacute;tenir les r&eacute;serves. Si l'entreprise ment sur ses r&eacute;serves, si sa banque fait faillite, tes stablecoins perdent leur valeur.</p>
+          </div>
+          <div class="method-card" style="border-left: 3px solid #f87171;">
+            <div class="method-header">
+              <span class="method-icon">&#9878;&#65039;</span>
+              <h4>Risque r&eacute;glementaire</h4>
+            </div>
+            <p>Les gouvernements r&eacute;gulent de plus en plus les stablecoins. L'UE a impos&eacute; des r&egrave;gles strictes avec MiCA. Les USA travaillent sur un cadre l&eacute;gislatif. Et surtout : <strong>Tether et Circle peuvent geler des adresses</strong> sur demande des autorit&eacute;s.</p>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Le crash UST / Terra Luna (mai 2022)</div>
+          <p>L'UST &eacute;tait un stablecoin algorithmique sans r&eacute;serve r&eacute;elle. Son m&eacute;canisme reposait sur l'arbitrage avec son token s&oelig;ur LUNA. Quand la confiance s'est effondr&eacute;e, une <strong>spirale de la mort</strong> s'est enclench&eacute;e : UST &agrave; 0$, LUNA de 80$ &agrave; une fraction de centime. <strong>40 milliards de dollars &eacute;vapor&eacute;s.</strong> Le mod&egrave;le algorithmique sans collat&eacute;ral est depuis consid&eacute;r&eacute; comme non viable.</p>
+        </div>
+
+        <div class="next-section-link">
+          <a href="#airdrops">Section suivante : Stablecoins &amp; Airdrops &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══════════════ SECTION 8 — AIRDROPS & FARMING ═══════════════ -->
+  <section class="guide-section section" id="airdrops">
+    <div class="container">
+      <div class="section-label reveal">08</div>
+      <h2 class="section-title reveal">Stablecoins &amp; Airdrops</h2>
+
+      <div class="guide-content reveal">
+        <p>Dans le cadre de cette formation, les stablecoins sont un <strong>outil central</strong>. Voici pourquoi ils sont indispensables pour le farming d'airdrops.</p>
+
+        <div class="strategy-box">
+          <div class="strategy-item">
+            <div class="strategy-num">1</div>
+            <div>
+              <strong>Monnaie de base pour le trading</strong>
+              <p>La plupart des strat&eacute;gies de volume utilisent des paires stablecoin (USDC/USDT). Tu g&eacute;n&egrave;res du volume <strong>sans risque de prix</strong> : les deux c&ocirc;t&eacute;s du trade valent 1$. Tu ne perds que les frais de swap (souvent 0,01-0,05%).</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">2</div>
+            <div>
+              <strong>Liquidit&eacute; DeFi</strong>
+              <p>Fournir de la liquidit&eacute; en stablecoins sur les DEX est une strat&eacute;gie classique de farming. Moins de risque d'impermanent loss qu'avec des paires volatiles, et beaucoup de protocoles r&eacute;compensent cette activit&eacute;.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">3</div>
+            <div>
+              <strong>Bridge entre cha&icirc;nes</strong>
+              <p>Pour farmer des airdrops sur diff&eacute;rents Layer 2, tu bridges souvent des stablecoins d'une cha&icirc;ne &agrave; l'autre. Chaque bridge utilis&eacute; = activit&eacute; on-chain = &eacute;ligibilit&eacute; potentielle.</p>
+            </div>
+          </div>
+          <div class="strategy-item">
+            <div class="strategy-num">4</div>
+            <div>
+              <strong>Gestion du risque</strong>
+              <p>Les farmers exp&eacute;riment&eacute;s gardent la majorit&eacute; de leur capital en stablecoins. &Ccedil;a permet de rester liquide et de saisir les opportunit&eacute;s rapidement quand elles se pr&eacute;sentent.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Le point cl&eacute;</div>
+          <p>Les stablecoins sont la <strong>fondation de l'&eacute;conomie crypto</strong>. Chaque interaction DeFi, chaque strat&eacute;gie d'airdrop, chaque op&eacute;ration de trading implique des stablecoins. Les comprendre, c'est comprendre le terrain de jeu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Footer -->
+  <section class="section">
+    <div class="container">
+      <div class="module-cta-footer reveal">
+        <h3>Les bases sont pos&eacute;es !</h3>
+        <p>Tu connais maintenant Bitcoin, Ethereum et les Stablecoins. Retourne au Module 01 pour continuer ta formation.</p>
+        <div class="cta-buttons">
+          <a href="module1-detail.html#crypto" class="btn-primary">Retour aux Cryptos &rarr;</a>
+          <a href="module2.html" class="btn-secondary">Module 02 : Investir &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Formation cr&eacute;&eacute;e avec &#10084;&#65039; pour la communaut&eacute; crypto francophone</p>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="module1.html">Cryptos</a>
+        <a href="bitcoin.html">Bitcoin</a>
+        <a href="ethereum.html">Ethereum</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){var b=document.getElementById('scrollProgress');window.addEventListener('scroll',function(){var s=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;b.style.width=(h>0?(s/h)*100:0)+'%';},{passive:true})})();
+    (function(){var t=document.getElementById('themeToggle'),r=document.documentElement,s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s);t.addEventListener('click',function(){var c=r.getAttribute('data-theme'),n=c==='dark'?'light':'dark';r.setAttribute('data-theme',n);localStorage.setItem('theme',n)})})();
+    (function(){var h=document.getElementById('navHamburger'),n=document.getElementById('nav');h.addEventListener('click',function(){n.classList.toggle('open')});n.querySelectorAll('.nav-links a').forEach(function(l){l.addEventListener('click',function(){n.classList.remove('open')})})})();
+    (function(){var r=document.querySelectorAll('.reveal');if('IntersectionObserver' in window){var o=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});r.forEach(function(el){o.observe(el)})}else{r.forEach(function(el){el.classList.add('visible')})}})();
+    (function(){var ss=document.querySelectorAll('.guide-section'),nl=document.querySelectorAll('.nav-links a'),sl=document.querySelectorAll('.detail-sidenav a');function u(){var p=window.scrollY+120,c='';ss.forEach(function(s){if(s.offsetTop<=p)c=s.getAttribute('id')});nl.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+c)});sl.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+c)});}window.addEventListener('scroll',u,{passive:true});u()})();
+  </script>
+
+</body>
+</html>
